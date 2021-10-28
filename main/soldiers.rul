@@ -1,0 +1,25 @@
+soldiers:
+
+  - type: STR_FALLEN
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+
+  - type: STR_CHAOS_MARINE
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+
+  - type: STR_SOLDIER
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+
+  - type: STR_SOLDIER_TERMINATOR
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam

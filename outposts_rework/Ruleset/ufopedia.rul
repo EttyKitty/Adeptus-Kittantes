@@ -1,0 +1,55 @@
+ufopaedia:
+
+  - id: STR_OUTPOSTS         #facility
+    type_id: 10
+    section: STR_HELP
+    image_id: PICK_STRATEGY.SPK
+    text: STR_OUTPOSTS_UFOPEDIA
+ 
+  - id: STR_ACCESS_OUTP         #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_DIRT                #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_EMPLACEMENT         #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_EMPLACEMENT_HEAVY   #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_MINEFIELD           #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_MARINES             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_GUARD             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_ADEPTAS             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_TRAINCAMP           #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_MARKET              #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_POWERG              #facility
+    requires: !add
+      - STR_OUTPOSTS

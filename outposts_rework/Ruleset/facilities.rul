@@ -1,0 +1,38 @@
+facilities:
+
+  - type: STR_ACCESS_OUTP
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_OUTPOST
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_OUTPOST_MARINES
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_OUTPOST_GUARD
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_OUTPOST_ADEPTAS
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_DIRT
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_EMPLACEMENT
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_EMPLACEMENT_HEAVY
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_MINEFIELD
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_TRAINCAMP
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_MARKET
+    requires: !add
+      - STR_OUTPOSTS
+  - type: STR_POWERG
+    requires: !add
+      - STR_OUTPOSTS

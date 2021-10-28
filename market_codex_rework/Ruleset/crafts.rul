@@ -1,0 +1,4 @@
+crafts:
+  - type: STR_VALKYRIE
+    requires: !add
+      - STR_GUARD_SUPORT

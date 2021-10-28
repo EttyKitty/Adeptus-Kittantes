@@ -1,0 +1,82 @@
+items:
+
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+
+  - type: STR_LASER_RIFLE #LASGUN                      10900
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_LASER_RIFLEG #LASGUN GUARD               10910
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_LASGUN_CLIP #LASGUN CLIP                 11010
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_LASER_PISTOL  #LASPISTOL                 10800
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_LASPISTOL_CLIP #LASPISTOL CLIP           10850
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_LASER_PISTOLG  #LASPISTOL  GUARD         10810
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_STUB_GUN
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_STUB_RIFLE
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_STUB_GUN_AMMO
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_AUTOPISTOL
+    requiresBuy: !add
+      - STR_GUARD_SUPORT  
+
+  - type: STR_AUTOPISTOL_CLIP
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_AUTOGUN
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_AUTOGUN_CLIP
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+  - type: STR_HEAVY_STUBBER_CLIP
+    requiresBuy: !add
+      - STR_GUARD_SUPORT
+
+
+  - type: STR_RIFLEB                      #10305
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_RIFLEC                      #10310
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOLB                      #10105
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOLS                     #10110
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOLH                      #10120
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
