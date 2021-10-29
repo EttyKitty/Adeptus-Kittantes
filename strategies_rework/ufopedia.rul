@@ -1,0 +1,36 @@
+ufopaedia:
+  - delete: STR_CHOSEN_DEVASTATOR
+  - delete: STR_CHOSEN_ASSAULT
+  - delete: STR_CHOSEN_SCOUT
+  - delete: STR_CHOSEN_TATICAL
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_DEVASTATOR
+  - delete: STR_SCOUT
+  - delete: STR_PRIMARIS
+
+########################################## OTHER THINGS ##########################################
+
+  - id: STR_SPACE_MARINES_STRATEGIES                   #10
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_SPACE_MARINES_STRATEGIES
+    image_id: PICK_STRATEGY.SPK
+    text: STR_SPACE_MARINES_STRATEGIES_DESC
+    listOrder: 8
+
+########################################## CLEANING THE CODEX ##########################################
+
+  - id: STR_ADEPTAS                  #65
+    requires:
+      - STR_ADEPTAS
+
+  - id: STR_IGS                    #70
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ARBITES                  #75
+    requires:
+      - STR_ARBITES

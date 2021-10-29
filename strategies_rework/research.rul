@@ -1,0 +1,80 @@
+arcScripts:
+  - delete: marinesPickStrategy
+
+research:
+  - delete: STR_SCOUT
+  - delete: STR_DEVASTATOR
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_PICK_STRATEGY
+
+
+  - name: STR_SPACE_MARINES_STRATEGIES
+    cost: 5
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_MOTION_SCANNER
+      - STR_SMOKE
+      - STR_SPEEDR
+      - STR_TRAINFACILITYR
+      - STR_MOTION_SCANNER
+      - STR_LASER_WEAPONS
+      - STR_CRAFTADD
+
+  - name: STR_PRIMARIS
+    cost: 25
+    points: 5
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+    lookup: ""
+    unlocks:
+      - STR_PRIMARIS_AND_ADEPTAS
+    disables: []
+    spawnedEvent: ""
+
+
+  - name: STR_HONOR_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_HONOR_ARMOR
+    dependencies: !remove
+      - STR_TATICAL
+
+  - name: STR_ASS_ARMOR_DEP1
+    requires: !remove
+      - STR_ASSAULT
+
+  - name: STR_SIGNAL_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_SCOUTH_RESEARCH
+    dependencies: !remove
+      - STR_SCOUT
+
+
+  - name: STR_HEAVY_PLASMA_MC
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_CHAINSWORD_MC
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_MELTABOMB
+    dependencies: !remove
+      - STR_SCOUT
+
+  - name: STR_MGRENADE
+    dependencies: !remove
+      - STR_TATICAL
+
+  - name: STR_MEDI_KIT # apothecary for marines
+    dependencies:
+      - STR_PERSONAL_ARMOR
+    unlocks:
+      - STR_MEDI_KIT_PREREQ
+    lookup: STR_MEDI_KIT_PREREQ

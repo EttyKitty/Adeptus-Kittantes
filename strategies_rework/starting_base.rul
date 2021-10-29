@@ -1,0 +1,72 @@
+startingBase:
+
+  scientists: 20
+  engineers: 10
+
+  randomSoldiers:
+    STR_SOLDIER: 12
+
+  facilities:
+    - type: STR_ACCESS_LIFT
+      x: 2
+      y: 3
+    - type: STR_HANGAR
+      x: 2
+      y: 4
+    - type: STR_HANGAR
+      x: 0
+      y: 4
+    - type: STR_HANGAR
+      x: 0
+      y: 2
+    - type: STR_SMALL_RADAR_SYSTEM
+      x: 3
+      y: 3
+    - type: STR_GENERAL_STORES
+      x: 0
+      y: 1
+    - type: STR_LIVING_QUARTERS
+      x: 3
+      y: 2
+    - type: STR_WORKSHOP
+      x: 4
+      y: 3
+    - type: STR_LABORATORY
+      x: 5
+      y: 3
+
+  items:
+    STR_FRAGMENTATION_ROCKETS: 9
+    STR_AC_AP_AMMO: 8
+    STR_RIFLE: 9
+    STR_RIFLE_CLIP: 27
+    STR_HEAVY_CANNON: 2
+    STR_HC_AP_AMMO: 6
+    STR_ROCKET_LAUNCHER: 1
+    STR_SMALL_ROCKET: 4
+    STR_LARGE_ROCKET: 2
+    STR_GRENADE: 12
+    STR_SMOKE_GRENADE: 12
+    STR_CLEAN_GENESEED: 6
+
+  crafts:
+    - type: STR_SPEEDC
+      id: 1
+      fuel: 1000
+      weapons:
+        - type: STR_CANNON_UC
+          ammo: 60
+        - type: STR_CERBERUS_LAUNCHER
+          ammo: 3
+      status: STR_READY
+
+    - type: STR_SPEEDC
+      id: 2
+      fuel: 1000
+      weapons:
+        - type: STR_CANNON_UC
+          ammo: 60
+        - type: STR_CERBERUS_LAUNCHER
+          ammo: 3
+      status: STR_READY
+
