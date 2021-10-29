@@ -1,0 +1,10 @@
+en-US:
+
+  STR_ADVANCED_BOLT_WEAPON: "Advanced Bolt-Weapon"
+
+  STR_STRATEGY_TEXT_INTRO: "{NEWLINE} This section of the Codex displays useful information about strategies and tactics used by our soldiers."
+  STR_SPACE_MARINES_STRATEGIES: "Adeptus Astartes Tactics"
+  STR_SPACE_MARINES_STRATEGIES_DESC: "{NEWLINE} The Space Marines always prefer to deploy right into the heart of the enemy's force and proceed to unleash a devastating barrage of bolter fire. The initial shock of this assault can often break an enemy force before a campaign has barely begun, ending a rebellion or forcing an alien invader off-world in one fell stroke."
+
+  STR_OUTPOSTS: "Outposts"
+  STR_OUTPOSTS_UFOPEDIA: "{NEWLINE}   Dear Commander,{NEWLINE}{NEWLINE}The Outposts are very cool."
