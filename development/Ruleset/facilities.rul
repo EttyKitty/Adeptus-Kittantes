@@ -1,0 +1,55 @@
+facilities:
+  - type: STR_SLAVE_INCUBATORS                 #USED TO GROW THE GENE-SEED. WORKS THE SAME AS PLANTATIONS IN XPIRATEZ
+    requiresBaseFunc: [MED]
+#    requires:
+#      - STR_SLAVE_INCUBATOR
+    spriteShape: 1
+    spriteFacility: 150
+    buildCost: 100000
+    buildTime: 30
+    monthlyCost: 10000
+    refundValue: 100000
+    mapName: XBASE_08
+    listOrder: 805
+
+  - type: STR_SLAVE_INCUBATORS_LOAD
+    requiresBaseFunc: [MED]
+    spriteShape: 1
+    spriteFacility: 151
+    size: 1
+    buildCost: 200000
+    refundValue: -20000
+    monthlyCost: 20000
+    buildCostItems:
+      STR_CLEAN_GENESEED:
+        build: 3
+        refund: 0
+    buildTime: 60
+    removalTime: 0
+    buildOverFacilities:
+      - STR_SLAVE_INCUBATORS
+    leavesBehindOnSell:
+      - STR_SLAVE_INCUBATORS_UNLOAD
+    mapName: XBASE_08
+    listOrder: 806
+
+  - type: STR_SLAVE_INCUBATORS_UNLOAD
+    requires:
+      - STR_GENERALLOCK
+    requiresBaseFunc: [MED]
+    spriteShape: 1
+    spriteFacility: 151
+    size: 1
+    buildCost: 200000
+    refundValue: -25000
+    monthlyCost: 20000
+    buildCostItems:
+      STR_CLEAN_GENESEED:
+        build: 0
+        refund: 6
+    buildTime: 0
+    removalTime: 1
+    leavesBehindOnSell:
+      - STR_SLAVE_INCUBATORS
+    mapName: XBASE_08
+    listOrder: 806

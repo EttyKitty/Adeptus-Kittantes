@@ -1,0 +1,217 @@
+items:
+  - delete: STR_CAPTAIN_SUIT              #6400
+  - delete: STR_SARGENT_ARMOR             #5500
+  - delete: STR_CHAP_ARMOR                #5900
+  - delete: STR_APOT_ARMOR                #5700
+  - delete: STR_TECH_ARMOR                #5800
+  - delete: STR_HONOR_ARMOR                #5600
+  - delete: STR_SIGNAL_ARMOR                #5602
+  - delete: STR_ASS_ARMOR_HONOR              #5601
+  - delete: STR_DEV_ARMOR                   #5300
+  - delete: STR_ASS_ARMOR                  #5400
+  - delete: STR_LIB_ARMOR                  #6000
+  - delete: STR_LIB_ARMOR_DISABLED
+  - delete: STR_TACTICAL_CARE_PACKAGE
+  - delete: STR_ASSAULT_CARE_PACKAGE
+  - delete: STR_DEVASTATOR_CARE_PACKAGE
+  - delete: STR_SCOUT_CARE_PACKAGE
+  - delete: STR_CRATED_LANDSPEEDER
+
+  - type: STR_CLEAN_GENESEED
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    costSell: 0
+    size: 0.1
+    weight: 3
+    bigSprite: {mod: 40k, index: 300}
+    handSprite: {mod: 40k, index: 560}
+    floorSprite: {mod: 40k, index: 166}
+    power: 5
+    battleType: 0
+    armor: 8
+    invWidth: 1
+    invHeight: 1
+    recover: true
+
+  - type: AUX_MORTAR                 #CHANGED THE ARCING SHOT AND THE BLAST RADIUS TO MATCH THE KRAK MISSILES
+    weight: 0
+    clipSize: 12
+    accuracyAuto: 60
+    tuAuto: 70
+    accuracyMultiplier:
+      firing: 0.8
+    power: 150
+    damageType: 1
+    blastRadius: 1
+    arcingShot: false
+    minRange: 4
+    hitAnimation: {mod: 40k, index: 0 }
+
+  - type: AUX_SIGNUM
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    size: 1
+    categories: [STR_CAT_SPELLS]
+    specialIconSprite: 300
+    fireSound: {mod: 40k, index: 1239 }
+    hitAnimation: {mod: 40k, index: 170 } 
+    power: 10
+    damageType: 10
+    confAimed:
+      name: STR_SIGNUM_USE
+    costAimed:
+      time: 25
+    accuracyAimed: 500
+    maxRange: 20
+    arcingShot: true
+    battleType: 1
+    twoHanded: false
+    invWidth: 1
+    invHeight: 2
+    fixedWeapon: true
+    recover: false
+    clipSize: -1
+    tags:
+      ITEM_BLESS_FIRING_ACCURACY: 1
+
+  - type: AUX_MEDI_KIT                  #FOR APOTHECARY
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    costBuy: 50000
+    costSell: 25000
+
+  - type: STR_ROSARIUS      #FOR CHAPLAIN
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    costBuy: 50000
+    costSell: 25000
+
+  - type: STR_PSYCHIC_HOOD      #FOR LIBRARIAN
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    costBuy: 50000
+    costSell: 25000
+
+  - type: STR_SERVO_ARM     # FOR TECHMARINE
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    costBuy: 50000
+    costSell: 25000
+  
+  - type: STR_MEDICAE_POUCH
+    weight: 2
+    bigSprite: 58
+    floorSprite: 74
+    battleType: 6
+    woundRecovery: 0
+    painKiller: 3
+    heal: 3
+    stimulant: 3
+    medikitTargetSelf: true
+    isConsumable: true
+    medikitType: 0
+    costUse:
+      time: 10
+    invWidth: 2
+    invHeight: 1
+    attraction: 15
+    recover: false
+
+  - type: STR_CAMO_CLOAK
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.2
+    costBuy: 15000
+    costSell: 5000
+
+########################################## WEAPONS ##########################################
+
+########################################## BATTLESCAPE CORPSES ##########################################
+
+  - type: STR_SIGNAL_CORPSE    #CHANGED SPRITE TO MATCH THE DEVASTATOR SQUAD
+    bigSprite: 903
+    floorSprite: 903
+
+#  - type: STR_ASPIRANT
+#    requiresBuy:
+#      - STR_MARINES_STRATEGY
+#      - STR_CHAPTER_PURITY
+#    listOrder: 2000
+#    costBuy: 10000
+#    ignoreInBaseDefense: true
+
+########################################## GEOSCAPE CORPSES ##########################################
+
+  - type: STR_SCOUT_CORPSE    #CORPSES FOR THE GENE-SEED AND ARMOR EXTRACTION
+    recover: true
+    size: 0.5
+    recoveryPoints: 10
+    ignoreInBaseDefense: true
+
+  - type: STR_MK7_CORPSE
+    recover: true
+    size: 1
+    recoveryPoints: 15
+    ignoreInBaseDefense: true
+
+  - type: STR_TERMINATOR_CORPSE
+    recover: true
+    size: 1.5
+    recoveryPoints: 20
+    ignoreInBaseDefense: true
+
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+
+  - type: STR_SERVITOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_BIKE_ARMOR
+    requiresBuy:
+      - STR_NOT_PRIMARIS
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_HWP_CANNON_SHELLS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR    
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+ 
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+
+  - type: STR_TANK_ROCKET_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+  
+  - type: STR_HWP_ROCKETS
+    costBuy: 0
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_TANK_ROCKET_LAUNCHER #Tarantula Sentry Weapon    2300
+    costBuy: 0
+
+  - type: STR_BANNER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ

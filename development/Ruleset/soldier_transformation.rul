@@ -1,0 +1,278 @@
+soldierTransformation:
+
+  - name: STR_PROMOTE_SCOUT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    producedSoldierType: STR_SOLDIER
+    lowerBoundAtMinStats: false
+    rerollStats: 
+      tu: 1
+      stamina: 1
+      health: 1
+      bravery: 1
+      reactions: 1
+      firing: 1
+      throwing: 1
+      strength: 1
+      psiStrength: 1
+      psiSkill: 1
+      melee: 1
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ASPIRANT
+    transferTime: 96
+    recoveryTime: 0
+    requiredItems:
+      STR_CLEAN_GENESEED: 1 
+
+##########################################OFFICERS PROMOTIONS##########################################
+
+  - name: STR_PROMOTE_APOTHECARY
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+    requiresBaseFunc: [MED]
+    producedSoldierType: STR_APOTHECARY
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SOLDIER
+    transferTime: 96
+    recoveryTime: 0
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      AUX_MEDI_KIT: 1
+
+  - name: STR_PROMOTE_LIBRARIAN
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+      - STR_MEDI_KIT
+    producedSoldierType: STR_LIBRARIAN
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SOLDIER
+    transferTime: 96
+    recoveryTime: 0
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      STR_PSYCHIC_HOOD: 1
+
+  - name: STR_PROMOTE_TECHMARINE
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+    requiresBaseFunc: [TEC]
+    producedSoldierType: STR_TECHMARINE
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SOLDIER
+    transferTime: 96
+    recoveryTime: 0
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      STR_SERVO_ARM: 1
+
+  - name: STR_PROMOTE_CHAPLAIN
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_CHAP_ARMOR
+    producedSoldierType: STR_CHAPLAIN
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SOLDIER
+    transferTime: 96
+    recoveryTime: 0
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+      STR_ROSARIUS: 1
+
+  - name: STR_PROMOTE_CAPTAIN
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_CAPTAIN_SUIT
+    producedSoldierType: STR_CAPTAIN
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_STERNGUARD_VET
+      - STR_STERNGUARD_VET_SGT
+      - STR_VANGUARD_VET
+      - STR_VANGUARD_VET_SGT
+    transferTime: 24
+    recoveryTime: 0
+
+########################################## SQUADS PROMOTIONS ##########################################
+
+  - name: STR_PROMOTE_DEVASTATOR
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_DEV_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 0
+    producedSoldierType: STR_DEVASTATOR
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SOLDIER
+    transferTime: 0
+    recoveryTime: 0
+    requiredItems:
+      STR_TATICAL_ARMOR: 1
+
+  - name: STR_PROMOTE_ASSAULT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_ASS_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 1
+    producedSoldierType: STR_ASSAULT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_DEVASTATOR
+      - STR_DEVASTATOR_SGT
+    transferTime: 24
+    recoveryTime: 0
+
+  - name: STR_PROMOTE_MARINE
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 2
+    producedSoldierType: STR_SPACE_MARINE
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ASSAULT
+      - STR_ASSAULT_SGT
+    transferTime: 24
+    recoveryTime: 0
+  
+  - name: STR_PROMOTE_STERNGUARD_VET
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_HONOR_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 3
+    producedSoldierType: STR_STERNGUARD_VET
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SPACE_MARINE
+      - STR_SPACE_MARINE_SGT
+    transferTime: 24
+    recoveryTime: 0
+  
+  - name: STR_PROMOTE_VANGUARD_VET
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_HONOR_ARMOR_RESEARCH
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 4
+    producedSoldierType: STR_VANGUARD_VET
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SPACE_MARINE
+    transferTime: 24
+    recoveryTime: 0
+
+########################################## SQUADS SERGEANTS ##########################################
+
+  - name: STR_PROMOTE_DEVASTATOR_SERGEANT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_DEV_ARMOR
+      - STR_SIGNAL_ARMOR_RESEARCH
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 1
+      STR_RANGED_HONOR: 0
+    producedSoldierType: STR_DEVASTATOR_SGT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_DEVASTATOR
+    transferTime: 24
+    recoveryTime: 0
+
+  - name: STR_PROMOTE_ASSAULT_SERGEANT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_ASS_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 2
+      STR_MELEE_HONOR: 0
+    producedSoldierType: STR_ASSAULT_SGT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_ASSAULT
+    transferTime: 24
+    recoveryTime: 0
+  
+  - name: STR_PROMOTE_MARINE_SGT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_SARGENT_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 3
+      STR_RANGED_HONOR: 0
+    producedSoldierType: STR_SPACE_MARINE_SGT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SPACE_MARINE
+    transferTime: 24
+    recoveryTime: 0
+
+  - name: STR_PROMOTE_STERNGUARD_VET_SGT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 4
+      STR_RANGED_HONOR: 1
+    producedSoldierType: STR_STERNGUARD_VET_SGT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_STERNGUARD_VET
+    transferTime: 24
+    recoveryTime: 0
+
+  - name: STR_PROMOTE_VANGUARD_VET_SGT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+      - STR_PERSONAL_ARMOR
+    requiredCommendations: 
+      STR_TOTAL_SCORE: 5
+      STR_MELEE_HONOR: 1
+    producedSoldierType: STR_VANGUARD_VET_SGT
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SPACE_MARINE
+    transferTime: 24
+    recoveryTime: 0

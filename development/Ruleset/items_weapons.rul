@@ -1,0 +1,1035 @@
+items:
+
+############################################################ ANCHORS ############################################################
+############################################################ ANCHORS ############################################################
+############################################################ ANCHORS ############################################################
+
+  - &STR_BOLT_PISTOL
+    type: STR_MK3_PISTOL
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.2
+    dropoff: 5
+    costBuy: 2500
+    costSell: 1000
+    weight: 15
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+    snapRange: 12
+    accuracySnap: 70
+    accuracyAimed: 0
+    tuSnap: 15
+    tuAimed: 0
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10100
+
+  - &STR_BOLT_RIFLE
+    type: STR_RIFLE
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.3
+    costBuy: 5000
+    costSell: 2500
+    weight: 18
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+    aimRange: 10
+    snapRange: 10
+    autoRange: 10
+    accuracyAimed: 80
+    accuracySnap: 70
+    accuracyAuto: 60
+    dropoff: 4
+    tuAimed: 30
+    confAimed:
+      shots: 1
+    tuSnap: 60
+    confSnap:
+      shots: 2
+    tuAuto: 60
+    autoShots: 4
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10300
+
+############################################################ 40K WEAPON ############################################################
+############################################################ 40K WEAPON ############################################################
+############################################################ 40K WEAPON ############################################################
+
+  - type: STR_FLAMETHROWER #                          10500
+    categories: [ STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    size: 0.2
+    costBuy: 20000
+    costSell: 12000
+    weight: 20
+    compatibleAmmo:
+      - STR_FLAMETHROWER_CLIP
+    accuracyAuto: 20
+    tuAuto: 30
+    battleType: 1
+    twoHanded: true
+    experienceTrainingMode: 6
+    arcingShot: true
+    maxRange: 12
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 6
+    attraction: 7
+    listOrder: 10500
+
+  - type: STR_HAND_FLAMETHROWER
+    categories: [ STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    size: 0.15
+    requiresBuy:
+    - STR_MARINES_AND_ADEPTAS
+    costBuy: 20000
+    costSell: 12000
+    weight: 10
+    compatibleAmmo:
+      - STR_FLAMETHROWER_CLIP
+    accuracyAuto: 10
+    tuAuto: 20
+    battleType: 1
+    arcingShot: true
+    twoHanded: false
+    experienceTrainingMode: 6
+    maxRange: 12
+    invWidth: 2
+    invHeight: 2
+    armor: 30
+    autoShots: 6
+    attraction: 7
+    listOrder: 10495
+
+  - type: STR_FLAMETHROWER_CLIP #                     10520
+    categories: [ STR_CAT_FLAMER, STR_CAT_TACTICAL]
+    size: 0.2
+    costBuy: 2000
+    costSell: 1000
+    weight: 5
+    power: 40
+    damageType: 2
+    damageAlter:
+      IgnoreSelfDestruct: false
+    blastRadius: 1
+    clipSize: 40
+    battleType: 2
+    invWidth: 1
+    invHeight: 2
+    bulletSpeed: 50
+    explosionSpeed: 10
+    armor: 15
+    attraction: 7
+    listOrder: 10520
+ 
+  - type: STR_HAND_FLAMETHROWER_CLIP ## Handflamer fuel tank
+    requiresBuy:
+    - STR_GENERALLOCK
+
+  - type: STR_PISTOLB #BOLTER PISTOL  10110  TYPE BLUE
+    refNode: *STR_BOLT_PISTOL
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.2
+    dropoff: 5
+    costSell: 1000
+    weight: 20
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+    accuracySnap: 75
+#    accuracyAimed: 100
+    tuSnap: 21
+#    tuAimed: 35
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10110
+
+  - type: STR_PISTOLS #BOLTER PISTOL  10120  TYPE SCOPED
+    refNode: *STR_BOLT_PISTOL
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.2
+    dropoff: 5
+    costSell: 1000
+    weight: 20
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuSnap: 21
+    tuAimed: 35
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 2
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10120
+
+  - type: STR_PISTOLH #BOLTER PISTOL  10130 TYPE HYBRID
+    refNode: *STR_BOLT_PISTOL
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.2
+    dropoff: 5
+    costSell: 1000
+    weight: 20
+    compatibleAmmo:
+      - STR_PISTOL_CLIP
+      - STR_PISTOL_CLIP_EX
+      - STR_PISTOL_CLIP_AP
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_EX
+    accuracySnap: 75
+    accuracyAimed: 100
+    tuSnap: 21
+    tuAimed: 35
+    battleType: 1
+    twoHanded: false
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10130
+
+  - type: STR_PISTOL_CLIP #              10210                    ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costBuy: 250
+    costSell: 125
+    weight: 2
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+    explosionSpeed: 5
+    power: 65
+    damageType: 1
+    clipSize: 10
+    battleType: 2
+    armor: 30
+    attraction: 1
+    invWidth: 1
+    invHeight: 1
+    listOrder: 10210
+
+  - type: STR_PISTOL_CLIP_EX #           2001       EXPLOSIVE    ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costSell: 250
+    weight: 2
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+    blastRadius: 1
+    power: 60
+    damageType: 3
+    clipSize: 10
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    armor: 30
+    attraction: 1
+    listOrder: 10230
+
+  - type: STR_PISTOL_CLIP_AP #           2001       AP++++++++   ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costSell: 250
+    weight: 2
+    damageAlter: #DA BOLTER AP+
+      ArmorEffectiveness: 0.5
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.5
+    explosionSpeed: 5
+    power: 60
+    damageType: 1
+    clipSize: 10
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    armor: 30
+    attraction: 1
+    listOrder: 10240
+
+  - type: STR_RIFLEB #BOLTER #        10310  TYPE BLUE
+    refNode: *STR_BOLT_RIFLE
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.3
+    dropoff: 5
+    costSell: 5000
+    weight: 25
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_EX
+    accuracySnap: 80
+    accuracyAuto: 80
+    tuSnap: 15
+    tuAuto: 30
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 2
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10310
+
+  - type: STR_RIFLEC #BOLTER #        10320  TYPE STALKER           AIMED
+    refNode: *STR_BOLT_RIFLE
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.3
+    dropoff: 5
+    costSell: 5000
+    weight: 25
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_EX
+    accuracySnap: 80
+    accuracyAuto: 66
+    accuracyAimed: 100
+    tuSnap: 25
+    tuAimed: 60
+    tuAuto: 40
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 3
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10320
+
+  - type: STR_RIFLED #BOLTER #        10330  TYPE RIFLE
+    refNode: *STR_BOLT_RIFLE
+    requiresBuy:
+      - STR_PRIMARIS
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.3
+    dropoff: 5
+    costBuy: 10000
+    costSell: 5000
+    weight: 25
+    compatibleAmmo:
+      - STR_RIFLE_CLIP
+      - STR_RIFLE_CLIP_AP
+      - STR_RIFLE_CLIP_EX
+    accuracySnap: 80
+    accuracyAuto: 66
+    tuSnap: 25
+    tuAuto: 40
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    autoShots: 5
+    bulletSpeed: 30
+    attraction: 1
+    listOrder: 10330
+
+  - type: STR_RIFLE_CLIP #            10410                      ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costBuy: 500
+    costSell: 250
+    weight: 3
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+    explosionSpeed: 5
+    power: 65
+    damageType: 1
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10410
+
+  - type: STR_RIFLE_CLIP_EX #         10430     EXPLOSIVE        ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costSell: 150
+    weight: 3
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+    blastRadius: 1
+    power: 60
+    damageType: 3
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10430
+
+  - type: STR_RIFLE_CLIP_AP #         10440     AP++++++++       ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    size: 0.1
+    costSell: 150
+    weight: 3
+    damageAlter: #DA BOLTER AP+
+      ArmorEffectiveness: 0.5
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 1.0
+      ToStun: 0.5
+    explosionSpeed: 5
+    power: 60
+    damageType: 1
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10440
+
+  - type: STR_RIFLE_CLIP_N #          10450                      ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requires:
+      - STR_ALIENS_ONLY
+    size: 0.1
+    costSell: 150
+    weight: 3
+    damageAlter: #DA BLIGHT
+      ToArmorPre: 0.2
+      ToArmor: 0.1
+      ToHealth: 0.7
+      ToStun: 0.2
+      ToWound: 0.5
+      ToEnergy: 0.5
+      RandomWound: false
+    explosionSpeed: 5
+    power: 60
+    damageType: 1
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10450
+
+  - type: STR_RIFLE_CLIP_R #          10460                      ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_TACTICAL]
+    requires:
+      - STR_ALIENS_ONLY
+    size: 0.1
+    costSell: 150
+    weight: 3
+    damageAlter: #DA BOLTER TZZ
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.1
+      ToHealth: 1.0
+      ToStun: 0.5
+      ToMorale: 0.5
+    explosionSpeed: 5
+    power: 60
+    damageType: 1
+    clipSize: 20
+    battleType: 2
+    armor: 30
+    invWidth: 1
+    invHeight: 2
+    listOrder: 10460
+
+  - type: STR_AUTO_CANNON #HEAVYBOLTER                12000
+    categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
+    size: 0.3
+    dropoff: 5
+    costBuy: 40000
+    costSell: 15000
+    weight: 40
+    compatibleAmmo:
+      - STR_AC_AP_AMMO
+      - STR_AC_I_AMMO
+    confAuto:
+      shots: 3
+    confSnap:
+      shots: 3
+    accuracyAimed: 0
+    accuracySnap: 70
+    accuracyAuto: 80
+    tuAimed: 0
+    tuSnap: 55
+    tuAuto: 65
+    snapRange: 36
+    autoRange: 36
+    kneelBonus: 100
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    armor: 30
+    sprayWaypoints: 2
+    bulletSpeed: 50
+    attraction: 4
+    listOrder: 12000
+
+  - type: STR_AC_AP_AMMO #HEAVYBOLTER                 12010                           ToStun
+    categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
+    size: 0.1
+    costBuy: 4000
+    costSell: 2000
+    weight: 20
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0.05
+      ArmorEffectiveness: 0.8
+      ToArmor: 0.1
+      ToHealth: 1.1
+      ToStun: 0.5
+    explosionSpeed: 5
+    power: 70
+    damageType: 1
+    clipSize: 60
+    battleType: 2
+    armor: 30
+    invWidth: 2
+    invHeight: 2
+    autoShots: 5
+    listOrder: 12020
+
+  - type: STR_AC_HE_AMMO #HEAVYBOLTER                 12030
+    categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
+    size: 0.1
+    costBuy: 0
+    costSell: 0
+    weight: 20
+    power: 50
+    damageType: 3
+    clipSize: 50
+    battleType: 2
+    armor: 30
+    invWidth: 2
+    invHeight: 2
+    autoShots: 5
+    listOrder: 12030
+
+  - type: STR_AC_I_AMMO #HEAVYBOLTER                  12040
+    categories: [STR_CAT_BOLTER, STR_CAT_DEVASTATOR]
+    size: 0.1
+    costBuy: 6000
+    costSell: 3000
+    weight: 20
+    power: 40
+    damageType: 8
+    damageAlter: #DA BOLTER
+      ToArmorPre: 0
+      ArmorEffectiveness: 1.4
+      ToArmor: 0
+      ToHealth: 1.2
+      ToStun: 0
+    clipSize: 25
+    shotgunPellets: 4
+    battleType: 2
+    armor: 30
+    invWidth: 2
+    invHeight: 2
+    listOrder: 12040
+
+  - type: STR_HEAVY_CANNON #SNIPER                    11900                           AIMED
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    size: 0.3
+    costBuy: 8000
+    costSell: 4000
+    weight: 30
+    compatibleAmmo:
+      - STR_HC_AP_AMMO
+    aimRange: 36
+    snapRange: 36
+    dropoff: 5
+    accuracySnap: 55
+    accuracyAimed: 120
+    tuSnap: 45
+    tuAimed: 85
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    listOrder: 11900
+    bulletSpeed: 50
+
+  - type: STR_HC_AP_AMMO #SNIPER AP                   11910
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    size: 0.1
+    costBuy: 800
+    costSell: 400
+    weight: 3
+    power: 70
+    damageAlter:
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      RandomHealth: true
+      ToHealth: 1.4
+      ToStun: 0.5
+      ToTile: 0.0
+    damageType: 1
+    clipSize: 6
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    listOrder: 11910
+
+  - type: STR_HC_HE_AMMO #SNIPER HE                   11920
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    size: 0.1
+    costBuy: 0
+    costSell: 0
+    weight: 3
+    power: 90
+    damageType: 3
+    clipSize: 4
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    blastRadius: 1
+    listOrder: 11920
+
+  - type: STR_HC_I_AMMO #SNIPER I                     11930
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    size: 0.1
+    costBuy: 0
+    costSell: 0
+    weight: 3
+    power: 100
+    damageType: 2
+    clipSize: 4
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    listOrder: 11930
+
+  - type: STR_ROCKET_LAUNCHER #                       12100                                  AIMED
+    categories: [ STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
+    size: 0.4
+    costBuy: 60000
+    costSell: 15000
+    weight: 50
+    compatibleAmmo:
+      - STR_SMALL_ROCKET
+      - STR_LARGE_ROCKET
+      - STR_INCENDIARY_ROCKET
+    aimRange: 48
+    snapRange: 48
+    accuracySnap: 65
+    accuracyAimed: 115
+    dropoff: 5
+    tuSnap: 65
+    tuAimed: 85
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    listOrder: 12100
+
+  - type: STR_SMALL_ROCKET #                          12130
+    categories: [ STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
+    size: 0.2
+    costBuy: 8000
+    costSell: 7000
+    weight: 6
+    power: 100
+    damageType: 3
+    clipSize: 1
+    battleType: 2
+    invWidth: 2
+    invHeight: 1
+    blastRadius: 10
+    listOrder: 12130
+
+  - type: STR_LARGE_ROCKET #                          12140
+    categories: [ STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
+    size: 0.2
+    costBuy: 12000
+    costSell: 10000
+    weight: 8
+    power: 150
+    damageType: 1 # AP instead of HE
+    damageAlter:
+      ArmorEffectiveness: 0.80
+      RandomType: 2 # side effect of other damageType
+      FixRadius: 1
+    clipSize: 1
+    battleType: 2
+    invWidth: 2
+    invHeight: 1
+    blastRadius: 1
+    hitAnimation: 184 #Green EX
+    listOrder: 12140
+
+  - type: STR_INCENDIARY_ROCKET #                     12150
+    categories: [ STR_CAT_ROCKETL, STR_CAT_DEVASTATOR]
+    size: 0.2
+    costBuy: 8000
+    costSell: 7000
+    weight: 8
+    power: 90
+    damageType: 2
+    clipSize: 1
+    battleType: 2
+    invWidth: 2
+    invHeight: 1
+    blastRadius: 5
+    listOrder: 12150
+
+  - type: STR_SHOTGUN #                               10600
+    bigSprite: 57
+    floorSprite: 73
+    handSprite: 128
+
+  - type: STR_POWERFIST            #12600           DA POWER
+    categories: [STR_CAT_MELEE, STR_CAT_ASSAULT]
+    size: 0.1
+    costBuy: 40000
+    costSell: 20000
+    weight: 20
+    power: 120
+    damageAlter:     #DA POWER
+      ArmorEffectiveness: 1.0
+      ToArmorPre: 0.0
+      ToHealth: 1.0
+      RandomType: 2 #TFTD [50% - 150%]
+      FixRadius: 0
+      RadiusEffectiveness: 0.0
+      ToItem: 0.0
+      TileDamageMethod: 1
+    damageType: 3
+    accuracyMelee: 80
+    tuMelee: 15
+    flatRate: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    strengthApplied: false
+    invWidth: 2
+    invHeight: 2
+    armor: 20
+    listOrder: 12600  
+
+  - type: STR_MFIST #special
+    weight: 0
+    power: 80
+    damageAlter:     #DA POWER
+      ArmorEffectiveness: 1.0
+      ToArmorPre: 1.0
+      ToHealth: 1.0
+      RandomType: 2 #TFTD [50% - 150%]
+      FixRadius: 0
+      RadiusEffectiveness: 0.0
+      ToItem: 0.0
+      TileDamageMethod: 1
+    damageType: 3
+    accuracyMelee: 80
+    tuMelee: 15
+    flatRate: true
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    skillApplied: true
+    strengthApplied: false
+    recover: false
+    fixedWeapon: true
+    specialUseEmptyHand: false
+    experienceTrainingMode: 13
+
+  - type: STR_BANNER #             30600
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+    size: 0.3
+    costBuy: 1000000
+    costSell: 500000
+    confAimed:
+      shots: 1
+      name: STR_FTE
+    weight: 60
+    power: 10
+    damageBonus:
+      bravery: 1.1
+    damageType: 0
+    damageAlter:
+      RandomType: 3
+      RadiusEffectiveness: 0.3
+      ArmorEffectiveness: 0.0
+      ToStun: 0.1
+      ToMorale: -0.18
+      ToTime: -1.00
+    accuracyMultiplier:
+      firing: 0.0
+      bravery: 2.2
+    accuracyAimed: 100
+    costAimed:
+      time: 70
+      energy: 90
+      morale: 15
+    clipSize: -1
+    flatRate: true
+    battleType: 1
+    arcingShot: true
+    maxRange: 20
+    bulletSpeed: 80
+    experienceTrainingMode: 32
+    invWidth: 2
+    invHeight: 3
+    armor: 12
+    listOrder: 30600
+
+  - type: STR_GRENADE #frag                #4006
+    size: 0.1
+    costBuy: 4000
+    costSell: 2000
+    weight: 4
+    power: 70
+    damageType: 3
+    battleType: 4
+    invWidth: 1
+    invHeight: 2
+    blastRadius: 5
+    listOrder: 13600
+    throwRange: 6
+
+  - type: STR_KRAK_GRENADE #krak
+    size: 0.1
+    costBuy: 6000
+    costSell: 3000
+    weight: 4
+    power: 100
+    damageType: 1 # AP instead of HE
+    damageAlter:
+      ArmorEffectiveness: 0.80
+      RandomType: 2 # side effect of other damageType
+      FixRadius: 1
+    battleType: 4
+    invWidth: 1
+    invHeight: 2
+    blastRadius: 1
+    listOrder: 13650
+    throwRange: 6
+  
+  - type: STR_PLASMA_RIFLE_TERRAN #                 11400
+    costBuy: 40000
+    costSell: 20000
+
+  - type: STR_PLASMA_PISTOL_TERRAN #                11200
+    costBuy: 20000
+    costSell: 10000
+
+  - type: STR_PLASMA_RIFLE_CLIP #                   11510
+    costBuy: 4000
+    costSell: 5000
+
+  - type: STR_HB                                                                #13100 no amied
+    costBuy: 20000
+    costSell: 10000
+
+  - type: STR_HB_CLIP                                                           #13120              ToStun
+    costBuy: 2000
+    costSell: 1000
+
+############################################################ NEW WEAPON ############################################################
+############################################################ NEW WEAPON ############################################################
+############################################################ NEW WEAPON ############################################################
+
+  - type: STR_ASSAULT_SHOTGUN
+    categories: [STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.2
+    costBuy: 5000
+    costSell: 2500
+    weight: 20
+    bigSprite: {mod: 40k, index: 235}
+    floorSprite: {mod: 40k, index: 118}
+    handSprite: {mod: 40k, index: 328}
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: {mod: 40k, index: 755}
+    compatibleAmmo:
+      - STR_ASSAULT_SHOTGUN_SHELLS
+    snapRange: 18
+    aimRange: 18
+    dropoff: 5
+    accuracySnap: 55
+    accuracyAimed: 70
+    tuSnap: 25
+    tuAimed: 35
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    listOrder: 10600
+    tags:
+      ITEM_RECOIL: 30
+
+  - type: STR_ASSAULT_SHOTGUN_SHELLS
+    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    shotgunBehavior: 1
+    shotgunSpread: 25
+    size: 0.1
+    costBuy: 500
+    costSell: 500
+    weight: 5
+    bigSprite: {mod: 40k, index: 236}
+    floorSprite: {mod: 40k, index: 119}
+    handSprite: {mod: 40k, index: 46}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+    power: 55
+    damageType: 1
+    clipSize: 6
+    battleType: 2
+    listOrder: 10610
+    shotgunPellets: 4
+
+  #  - type: STR_ASSAULT_SHOTGUN_SHELLS_AP   # I CAN'T BALANCE THEM
+  #    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+  #    requiresBuy:
+  #      - STR_MARINES_STRATEGY
+  #    shotgunBehavior: 1
+  #    shotgunSpread: 25
+  #    size: 0.1
+  #    costBuy: 10000
+  #    costSell: 3500
+  #    weight: 5
+  #    bigSprite: {mod: 40k, index: 803}
+  #    floorSprite: {mod: 40k, index: 119}
+  #    handSprite: {mod: 40k, index: 464}
+  #    hitSound: {mod: 40k, index: 22}
+  #    hitAnimation: {mod: 40k, index: 26}
+  #    power: 55
+  #    damageAlter:
+  #      ArmorEffectiveness: 0.5
+  #      ToArmorPre: 0.0
+  #      ToArmor: 0.0
+  #      ToHealth: 1.0
+  #      ToStun: 0.5
+  #    damageType: 1
+  #    battleType: 2
+  #    invWidth: 1
+  #    invHeight: 1
+  #    clipSize: 6
+  #    listOrder: 10710
+  #    shotgunPellets: 6
+
+  - type: STR_ASTARTES_WEBBER #GRAVGUN                          11805
+    categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.2
+    dropoff: 5
+    costBuy: 30000
+    costSell: 15000
+    weight: 20
+    bigSprite: {mod: 40k, index: 626}
+    floorSprite: {mod: 40k, index: 615}
+    handSprite: {mod: 40k, index: 184}
+    bulletSprite: {mod: 40k, index: 21}
+    fireSound: {mod: 40k, index: 802}
+    compatibleAmmo:
+      - STR_ASTARTES_WEBBER_AMMO
+    accuracySnap: 60
+    tuSnap: 40
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+    recoveryPoints: 4
+    listOrder: 11805
+
+  - type: STR_ASTARTES_WEBBER_AMMO 
+    categories: [STR_CAT_GRAVGUN, STR_CAT_TACTICAL]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.1
+    costBuy: 10000
+    costSell: 5000
+    weight: 6
+    bigSprite: {mod: 40k, index: 627}
+    floorSprite: {mod: 40k, index: 616}
+    handSprite: {mod: 40k, index: 616}
+    hitSound: {mod: 40k, index: 790}
+    hitAnimation: {mod: 40k, index: 160}
+    power: 60
+    damageType: 6
+    clipSize: 4
+    battleType: 2
+    recoveryPoints: 1
+    damageAlter: #GRAV GUN
+      RandomType: 2 #TFTD [50% - 150%]
+      ArmorEffectiveness: 0.0
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 0.0
+      ToStun: 1.0
+      ToWound: 0.0
+    listOrder: 11806
+
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+############################################################ CLEANING ############################################################
+
+  - type: STR_PISTOL  #BOLTER PISTOL  10100
+    requiresBuy:
+      - STR_GUARD_AND_ARBITES
+      - STR_LIGHT_BOLTERS
+
+  - type: STR_SHOTGUN
+    requiresBuy:
+      - STR_GUARD_AND_ARBITES
+
+  - type: STR_SHOTGUN_SHELLS
+    requiresBuy:
+      - STR_GUARD_AND_ARBITES
+
+  - type: STR_STUN_ROD
+    requiresBuy:
+      - STR_GUARD_AND_ARBITES

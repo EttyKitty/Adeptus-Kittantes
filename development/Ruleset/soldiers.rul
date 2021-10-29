@@ -1,0 +1,252 @@
+soldiers:
+
+  - type: STR_FALLEN
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+
+  - type: STR_CHAOS_MARINE
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+
+########################################## ASPIRANT ##########################################
+
+  - type: STR_ASPIRANT
+    costBuy: 10000
+    costSalary: 1000
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    allowPiloting: true
+    armor: STR_SCOUT_UC
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 0
+    avatarOffsetX: 67
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+    deathMale: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]
+    deathFemale: [744, 745, 746, 747, 748, 749, 750, 751, 752]
+    allowPromotion: false
+    rankStrings:
+      - STR_ASPIRANT
+
+########################################## MAIN SPACE MARINE SOLDIER TYPE ##########################################
+
+  - &STR_SPACE_MARINE
+    type: STR_SOLDIER
+    costBuy: 0
+    costSalary: 10000
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    minStats:
+      tu: 50
+      stamina: 40
+      health: 40
+      bravery: 60 #was 10
+      reactions: 40
+      firing: 50
+      throwing: 50
+      strength: 40
+      psiStrength: 40 # was 0
+      psiSkill: 0
+      melee: 50
+    maxStats:
+      tu: 70
+      stamina: 80
+      health: 60
+      bravery: 80
+      reactions: 60
+      firing: 70
+      throwing: 70
+      strength: 50
+      psiStrength: 100
+      psiSkill: 16
+      melee: 70
+    statCaps:
+      tu: 100
+      stamina: 120
+      health: 80
+      bravery: 120
+      reactions: 110
+      firing: 120
+      throwing: 120
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    trainingStatCaps:
+      tu: 80
+      stamina: 100
+      health: 70
+      firing: 100
+      throwing: 80
+      strength: 80
+      psiStrength: 100
+      psiSkill: 100
+      melee: 100
+    dogfightExperience:
+      bravery: 10
+      reactions: 30
+      firing: 25
+    allowPiloting: true
+    armor: STR_SCOUT_UC
+    standHeight: 22
+    kneelHeight: 14
+    avatarOffsetX: 67
+    avatarOffsetY: 42
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - MarineName/00-Spacemarine.nam
+    deathMale: [713, 714, 715, 716, 717, 718, 719, 720, 721, 722]
+    deathFemale: [744, 745, 746, 747, 748, 749, 750, 751, 752]
+    allowPromotion: false
+    rankStrings:
+      - STR_SOLDIER
+
+########################################## OFFICERS ##########################################
+
+  - type: STR_APOTHECARY
+    refNode: *STR_SPACE_MARINE
+    costSalary: 50000
+    armor: STR_APOT_ARMOR_UC
+    rankStrings:
+      - STR_APOTHECARY
+
+  - type: STR_LIBRARIAN
+    refNode: *STR_SPACE_MARINE
+    costSalary: 50000
+    armor: STR_LIB_ARMOR_UC
+    rankStrings:
+      - STR_LIBRARIAN
+
+  - type: STR_TECHMARINE
+    refNode: *STR_SPACE_MARINE
+    costSalary: 50000
+    armor: STR_TECH_ARMOR_UC
+    rankStrings:
+      - STR_TECHMARINE
+    allowPiloting: true
+
+  - type: STR_CHAPLAIN
+    refNode: *STR_SPACE_MARINE
+    costSalary: 50000
+    armor: STR_CHAP_ARMOR_UC
+    rankStrings:
+      - STR_CHAPLAIN
+
+########################################## SQUADS ##########################################
+
+  - type: STR_DEVASTATOR
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_DEV_ARMOR_UC
+    rankStrings:
+      - STR_DEVASTATOR
+
+  - type: STR_DEVASTATOR_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_SIGNAL_ARMOR_UC
+    rankStrings:
+      - STR_DEVASTATOR_SGT
+
+  - type: STR_ASSAULT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_ASS_ARMOR_UC
+    rankStrings:
+      - STR_ASSAULT
+
+  - type: STR_ASSAULT_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_ASS_SGT_ARMOR_UC
+    rankStrings:
+      - STR_ASSAULT_SGT
+
+  - type: STR_SPACE_MARINE
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_PERSONAL_ARMOR_UC
+    rankStrings:
+      - STR_SPACE_MARINE
+
+  - type: STR_SPACE_MARINE_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_SARGENT_ARMOR_UC
+    rankStrings:
+      - STR_SPACE_MARINE_SGT
+
+  - type: STR_STERNGUARD_VET
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_HONOR_ARMOR_UC
+    rankStrings:
+      - STR_STERNGUARD_VET
+
+  - type: STR_STERNGUARD_VET_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_HONOR_ARMOR_SGT_UC
+    rankStrings:
+      - STR_STERNGUARD_VET_SGT
+
+  - type: STR_VANGUARD_VET
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_ASS_ARMOR_HONOR_UC
+    rankStrings:
+      - STR_VANGUARD_VET
+
+  - type: STR_VANGUARD_VET_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_ASS_ARMOR_HONOR_SGT_UC
+    rankStrings:
+      - STR_VANGUARD_VET_SGT
+
+  - type: STR_CAPTAIN
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_CAPTAIN_UC
+    rankStrings:
+      - STR_CAPTAIN
+
+########################################## VETERANS WITH THE TERMINATOR ARMOR ##########################################
+
+  - type: STR_TERMINATOR
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_CAPTAIN_UC
+    rankStrings:
+      - STR_TERMINATOR
+
+  - type: STR_TERMINATOR_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_CAPTAIN_UC
+    rankStrings:
+      - STR_TERMINATOR_SGT
+
+  - type: STR_ASSTERMINATOR
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_CAPTAIN_UC
+    rankStrings:
+      - STR_ASSTERMINATOR
+
+  - type: STR_ASSTERMINATOR_SGT
+    refNode: *STR_SPACE_MARINE
+    costSalary: 20000
+    armor: STR_CAPTAIN_UC
+    rankStrings:
+      - STR_ASSTERMINATOR_SGT

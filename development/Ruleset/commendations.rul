@@ -1,0 +1,35 @@
+ commendations:
+  - type: STR_TOTAL_SCORE
+    description: STR_TOTAL_SCORE_DESC
+    sprite: 1
+    criteria:
+       totalScore: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000]
+
+  - type: STR_MELEE_HONOR
+    description: STR_MELEE_HONOR_DESC
+    sprite: 2
+    criteria: 
+      killsWithCriteriaCareer: [10, 20]
+    killCriteria:
+      -
+        - [1, ["BT_MELEE", "STATUS_DEAD", "FACTION_HOSTILE"]]
+
+  - type: STR_RANGED_HONOR
+    description: STR_RANGED_HONOR_DESC
+    sprite: 2
+    criteria: 
+      killsWithCriteriaCareer: [15, 30]
+    killCriteria:
+      -
+        - [1, ["BT_FIREARM", "STATUS_DEAD", "FACTION_HOSTILE"]]
+
+  - type: STR_TERMINATOR_CROSS 
+    description: STR_TERMINATOR_CROSS_DESCRIPTION
+    sprite: 4
+    criteria: 
+      totalScore: [12000]
+      killsWithCriteriaCareer: [40]
+    killCriteria:
+      -
+        - [1, ["STATUS_DEAD", "FACTION_HOSTILE"]]
+    

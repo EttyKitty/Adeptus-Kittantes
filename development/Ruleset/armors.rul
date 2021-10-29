@@ -1,0 +1,3642 @@
+armors:
+  - delete: STR_SCOUT_UC
+  - delete: STR_SCOUTH_UC
+  - delete: STR_SCOUTHB_UC
+  - delete: STR_SCOUTHR_UC
+  - delete: STR_SCOUTHY_UC
+  - delete: STR_SCOUTHG_UC
+  - delete: STR_PERSONAL_ARMOR_UC
+  - delete: STR_DEV_ARMOR_UC
+  - delete: STR_SIGNAL_ARMOR_UC
+  - delete: STR_ASS_ARMOR_UC
+  - delete: STR_ASS_SGT_ARMOR_UC
+  - delete: STR_SARGENT_ARMOR_UC
+  - delete: STR_HONOR_ARMOR_UC
+  - delete: STR_SARGENT_ARMOR_UC
+
+  - &STR_SCOUT_UC
+    type: STR_SCOUT_UC                 #SCOUT ARMOR
+    visibilityAtDay: 60
+    visibilityAtDark: 60
+    spriteSheet: XCOM_0.PCK
+    storeItem: STR_NONE
+    corpseGeo: STR_SCOUT_CORPSE
+    corpseBattle:
+      - STR_SCOUT_CORPSE
+    stats:
+       tu: 0
+       stamina: 0
+       firing: 0
+       health: 0
+       bravery: 0 #always multiples of 10
+       reactions: 0
+       throwing: 0
+       strength: 0
+       psiStrength: 0
+       psiSkill: 0
+       melee: 0
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+    damageModifier:
+      - 1.0 #SUPPORT
+      - 1.0 #PIERCING
+      - 1.0 #FLAME
+      - 1.0 #CONCUSSION
+      - 1.0 #PHOTON
+      - 1.0 #PLASMA
+      - 1.0 #NON-LETHAL
+      - 1.0 #CUTTING
+      - 1.0 #ACID
+      - 1.0 #GAS
+      - 1.0 #MENTAL
+      - 1.0 #?
+      - 1.0 #?
+      - 1.0 #?
+    units:
+      - STR_SOLDIER
+      - STR_ASPIRANT
+    loftempsSet: [ 3 ]
+    builtInWeapons: 
+      - STR_MEDICAE_POUCH
+      - INV_NULL_3X3
+
+  - type: STR_SCOUTH_UC                  #SCOUT HONOR BROWN
+    refNode: *STR_SCOUT_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    customArmorPreviewIndex: 14
+    spriteSheet: XCOM_HS.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+  - type: STR_SCOUTHW_UC                 #SCOUT HONOR WHITE
+    refNode: *STR_SCOUT_UC
+    ufopediaType: STR_SCOUTH_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    spriteSheet: XCOM_HSW.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+
+  - type: STR_SCOUTHB_UC                 #SCOUT HONOR BLACK
+    refNode: *STR_SCOUT_UC
+    ufopediaType: STR_SCOUTH_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    spriteSheet: XCOM_HSB.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+  - type: STR_SCOUTHR_UC                 #SCOUT HONOR RED
+    refNode: *STR_SCOUT_UC
+    ufopediaType: STR_SCOUTH_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    spriteSheet: XCOM_HSR.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+  - type: STR_SCOUTHY_UC                 #SCOUT HONOR YELLOW
+    refNode: *STR_SCOUT_UC
+    ufopediaType: STR_SCOUTH_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    spriteSheet: XCOM_HSY.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+  - type: STR_SCOUTHG_UC                 #SCOUT HONOR GREEN
+    refNode: *STR_SCOUT_UC
+    ufopediaType: STR_SCOUTH_UC
+    camouflageAtDay: -10
+    camouflageAtDark: -10
+    spriteSheet: XCOM_HSG.PCK
+    storeItem: STR_CAMO_CLOAK
+    corpseBattle:
+      - STR_SCOUTH_CORPSE
+    frontArmor: 95
+    sideArmor: 72
+    rearArmor: 52
+    underArmor: 42
+
+########################################## MK7 Power Armor ##########################################
+
+  - &STR_MK7_ARMOR
+    type: STR_PERSONAL_ARMOR_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 40
+    heatVision: 50
+    spriteSheet: XCOM_1.PCK
+    customArmorPreviewIndex: 1
+    storeItem: STR_TATICAL_ARMOR
+    corpseBattle:
+      - STR_MK7_CORPSE
+    corpseGeo: STR_MK7_CORPSE
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    stats:
+       tu: 0
+       stamina: 0
+       health: 30
+       bravery: 0 #always multiples of 10
+       reactions: 0
+       firing: 0
+       throwing: 0
+       strength: 0
+       psiStrength: 0
+       psiSkill: 0
+       melee: 0
+    frontArmor: 125
+    sideArmor: 115
+    rearArmor: 85
+    underArmor: 75
+    damageModifier: #MARINE ARMOR
+      - 1.0 #SUPPORT
+      - 1.0 #PIERCING
+      - 0.6 #FLAME
+      - 0.8 #CONCUSSION
+      - 0.8 #PHOTON
+      - 1.0 #PLASMA
+      - 0.6 #NON-LETHAL
+      - 0.8 #CUTTING
+      - 0.8 #ACID
+      - 0.0 #GAS
+      - 1.0 #MENTAL
+      - 1.0 #?
+      - 1.0 #?
+      - 1.0 #?
+    units:
+      - STR_SPACE_MARINE
+    drawingRoutine: 0
+    loftempsSet: [ 3 ]
+    builtInWeapons:
+      - INV_NULL_3X3
+
+########################################## OFFICERS ARMORS ##########################################
+
+  - type: STR_APOT_ARMOR_UC                 #APOTHECARY VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_22.PCK
+    customArmorPreviewIndex: 6
+    corpseBattle:
+      - STR_APOT_CORPSE
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_MEDI_KIT
+    units:
+      - STR_APOTHECARY
+
+  - type: STR_LIB_ARMOR_UC                 #LIBRARIAN VARIANT
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_PSI_AMP
+
+  - type: STR_LIB_ARMOR_LOCKDOWN
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_LOCKDOWN_TOME
+
+  - type: STR_LIB_ARMOR_MELEE_INSPIRE
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_MELEE_INSPIRE_TOME
+
+  - type: STR_LIB_ARMOR_SHIELD
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_SHIELD_TOME
+
+  - type: STR_LIB_ARMOR_SMITE
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_SMITE_TOME
+
+  - type: STR_LIB_ARMOR_STASIS
+    refNode: *STR_MK7_ARMOR
+    ufopediaType: STR_LIB_ARMOR_UC
+    spriteSheet: XCOM_24.PCK
+    customArmorPreviewIndex: 12
+    corpseBattle:
+      - STR_LIB_CORPSE
+    specialWeapon: STR_LIBRARIAN_SPECIAL_WEAPON
+    units:
+      - STR_LIBRARIAN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - STR_STASIS_TOME
+
+  - type: STR_TECH_ARMOR_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_30.PCK
+    customArmorPreviewIndex: 5
+    corpseBattle:
+      - STR_TECH_CORPSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    specialWeapon: AUX_PROBE
+    units:
+      - STR_TECHMARINE
+
+  - type: STR_CHAP_ARMOR_UC                 #CHAPLAIN VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_27.PCK
+    spriteInv: MAN_27
+    customArmorPreviewIndex: 13
+    zombiImmune: true
+    corpseBattle:
+      - STR_CHAP_CORPSE
+    builtInWeapons:
+      - AUX_CROZIUS
+      - INV_NULL_3X3
+    units:
+      - STR_CHAPLAIN
+
+########################################## SQUADS ARMORS ##########################################
+
+  - type: STR_DEV_ARMOR_UC                 #DEVASTATOR VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_23.PCK
+    customArmorPreviewIndex: 3
+    stats:
+       firing: 5
+    rearArmor: 90
+    units:
+      - STR_DEVASTATOR
+      - STR_SPACE_MARINE
+    builtInWeapons:
+      - INV_NULL_1X3
+
+  - type: STR_SIGNAL_ARMOR_UC                 #DEVASTATOR SERGEANT VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: SIGNALDR.PCK
+    customArmorPreviewIndex: 16
+    corpseBattle:
+      - STR_SARGENT_CORPSE
+    specialWeapon: 
+      AUX_SIGNUM
+    stats:
+       firing: 15
+    units:
+      - STR_DEVASTATOR_SGT
+      - STR_SPACE_MARINE_SGT
+
+  - type: STR_ASS_ARMOR_UC                 #ASSAULT VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_25.PCK
+    customArmorPreviewIndex: 2
+    movementType: 1
+    builtInWeapons:
+      - INV_NULL_3X3
+    units:
+      - STR_ASSAULT
+      - STR_SPACE_MARINE
+
+  - type: STR_ASS_SGT_ARMOR_UC                 #ASSAULT SERGEANT VARIANT
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: ASSSER.PCK
+    customArmorPreviewIndex: 37
+    corpseBattle:
+      - STR_SARGENT_CORPSE
+    movementType: 1
+    units:
+      - STR_ASSAULT_SGT
+      - STR_SPACE_MARINE_SGT
+
+  - type: STR_SARGENT_ARMOR_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_21.PCK
+    customArmorPreviewIndex: 4
+    corpseBattle:
+      - STR_SARGENT_CORPSE
+    units:
+      - STR_SPACE_MARINE_SGT
+    builtInWeapons:
+      - INV_NULL_3X3
+
+  - type: STR_HONOR_ARMOR_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_28.PCK
+    customArmorPreviewIndex: 11
+    corpseBattle:
+      - STR_HONOR_CORPSE
+    units:
+      - STR_STERNGUARD_VET
+    builtInWeapons:
+      - INV_NULL_3X3
+
+  - type: STR_HONOR_ARMOR_SGT_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_28.PCK
+    customArmorPreviewIndex: 11
+    corpseBattle:
+      - STR_HONOR_CORPSE
+    units:
+      - STR_STERNGUARD_VET_SGT
+    builtInWeapons:
+      - INV_NULL_3X3
+
+  - type: STR_ASS_ARMOR_HONOR_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_HASS.PCK
+    customArmorPreviewIndex: 15
+    corpseBattle:
+      - STR_HONOR_CORPSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    units:
+      - STR_VANGUARD_VET
+  
+  - type: STR_ASS_ARMOR_HONOR_SGT_UC
+    refNode: *STR_MK7_ARMOR
+    spriteSheet: XCOM_HASS.PCK
+    customArmorPreviewIndex: 15
+    corpseBattle:
+      - STR_HONOR_CORPSE
+    builtInWeapons:
+      - INV_NULL_3X3
+    units:
+      - STR_VANGUARD_VET_SGT
+
+########################################## TERMINATOR ARMOR ##########################################
+
+  - &STR_TERMINATOR_ARMOR
+    type: STR_POWER_SUIT_UC                 #TERMINATOR MAIN ARMOR TYPE
+    visibilityAtDay: 40
+    visibilityAtDark: 40
+    spriteSheet: XCOM_2.PCK
+    customArmorPreviewIndex: 7
+    corpseBattle:
+      - STR_TERMINATOR_CORPSE
+    storeItem: STR_POWER_SUIT
+    corpseGeo: STR_TERMINATOR_CORPSE
+    stats:
+       tu: -20
+       stamina: -30
+       firing: 0
+       health: 0
+       bravery: 0 #always multiples of 10
+       reactions: -20
+       throwing: -30
+       strength: 100
+       psiStrength: 0
+       psiSkill: 0
+       melee: 10
+    frontArmor: 150
+    sideArmor: 120
+    rearArmor: 100
+    underArmor: 90
+    damageModifier: #TERMINATOR ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.3 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    units: []
+    loftempsSet: [ 3 ]
+    forcedTorso: 1
+    specialWeapon: STR_MFIST
+    builtInWeapons:
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+
+  - type: STR_POWER_SUIT_CL_UC                 #TERMINATOR w/ CYCLONE LAUNCHER VARIANT
+    refNode: *STR_TERMINATOR_ARMOR
+    spriteSheet: TERMINATOR-ARMORCYCLONE.PCK
+    specialWeapon:
+      AUX_MORTAR
+    builtInWeapons:
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+
+  - type: STR_TSARGENT_UC                   #TERMINATOR SARGENT VARIANT
+    refNode: *STR_TERMINATOR_ARMOR
+    spriteSheet: TERMINATORSARGENT.PCK
+    customArmorPreviewIndex: 9
+    corpseBattle:
+      - STR_TERMINATOR_SARGENT_CORPSE
+
+#  - type: STR_TERM_SAR_CL                   #TERMINATOR SARGENT w/ CYCLONE LAUNCHER
+#    refNode: *STR_POWER_SUIT_UC
+#    spriteSheet: TERMINATORSARGENTCYCLONE.PCK
+#    customArmorPreviewIndex: 9
+#    corpseBattle:
+#      - STR_TERMINATOR_SARGENT_CORPSE
+#    specialWeapon: AUX_MORTAR
+
+  - type: STR_CAPTAIN_UC                    #TERMINATOR CAPTAIN ARMOR
+    refNode: *STR_TERMINATOR_ARMOR
+    spriteSheet: XCOM_20.PCK
+    customArmorPreviewIndex: 10
+    corpseBattle:
+      - STR_CAPTAIN_CORPSE
+    units:
+      - STR_CAPTAIN
+    builtInWeapons:
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+
+  - &STR_FLYING_SUIT_UC
+    type: STR_FLYING_SUIT_UC                   #TERMINATOR ASSAULT VARIANT
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    spriteSheet: XCOM_26.PCK
+    customArmorPreviewIndex: 8
+    corpseBattle:
+      - STR_TERMINATOR_CORPSE
+    storeItem: STR_FLYING_SUIT
+    corpseGeo: STR_TERMINATOR_CORPSE
+    stats:
+       tu: -10
+       stamina: -20
+       health: 0
+       bravery: 0 #always multiples of 10
+       reactions: 0
+       firing: -90
+       throwing: -10
+       strength: 100
+       psiStrength: 0
+       psiSkill: 0
+       melee: 30
+    frontArmor: 170
+    sideArmor: 140
+    rearArmor: 100
+    underArmor: 90
+    movementType: 0
+    damageModifier: #TERMINATOR ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.3 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    units: []
+    loftempsSet: [ 3 ]
+    forcedTorso: 1
+    specialWeapon: STR_MFIST
+    builtInWeapons:
+      - AUX_SHIELD
+      - INV_NULL_3X3
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+
+  - type: STR_FLYING_SUIT_SARGENT_UC                #TERMINATOR ASSAULT SERGEANT VARIANT
+    refNode: *STR_FLYING_SUIT_UC
+    spriteSheet: TERMINATORASSSARGENT.PCK
+    customArmorPreviewIndex: 9
+    corpseBattle:
+      - STR_TERMINATOR_SARGENT_CORPSE
+
+
+##########################################               ##########################################
+########################################## LAYERED ARMOR ##########################################
+##########################################               ##########################################
+
+
+  - type: STR_POWER_SUIT_CL_UC
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TERMINATORCL
+    layersDefinition:
+      M0: ["0", "TERMINATORMFCL", "M0_HEAD"]
+      M1: ["0", "TERMINATORMFCL", "M1_HEAD"]
+      M2: ["0", "TERMINATORMFCL", "M2_HEAD"]
+      M3: ["0", "TERMINATORMFCL", "M3_HEAD"]
+      M4: ["0", "TERMINATORMFCL", "M4_HEAD"]
+      M5: ["0", "TERMINATORMFCL", "M5_HEAD"]
+      M6: ["0", "TERMINATORMFCL", "M6_HEAD"]
+      M7: ["0", "TERMINATORMFCL", "M7_HEAD"]
+      M8: ["0", "TERMINATORMFCL", "M8_HEAD"]
+      M9: ["0", "TERMINATORMFCL", "M9_HEAD"]
+      M10: ["0", "TERMINATORMFCL", "M10_HEAD"]
+      M11: ["0", "TERMINATORMFCL", "M11_HEAD"]
+      M12: ["0", "TERMINATORMFCL", "M12_HEAD"]
+      M13: ["0", "TERMINATORMFCL", "M13_HEAD"]
+      M14: ["0", "TERMINATORMFCL", "M14_HEAD"]
+      M15: ["0", "TERMINATORMFCL", "M15_HEAD"]
+      M16: ["0", "TERMINATORMFCL", "M16_HEAD"]
+      M17: ["0", "TERMINATORMFCL", "M17_HEAD"]
+      M18: ["0", "TERMINATORMFCL", "M18_HEAD"]
+      M19: ["0", "TERMINATORMFCL", "M19_HEAD"]
+      M20: ["0", "TERMINATORMFCL", "M20_HEAD"]
+      M21: ["0", "TERMINATORMFCL", "M21_HEAD"]
+      M22: ["0", "TERMINATORMFCL", "M22_HEAD"]
+      M23: ["0", "TERMINATORMFCL", "M23_HEAD"]
+      M24: ["0", "TERMINATORMFCL", "M24_HEAD"]
+      M25: ["0", "TERMINATORMFCL", "M25_HEAD"]
+      M26: ["0", "TERMINATORMFCL", "M26_HEAD"]
+      M27: ["0", "TERMINATORMFCL", "M27_HEAD"]
+      M28: ["0", "TERMINATORMFCL", "M28_HEAD"]
+      M29: ["0", "TERMINATORMFCL", "M29_HEAD"]
+      M30: ["0", "TERMINATORMFCL", "M30_HEAD"]
+      M31: ["0", "TERMINATORMFCL", "M31_HEAD"]
+      M32: ["0", "TERMINATORMFCL", "M32_HEAD"]
+      M33: ["0", "TERMINATORMFCL", "M33_HEAD"]
+      M34: ["0", "TERMINATORMFCL", "M34_HEAD"]
+      M35: ["0", "TERMINATORMFCL", "M35_HEAD"]
+      M36: ["0", "TERMINATORMFCL", "M36_HEAD"]
+      M37: ["0", "TERMINATORMFCL", "M37_HEAD"]
+      M38: ["0", "TERMINATORMFCL", "M38_HEAD"]
+      M39: ["0", "TERMINATORMFCL", "M39_HEAD"]
+      M40: ["0", "TERMINATORMFCL", "M40_HEAD"]
+      M41: ["0", "TERMINATORMFCL", "M41_HEAD"]
+      M42: ["0", "TERMINATORMFCL", "M42_HEAD"]
+      M43: ["0", "TERMINATORMFCL", "M43_HEAD"]
+      M44: ["0", "TERMINATORMFCL", "M44_HEAD"]
+      M45: ["0", "TERMINATORMFCL", "M45_HEAD"]
+      M46: ["0", "TERMINATORMFCL", "M46_HEAD"]
+      M47: ["0", "TERMINATORMFCL", "M47_HEAD"]
+      M48: ["0", "TERMINATORMFCL", "F0_HEAD"]
+      M49: ["0", "TERMINATORMFCL", "F1_HEAD"]
+      M50: ["0", "TERMINATORMFCL", "F2_HEAD"]
+      M51: ["0", "TERMINATORMFCL", "F3_HEAD"]
+      M52: ["0", "TERMINATORMFCL", "F4_HEAD"]
+      M53: ["0", "TERMINATORMFCL", "F5_HEAD"]
+      M54: ["0", "TERMINATORMFCL", "F6_HEAD"]
+      M55: ["0", "TERMINATORMFCL", "F7_HEAD"]
+      M56: ["0", "TERMINATORMFCL", "F8_HEAD"]
+      M57: ["0", "TERMINATORMFCL", "F9_HEAD"]
+      M58: ["0", "TERMINATORMFCL", "F10_HEAD"]
+      M59: ["0", "TERMINATORMFCL", "F11_HEAD"]
+      M60: ["0", "TERMINATORMFCL", "F12_HEAD"]
+      M61: ["0", "TERMINATORMFCL", "F13_HEAD"]
+      M62: ["0", "TERMINATORMFCL", "F14_HEAD"]
+      M63: ["0", "TERMINATORMFCL", "F15_HEAD"]
+      M64: ["0", "TERMINATORMFCL", "F16_HEAD"]
+      M65: ["0", "TERMINATORMFCL", "F17_HEAD"]
+      M66: ["0", "TERMINATORMFCL", "F18_HEAD"]
+      M67: ["0", "TERMINATORMFCL", "F19_HEAD"]
+      M68: ["0", "TERMINATORMFCL", "F20_HEAD"]
+      M69: ["0", "TERMINATORMFCL", "F21_HEAD"]
+      M70: ["0", "TERMINATORMFCL", "F22_HEAD"]
+      M71: ["0", "TERMINATORMFCL", "F23_HEAD"]
+      M72: ["0", "TERMINATORMFCL", "F24_HEAD"]
+      M73: ["0", "TERMINATORMFCL", "F25_HEAD"]
+      M74: ["0", "TERMINATORMFCL", "F26_HEAD"]
+      M75: ["0", "TERMINATORMFCL", "F27_HEAD"]
+      M76: ["0", "TERMINATORMFCL", "F28_HEAD"]
+      M77: ["0", "TERMINATORMFCL", "F29_HEAD"]
+      M78: ["0", "TERMINATORMFCL", "F30_HEAD"]
+      M79: ["0", "TERMINATORMFCL", "F31_HEAD"]
+      M80: ["0", "TERMINATORMFCL", "F32_HEAD"]
+      M81: ["0", "TERMINATORMFCL", "F33_HEAD"]
+      M82: ["0", "TERMINATORMFCL", "F34_HEAD"]
+      M83: ["0", "TERMINATORMFCL", "F35_HEAD"]
+      M84: ["0", "TERMINATORMFCL", "F36_HEAD"]
+      M85: ["0", "TERMINATORMFCL", "F37_HEAD"]
+      M86: ["0", "TERMINATORMFCL", "F38_HEAD"]
+      M87: ["0", "TERMINATORMFCL", "F39_HEAD"]
+      M88: ["0", "TERMINATORMFCL", "F40_HEAD"]
+      M89: ["0", "TERMINATORMFCL", "F41_HEAD"]
+      M90: ["0", "TERMINATORMFCL", "F42_HEAD"]
+      M91: ["0", "TERMINATORMFCL", "F43_HEAD"]
+      M92: ["0", "TERMINATORMFCL", "F44_HEAD"]
+      M93: ["0", "TERMINATORMFCL", "F45_HEAD"]
+      M94: ["0", "TERMINATORMFCL", "F46_HEAD"]
+      M95: ["0", "TERMINATORMFCL", "F47_HEAD"]
+      F0: ["0", "TERMINATORMFCL", "F0_HEAD"]
+      F1: ["0", "TERMINATORMFCL", "F1_HEAD"]
+      F2: ["0", "TERMINATORMFCL", "F2_HEAD"]
+      F3: ["0", "TERMINATORMFCL", "F3_HEAD"]
+      F4: ["0", "TERMINATORMFCL", "F4_HEAD"]
+      F5: ["0", "TERMINATORMFCL", "F5_HEAD"]
+
+#  - type: STR_TERM_SAR_CL
+#    layersDefaultPrefix: 0
+#    layersSpecificPrefix:
+#      1: TSARGENTCL
+#    layersDefinition:
+#      M0: ["0", "TERMINATORSMFCL", "M0_HEAD"]
+#      M1: ["0", "TERMINATORSMFCL", "M1_HEAD"]
+#      M2: ["0", "TERMINATORSMFCL", "M2_HEAD"]
+#      M3: ["0", "TERMINATORSMFCL", "M3_HEAD"]
+#      M4: ["0", "TERMINATORSMFCL", "M4_HEAD"]
+#      M5: ["0", "TERMINATORSMFCL", "M5_HEAD"]
+#      M6: ["0", "TERMINATORSMFCL", "M6_HEAD"]
+#      M7: ["0", "TERMINATORSMFCL", "M7_HEAD"]
+#      M8: ["0", "TERMINATORSMFCL", "M8_HEAD"]
+#      M9: ["0", "TERMINATORSMFCL", "M9_HEAD"]
+#      M10: ["0", "TERMINATORSMFCL", "M10_HEAD"]
+#      M11: ["0", "TERMINATORSMFCL", "M11_HEAD"]
+#      M12: ["0", "TERMINATORSMFCL", "M12_HEAD"]
+#      M13: ["0", "TERMINATORSMFCL", "M13_HEAD"]
+#      M14: ["0", "TERMINATORSMFCL", "M14_HEAD"]
+#      M15: ["0", "TERMINATORSMFCL", "M15_HEAD"]
+#      M16: ["0", "TERMINATORSMFCL", "M16_HEAD"]
+#      M17: ["0", "TERMINATORSMFCL", "M17_HEAD"]
+#      M18: ["0", "TERMINATORSMFCL", "M18_HEAD"]
+#      M19: ["0", "TERMINATORSMFCL", "M19_HEAD"]
+#      M20: ["0", "TERMINATORSMFCL", "M20_HEAD"]
+#      M21: ["0", "TERMINATORSMFCL", "M21_HEAD"]
+#      M22: ["0", "TERMINATORSMFCL", "M22_HEAD"]
+#      M23: ["0", "TERMINATORSMFCL", "M23_HEAD"]
+#      M24: ["0", "TERMINATORSMFCL", "M24_HEAD"]
+#      M25: ["0", "TERMINATORSMFCL", "M25_HEAD"]
+#      M26: ["0", "TERMINATORSMFCL", "M26_HEAD"]
+#      M27: ["0", "TERMINATORSMFCL", "M27_HEAD"]
+#      M28: ["0", "TERMINATORSMFCL", "M28_HEAD"]
+#      M29: ["0", "TERMINATORSMFCL", "M29_HEAD"]
+#      M30: ["0", "TERMINATORSMFCL", "M30_HEAD"]
+#      M31: ["0", "TERMINATORSMFCL", "M31_HEAD"]
+#      M32: ["0", "TERMINATORSMFCL", "M32_HEAD"]
+#      M33: ["0", "TERMINATORSMFCL", "M33_HEAD"]
+#      M34: ["0", "TERMINATORSMFCL", "M34_HEAD"]
+#      M35: ["0", "TERMINATORSMFCL", "M35_HEAD"]
+#      M36: ["0", "TERMINATORSMFCL", "M36_HEAD"]
+#      M37: ["0", "TERMINATORSMFCL", "M37_HEAD"]
+#      M38: ["0", "TERMINATORSMFCL", "M38_HEAD"]
+#      M39: ["0", "TERMINATORSMFCL", "M39_HEAD"]
+#      M40: ["0", "TERMINATORSMFCL", "M40_HEAD"]
+#      M41: ["0", "TERMINATORSMFCL", "M41_HEAD"]
+#      M42: ["0", "TERMINATORSMFCL", "M42_HEAD"]
+#      M43: ["0", "TERMINATORSMFCL", "M43_HEAD"]
+#      M44: ["0", "TERMINATORSMFCL", "M44_HEAD"]
+#      M45: ["0", "TERMINATORSMFCL", "M45_HEAD"]
+#      M46: ["0", "TERMINATORSMFCL", "M46_HEAD"]
+#      M47: ["0", "TERMINATORSMFCL", "M47_HEAD"]
+#      M48: ["0", "TERMINATORSMFCL", "F0_HEAD"]
+#      M49: ["0", "TERMINATORSMFCL", "F1_HEAD"]
+#      M50: ["0", "TERMINATORSMFCL", "F2_HEAD"]
+#      M51: ["0", "TERMINATORSMFCL", "F3_HEAD"]
+#      M52: ["0", "TERMINATORSMFCL", "F4_HEAD"]
+#      M53: ["0", "TERMINATORSMFCL", "F5_HEAD"]
+#      M54: ["0", "TERMINATORSMFCL", "F6_HEAD"]
+#      M55: ["0", "TERMINATORSMFCL", "F7_HEAD"]
+#      M56: ["0", "TERMINATORSMFCL", "F8_HEAD"]
+#      M57: ["0", "TERMINATORSMFCL", "F9_HEAD"]
+#      M58: ["0", "TERMINATORSMFCL", "F10_HEAD"]
+#      M59: ["0", "TERMINATORSMFCL", "F11_HEAD"]
+#      M60: ["0", "TERMINATORSMFCL", "F12_HEAD"]
+#      M61: ["0", "TERMINATORSMFCL", "F13_HEAD"]
+#      M62: ["0", "TERMINATORSMFCL", "F14_HEAD"]
+#      M63: ["0", "TERMINATORSMFCL", "F15_HEAD"]
+#      M64: ["0", "TERMINATORSMFCL", "F16_HEAD"]
+#      M65: ["0", "TERMINATORSMFCL", "F17_HEAD"]
+#      M66: ["0", "TERMINATORSMFCL", "F18_HEAD"]
+#      M67: ["0", "TERMINATORSMFCL", "F19_HEAD"]
+#      M68: ["0", "TERMINATORSMFCL", "F20_HEAD"]
+#      M69: ["0", "TERMINATORSMFCL", "F21_HEAD"]
+#      M70: ["0", "TERMINATORSMFCL", "F22_HEAD"]
+#      M71: ["0", "TERMINATORSMFCL", "F23_HEAD"]
+#      M72: ["0", "TERMINATORSMFCL", "F24_HEAD"]
+#      M73: ["0", "TERMINATORSMFCL", "F25_HEAD"]
+#      M74: ["0", "TERMINATORSMFCL", "F26_HEAD"]
+#      M75: ["0", "TERMINATORSMFCL", "F27_HEAD"]
+#      M76: ["0", "TERMINATORSMFCL", "F28_HEAD"]
+#      M77: ["0", "TERMINATORSMFCL", "F29_HEAD"]
+#      M78: ["0", "TERMINATORSMFCL", "F30_HEAD"]
+#      M79: ["0", "TERMINATORSMFCL", "F31_HEAD"]
+#      M80: ["0", "TERMINATORSMFCL", "F32_HEAD"]
+#      M81: ["0", "TERMINATORSMFCL", "F33_HEAD"]
+#      M82: ["0", "TERMINATORSMFCL", "F34_HEAD"]
+#      M83: ["0", "TERMINATORSMFCL", "F35_HEAD"]
+#      M84: ["0", "TERMINATORSMFCL", "F36_HEAD"]
+#      M85: ["0", "TERMINATORSMFCL", "F37_HEAD"]
+#      M86: ["0", "TERMINATORSMFCL", "F38_HEAD"]
+#      M87: ["0", "TERMINATORSMFCL", "F39_HEAD"]
+#      M88: ["0", "TERMINATORSMFCL", "F40_HEAD"]
+#      M89: ["0", "TERMINATORSMFCL", "F41_HEAD"]
+#      M90: ["0", "TERMINATORSMFCL", "F42_HEAD"]
+#      M91: ["0", "TERMINATORSMFCL", "F43_HEAD"]
+#      M92: ["0", "TERMINATORSMFCL", "F44_HEAD"]
+#      M93: ["0", "TERMINATORSMFCL", "F45_HEAD"]
+#      M94: ["0", "TERMINATORSMFCL", "F46_HEAD"]
+#      M95: ["0", "TERMINATORSMFCL", "F47_HEAD"]
+#      F0: ["0", "TERMINATORSMFCL", "F0_HEAD"]
+#      F1: ["0", "TERMINATORSMFCL", "F1_HEAD"]
+#      F2: ["0", "TERMINATORSMFCL", "F2_HEAD"]
+#      F3: ["0", "TERMINATORSMFCL", "F3_HEAD"]
+#      F4: ["0", "TERMINATORSMFCL", "F4_HEAD"]
+#      F5: ["0", "TERMINATORSMFCL", "F5_HEAD"]
+
+  - type: STR_FLYING_SUIT_SARGENT_UC  #TSARGENT
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TSARGENT
+    layersDefinition:
+      M0: ["0", "TERMINATORSMF", "M0_HEAD"]
+      M1: ["0", "TERMINATORSMF", "M1_HEAD"]
+      M2: ["0", "TERMINATORSMF", "M2_HEAD"]
+      M3: ["0", "TERMINATORSMF", "M3_HEAD"]
+      M4: ["0", "TERMINATORSMF", "M4_HEAD"]
+      M5: ["0", "TERMINATORSMF", "M5_HEAD"]
+      M6: ["0", "TERMINATORSMF", "M6_HEAD"]
+      M7: ["0", "TERMINATORSMF", "M7_HEAD"]
+      M8: ["0", "TERMINATORSMF", "M8_HEAD"]
+      M9: ["0", "TERMINATORSMF", "M9_HEAD"]
+      M10: ["0", "TERMINATORSMF", "M10_HEAD"]
+      M11: ["0", "TERMINATORSMF", "M11_HEAD"]
+      M12: ["0", "TERMINATORSMF", "M12_HEAD"]
+      M13: ["0", "TERMINATORSMF", "M13_HEAD"]
+      M14: ["0", "TERMINATORSMF", "M14_HEAD"]
+      M15: ["0", "TERMINATORSMF", "M15_HEAD"]
+      M16: ["0", "TERMINATORSMF", "M16_HEAD"]
+      M17: ["0", "TERMINATORSMF", "M17_HEAD"]
+      M18: ["0", "TERMINATORSMF", "M18_HEAD"]
+      M19: ["0", "TERMINATORSMF", "M19_HEAD"]
+      M20: ["0", "TERMINATORSMF", "M20_HEAD"]
+      M21: ["0", "TERMINATORSMF", "M21_HEAD"]
+      M22: ["0", "TERMINATORSMF", "M22_HEAD"]
+      M23: ["0", "TERMINATORSMF", "M23_HEAD"]
+      M24: ["0", "TERMINATORSMF", "M24_HEAD"]
+      M25: ["0", "TERMINATORSMF", "M25_HEAD"]
+      M26: ["0", "TERMINATORSMF", "M26_HEAD"]
+      M27: ["0", "TERMINATORSMF", "M27_HEAD"]
+      M28: ["0", "TERMINATORSMF", "M28_HEAD"]
+      M29: ["0", "TERMINATORSMF", "M29_HEAD"]
+      M30: ["0", "TERMINATORSMF", "M30_HEAD"]
+      M31: ["0", "TERMINATORSMF", "M31_HEAD"]
+      M32: ["0", "TERMINATORSMF", "M32_HEAD"]
+      M33: ["0", "TERMINATORSMF", "M33_HEAD"]
+      M34: ["0", "TERMINATORSMF", "M34_HEAD"]
+      M35: ["0", "TERMINATORSMF", "M35_HEAD"]
+      M36: ["0", "TERMINATORSMF", "M36_HEAD"]
+      M37: ["0", "TERMINATORSMF", "M37_HEAD"]
+      M38: ["0", "TERMINATORSMF", "M38_HEAD"]
+      M39: ["0", "TERMINATORSMF", "M39_HEAD"]
+      M40: ["0", "TERMINATORSMF", "M40_HEAD"]
+      M41: ["0", "TERMINATORSMF", "M41_HEAD"]
+      M42: ["0", "TERMINATORSMF", "M42_HEAD"]
+      M43: ["0", "TERMINATORSMF", "M43_HEAD"]
+      M44: ["0", "TERMINATORSMF", "M44_HEAD"]
+      M45: ["0", "TERMINATORSMF", "M45_HEAD"]
+      M46: ["0", "TERMINATORSMF", "M46_HEAD"]
+      M47: ["0", "TERMINATORSMF", "M47_HEAD"]
+      M48: ["0", "TERMINATORSMF", "F0_HEAD"]
+      M49: ["0", "TERMINATORSMF", "F1_HEAD"]
+      M50: ["0", "TERMINATORSMF", "F2_HEAD"]
+      M51: ["0", "TERMINATORSMF", "F3_HEAD"]
+      M52: ["0", "TERMINATORSMF", "F4_HEAD"]
+      M53: ["0", "TERMINATORSMF", "F5_HEAD"]
+      M54: ["0", "TERMINATORSMF", "F6_HEAD"]
+      M55: ["0", "TERMINATORSMF", "F7_HEAD"]
+      M56: ["0", "TERMINATORSMF", "F8_HEAD"]
+      M57: ["0", "TERMINATORSMF", "F9_HEAD"]
+      M58: ["0", "TERMINATORSMF", "F10_HEAD"]
+      M59: ["0", "TERMINATORSMF", "F11_HEAD"]
+      M60: ["0", "TERMINATORSMF", "F12_HEAD"]
+      M61: ["0", "TERMINATORSMF", "F13_HEAD"]
+      M62: ["0", "TERMINATORSMF", "F14_HEAD"]
+      M63: ["0", "TERMINATORSMF", "F15_HEAD"]
+      M64: ["0", "TERMINATORSMF", "F16_HEAD"]
+      M65: ["0", "TERMINATORSMF", "F17_HEAD"]
+      M66: ["0", "TERMINATORSMF", "F18_HEAD"]
+      M67: ["0", "TERMINATORSMF", "F19_HEAD"]
+      M68: ["0", "TERMINATORSMF", "F20_HEAD"]
+      M69: ["0", "TERMINATORSMF", "F21_HEAD"]
+      M70: ["0", "TERMINATORSMF", "F22_HEAD"]
+      M71: ["0", "TERMINATORSMF", "F23_HEAD"]
+      M72: ["0", "TERMINATORSMF", "F24_HEAD"]
+      M73: ["0", "TERMINATORSMF", "F25_HEAD"]
+      M74: ["0", "TERMINATORSMF", "F26_HEAD"]
+      M75: ["0", "TERMINATORSMF", "F27_HEAD"]
+      M76: ["0", "TERMINATORSMF", "F28_HEAD"]
+      M77: ["0", "TERMINATORSMF", "F29_HEAD"]
+      M78: ["0", "TERMINATORSMF", "F30_HEAD"]
+      M79: ["0", "TERMINATORSMF", "F31_HEAD"]
+      M80: ["0", "TERMINATORSMF", "F32_HEAD"]
+      M81: ["0", "TERMINATORSMF", "F33_HEAD"]
+      M82: ["0", "TERMINATORSMF", "F34_HEAD"]
+      M83: ["0", "TERMINATORSMF", "F35_HEAD"]
+      M84: ["0", "TERMINATORSMF", "F36_HEAD"]
+      M85: ["0", "TERMINATORSMF", "F37_HEAD"]
+      M86: ["0", "TERMINATORSMF", "F38_HEAD"]
+      M87: ["0", "TERMINATORSMF", "F39_HEAD"]
+      M88: ["0", "TERMINATORSMF", "F40_HEAD"]
+      M89: ["0", "TERMINATORSMF", "F41_HEAD"]
+      M90: ["0", "TERMINATORSMF", "F42_HEAD"]
+      M91: ["0", "TERMINATORSMF", "F43_HEAD"]
+      M92: ["0", "TERMINATORSMF", "F44_HEAD"]
+      M93: ["0", "TERMINATORSMF", "F45_HEAD"]
+      M94: ["0", "TERMINATORSMF", "F46_HEAD"]
+      M95: ["0", "TERMINATORSMF", "F47_HEAD"]
+      F0: ["0", "TERMINATORSMF", "F0_HEAD"]
+      F1: ["0", "TERMINATORSMF", "F1_HEAD"]
+      F2: ["0", "TERMINATORSMF", "F2_HEAD"]
+      F3: ["0", "TERMINATORSMF", "F3_HEAD"]
+      F4: ["0", "TERMINATORSMF", "F4_HEAD"]
+      F5: ["0", "TERMINATORSMF", "F5_HEAD"]
+
+  - type: CENT_ARMOR_UC #CENT
+    layersDefaultPrefix: 1
+    layersSpecificPrefix:
+      1: CENT
+    layersDefinition:
+      F0: ["0", "CENTMF", "F0_HEAD"]
+      F1: ["0", "CENTMF", "F1_HEAD"]
+      F2: ["0", "CENTMF", "F2_HEAD"]
+      F3: ["0", "CENTMF", "F3_HEAD"]
+      F4: ["0", "CENTMF", "F4_HEAD"]
+      F5: ["0", "CENTMF", "F5_HEAD"]
+      M0: ["0", "CENTMF", "M0_HEAD"]
+      M1: ["0", "CENTMF", "M1_HEAD"]
+      M2: ["0", "CENTMF", "M2_HEAD"]
+      M3: ["0", "CENTMF", "M3_HEAD"]
+      M4: ["0", "CENTMF", "M4_HEAD"]
+      M5: ["0", "CENTMF", "M5_HEAD"]
+      M6: ["0", "CENTMF", "M6_HEAD"]
+      M7: ["0", "CENTMF", "M7_HEAD"]
+      M8: ["0", "CENTMF", "M8_HEAD"]
+      M9: ["0", "CENTMF", "M9_HEAD"]
+      M10: ["0", "CENTMF", "M10_HEAD"]
+      M11: ["0", "CENTMF", "M11_HEAD"]
+      M12: ["0", "CENTMF", "M12_HEAD"]
+      M13: ["0", "CENTMF", "M13_HEAD"]
+      M14: ["0", "CENTMF", "M14_HEAD"]
+      M15: ["0", "CENTMF", "M15_HEAD"]
+      M16: ["0", "CENTMF", "M16_HEAD"]
+      M17: ["0", "CENTMF", "M17_HEAD"]
+      M18: ["0", "CENTMF", "M18_HEAD"]
+      M19: ["0", "CENTMF", "M19_HEAD"]
+      M20: ["0", "CENTMF", "M20_HEAD"]
+      M21: ["0", "CENTMF", "M21_HEAD"]
+      M22: ["0", "CENTMF", "M22_HEAD"]
+      M23: ["0", "CENTMF", "M23_HEAD"]
+      M24: ["0", "CENTMF", "M24_HEAD"]
+      M25: ["0", "CENTMF", "M25_HEAD"]
+      M26: ["0", "CENTMF", "M26_HEAD"]
+      M27: ["0", "CENTMF", "M27_HEAD"]
+      M28: ["0", "CENTMF", "M28_HEAD"]
+      M29: ["0", "CENTMF", "M29_HEAD"]
+      M30: ["0", "CENTMF", "M30_HEAD"]
+      M31: ["0", "CENTMF", "M31_HEAD"]
+      M32: ["0", "CENTMF", "M32_HEAD"]
+      M33: ["0", "CENTMF", "M33_HEAD"]
+      M34: ["0", "CENTMF", "M34_HEAD"]
+      M35: ["0", "CENTMF", "M35_HEAD"]
+      M36: ["0", "CENTMF", "M36_HEAD"]
+      M37: ["0", "CENTMF", "M37_HEAD"]
+      M38: ["0", "CENTMF", "M38_HEAD"]
+      M39: ["0", "CENTMF", "M39_HEAD"]
+      M40: ["0", "CENTMF", "M40_HEAD"]
+      M41: ["0", "CENTMF", "M41_HEAD"]
+      M42: ["0", "CENTMF", "M42_HEAD"]
+      M43: ["0", "CENTMF", "M43_HEAD"]
+      M44: ["0", "CENTMF", "M44_HEAD"]
+      M45: ["0", "CENTMF", "M45_HEAD"]
+      M46: ["0", "CENTMF", "M46_HEAD"]
+      M47: ["0", "CENTMF", "M47_HEAD"]
+      M48: ["0", "CENTMF", "F0_HEAD"]
+      M49: ["0", "CENTMF", "F1_HEAD"]
+      M50: ["0", "CENTMF", "F2_HEAD"]
+      M51: ["0", "CENTMF", "F3_HEAD"]
+      M52: ["0", "CENTMF", "F4_HEAD"]
+      M53: ["0", "CENTMF", "F5_HEAD"]
+      M54: ["0", "CENTMF", "F6_HEAD"]
+      M55: ["0", "CENTMF", "F7_HEAD"]
+      M56: ["0", "CENTMF", "F8_HEAD"]
+      M57: ["0", "CENTMF", "F9_HEAD"]
+      M58: ["0", "CENTMF", "F10_HEAD"]
+      M59: ["0", "CENTMF", "F11_HEAD"]
+      M60: ["0", "CENTMF", "F12_HEAD"]
+      M61: ["0", "CENTMF", "F13_HEAD"]
+      M62: ["0", "CENTMF", "F14_HEAD"]
+      M63: ["0", "CENTMF", "F15_HEAD"]
+      M64: ["0", "CENTMF", "F16_HEAD"]
+      M65: ["0", "CENTMF", "F17_HEAD"]
+      M66: ["0", "CENTMF", "F18_HEAD"]
+      M67: ["0", "CENTMF", "F19_HEAD"]
+      M68: ["0", "CENTMF", "F20_HEAD"]
+      M69: ["0", "CENTMF", "F21_HEAD"]
+      M70: ["0", "CENTMF", "F22_HEAD"]
+      M71: ["0", "CENTMF", "F23_HEAD"]
+      M72: ["0", "CENTMF", "F24_HEAD"]
+      M73: ["0", "CENTMF", "F25_HEAD"]
+      M74: ["0", "CENTMF", "F26_HEAD"]
+      M75: ["0", "CENTMF", "F27_HEAD"]
+      M76: ["0", "CENTMF", "F28_HEAD"]
+      M77: ["0", "CENTMF", "F29_HEAD"]
+      M78: ["0", "CENTMF", "F30_HEAD"]
+      M79: ["0", "CENTMF", "F31_HEAD"]
+      M80: ["0", "CENTMF", "F32_HEAD"]
+      M81: ["0", "CENTMF", "F33_HEAD"]
+      M82: ["0", "CENTMF", "F34_HEAD"]
+      M83: ["0", "CENTMF", "F35_HEAD"]
+      M84: ["0", "CENTMF", "F36_HEAD"]
+      M85: ["0", "CENTMF", "F37_HEAD"]
+      M86: ["0", "CENTMF", "F38_HEAD"]
+      M87: ["0", "CENTMF", "F39_HEAD"]
+      M88: ["0", "CENTMF", "F40_HEAD"]
+      M89: ["0", "CENTMF", "F41_HEAD"]
+      M90: ["0", "CENTMF", "F42_HEAD"]
+      M91: ["0", "CENTMF", "F43_HEAD"]
+      M92: ["0", "CENTMF", "F44_HEAD"]
+      M93: ["0", "CENTMF", "F45_HEAD"]
+      M94: ["0", "CENTMF", "F46_HEAD"]
+      M95: ["0", "CENTMF", "F47_HEAD"]	  
+  - type: BIKE_ARMOR_UC #BIKE
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: BIKE
+    layersDefinition:
+      F0: ["0", "BIKEF", "F0_HEAD"]
+      F1: ["0", "BIKEF", "F1_HEAD"]
+      F2: ["0", "BIKEF", "F2_HEAD"]
+      F3: ["0", "BIKEF", "F3_HEAD"]
+      F4: ["0", "BIKEF", "F4_HEAD"]
+      F5: ["0", "BIKEF", "F5_HEAD"]
+      M0: ["0", "BIKEM", "M0_HEAD"]
+      M1: ["0", "BIKEM", "M1_HEAD"]
+      M2: ["0", "BIKEM", "M2_HEAD"]
+      M3: ["0", "BIKEM", "M3_HEAD"]
+      M4: ["0", "BIKEM", "M4_HEAD"]
+      M5: ["0", "BIKEM", "M5_HEAD"]
+      M6: ["0", "BIKEM", "M6_HEAD"]
+      M7: ["0", "BIKEM", "M7_HEAD"]
+      M8: ["0", "BIKEM", "M8_HEAD"]
+      M9: ["0", "BIKEM", "M9_HEAD"]
+      M10: ["0", "BIKEM", "M10_HEAD"]
+      M11: ["0", "BIKEM", "M11_HEAD"]
+      M12: ["0", "BIKEM", "M12_HEAD"]
+      M13: ["0", "BIKEM", "M13_HEAD"]
+      M14: ["0", "BIKEM", "M14_HEAD"]
+      M15: ["0", "BIKEM", "M15_HEAD"]
+      M16: ["0", "BIKEM", "M16_HEAD"]
+      M17: ["0", "BIKEM", "M17_HEAD"]
+      M18: ["0", "BIKEM", "M18_HEAD"]
+      M19: ["0", "BIKEM", "M19_HEAD"]
+      M20: ["0", "BIKEM", "M20_HEAD"]
+      M21: ["0", "BIKEM", "M21_HEAD"]
+      M22: ["0", "BIKEM", "M22_HEAD"]
+      M23: ["0", "BIKEM", "M23_HEAD"]
+      M24: ["0", "BIKEM", "M24_HEAD"]
+      M25: ["0", "BIKEM", "M25_HEAD"]
+      M26: ["0", "BIKEM", "M26_HEAD"]
+      M27: ["0", "BIKEM", "M27_HEAD"]
+      M28: ["0", "BIKEM", "M28_HEAD"]
+      M29: ["0", "BIKEM", "M29_HEAD"]
+      M30: ["0", "BIKEM", "M30_HEAD"]
+      M31: ["0", "BIKEM", "M31_HEAD"]
+      M32: ["0", "BIKEM", "M32_HEAD"]
+      M33: ["0", "BIKEM", "M33_HEAD"]
+      M34: ["0", "BIKEM", "M34_HEAD"]
+      M35: ["0", "BIKEM", "M35_HEAD"]
+      M36: ["0", "BIKEM", "M36_HEAD"]
+      M37: ["0", "BIKEM", "M37_HEAD"]
+      M38: ["0", "BIKEM", "M38_HEAD"]
+      M39: ["0", "BIKEM", "M39_HEAD"]
+      M40: ["0", "BIKEM", "M40_HEAD"]
+      M41: ["0", "BIKEM", "M41_HEAD"]
+      M42: ["0", "BIKEM", "M42_HEAD"]
+      M43: ["0", "BIKEM", "M43_HEAD"]
+      M44: ["0", "BIKEM", "M44_HEAD"]
+      M45: ["0", "BIKEM", "M45_HEAD"]
+      M46: ["0", "BIKEM", "M46_HEAD"]
+      M47: ["0", "BIKEM", "M47_HEAD"]
+      M48: ["0", "BIKEM", "F0_HEAD"]
+      M49: ["0", "BIKEM", "F1_HEAD"]
+      M50: ["0", "BIKEM", "F2_HEAD"]
+      M51: ["0", "BIKEM", "F3_HEAD"]
+      M52: ["0", "BIKEM", "F4_HEAD"]
+      M53: ["0", "BIKEM", "F5_HEAD"]
+      M54: ["0", "BIKEM", "F6_HEAD"]
+      M55: ["0", "BIKEM", "F7_HEAD"]
+      M56: ["0", "BIKEM", "F8_HEAD"]
+      M57: ["0", "BIKEM", "F9_HEAD"]
+      M58: ["0", "BIKEM", "F10_HEAD"]
+      M59: ["0", "BIKEM", "F11_HEAD"]
+      M60: ["0", "BIKEM", "F12_HEAD"]
+      M61: ["0", "BIKEM", "F13_HEAD"]
+      M62: ["0", "BIKEM", "F14_HEAD"]
+      M63: ["0", "BIKEM", "F15_HEAD"]
+      M64: ["0", "BIKEM", "F16_HEAD"]
+      M65: ["0", "BIKEM", "F17_HEAD"]
+      M66: ["0", "BIKEM", "F18_HEAD"]
+      M67: ["0", "BIKEM", "F19_HEAD"]
+      M68: ["0", "BIKEM", "F20_HEAD"]
+      M69: ["0", "BIKEM", "F21_HEAD"]
+      M70: ["0", "BIKEM", "F22_HEAD"]
+      M71: ["0", "BIKEM", "F23_HEAD"]
+      M72: ["0", "BIKEM", "F24_HEAD"]
+      M73: ["0", "BIKEM", "F25_HEAD"]
+      M74: ["0", "BIKEM", "F26_HEAD"]
+      M75: ["0", "BIKEM", "F27_HEAD"]
+      M76: ["0", "BIKEM", "F28_HEAD"]
+      M77: ["0", "BIKEM", "F29_HEAD"]
+      M78: ["0", "BIKEM", "F30_HEAD"]
+      M79: ["0", "BIKEM", "F31_HEAD"]
+      M80: ["0", "BIKEM", "F32_HEAD"]
+      M81: ["0", "BIKEM", "F33_HEAD"]
+      M82: ["0", "BIKEM", "F34_HEAD"]
+      M83: ["0", "BIKEM", "F35_HEAD"]
+      M84: ["0", "BIKEM", "F36_HEAD"]
+      M85: ["0", "BIKEM", "F37_HEAD"]
+      M86: ["0", "BIKEM", "F38_HEAD"]
+      M87: ["0", "BIKEM", "F39_HEAD"]
+      M88: ["0", "BIKEM", "F40_HEAD"]
+      M89: ["0", "BIKEM", "F41_HEAD"]
+      M90: ["0", "BIKEM", "F42_HEAD"]
+      M91: ["0", "BIKEM", "F43_HEAD"]
+      M92: ["0", "BIKEM", "F44_HEAD"]
+      M93: ["0", "BIKEM", "F45_HEAD"]
+      M94: ["0", "BIKEM", "F46_HEAD"]
+      M95: ["0", "BIKEM", "F47_HEAD"]
+  - type: STR_SCOUT_UC #SCOUT
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: SCOUT
+      3: GOGGLES
+    layersDefinition:
+      F0: ["0", "ASCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["0", "ASCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["0", "ASCOUTFC", "F2_HEAD", "GOGGLES"]
+      F3: ["0", "ASCOUTFB", "F3_HEAD", "GOGGLES"]
+      F4: ["0", "ASCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["0", "ASCOUTF", "F5_HEAD", "GOGGLES"]
+      M0: ["0", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["0", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["0", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["0", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["0", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["0", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["0", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["0", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["0", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["0", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["0", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["0", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["0", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["0", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["0", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["0", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["0", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["0", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["0", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["0", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["0", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["0", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["0", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["0", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["0", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["0", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["0", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["0", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["0", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["0", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["0", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["0", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["0", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["0", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["0", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["0", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["0", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["0", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["0", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["0", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["0", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["0", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["0", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["0", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["0", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["0", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["0", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["0", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["0", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["0", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["0", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["0", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["0", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["0", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["0", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["0", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["0", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["0", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["0", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["0", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["0", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["0", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["0", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["0", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["0", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["0", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["0", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["0", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["0", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["0", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["0", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["0", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["0", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["0", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["0", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["0", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["0", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["0", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["0", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["0", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["0", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["0", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["0", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["0", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["0", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["0", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["0", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["0", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["0", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["0", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["0", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["0", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["0", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["0", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["0", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["0", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+  - type: STR_SCOUTHG_UC #SCOUT HONOR GREEN
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPEG", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPEG", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPEG", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPEG", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPEG", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPEG", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPEG", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPEG", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPEG", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPEG", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPEG", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPEG", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPEG", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPEG", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPEG", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPEG", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPEG", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPEG", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPEG", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPEG", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPEG", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPEG", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPEG", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPEG", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPEG", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPEG", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPEG", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPEG", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPEG", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPEG", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPEG", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPEG", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPEG", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPEG", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPEG", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPEG", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPEG", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPEG", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPEG", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPEG", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPEG", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPEG", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPEG", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPEG", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPEG", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPEG", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPEG", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPEG", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPEG", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPEG", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPEG", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPEG", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPEG", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPEG", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPEG", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPEG", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPEG", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPEG", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPEG", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPEG", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPEG", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPEG", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPEG", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPEG", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPEG", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPEG", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPEG", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPEG", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPEG", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPEG", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPEG", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPEG", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPEG", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPEG", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPEG", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPEG", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPEG", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPEG", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPEG", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPEG", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPEG", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPEG", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPEG", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPEG", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPEG", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPEG", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPEG", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPEG", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPEG", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPEG", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPEG", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPEG", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPEG", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPEG", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPEG", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPEG", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPEG", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPEG", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPEG", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPEG", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPEG", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPEG", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_SCOUTHR_UC #SCOUT HONOR DESERT
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPER", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPER", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPER", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPER", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPER", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPER", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPER", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPER", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPER", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPER", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPER", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPER", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPER", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPER", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPER", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPER", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPER", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPER", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPER", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPER", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPER", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPER", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPER", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPER", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPER", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPER", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPER", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPER", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPER", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPER", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPER", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPER", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPER", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPER", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPER", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPER", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPER", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPER", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPER", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPER", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPER", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPER", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPER", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPER", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPER", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPER", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPER", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPER", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPER", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPER", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPER", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPER", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPER", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPER", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPER", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPER", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPER", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPER", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPER", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPER", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPER", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPER", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPER", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPER", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPER", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPER", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPER", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPER", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPER", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPER", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPER", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPER", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPER", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPER", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPER", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPER", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPER", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPER", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPER", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPER", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPER", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPER", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPER", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPER", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPER", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPER", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPER", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPER", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPER", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPER", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPER", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPER", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPER", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPER", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPER", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPER", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPER", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPER", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPER", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPER", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPER", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPER", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_SCOUTHY_UC #SCOUT HONOR DESERT
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPEY", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPEY", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPEY", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPEY", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPEY", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPEY", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPEY", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPEY", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPEY", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPEY", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPEY", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPEY", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPEY", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPEY", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPEY", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPEY", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPEY", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPEY", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPEY", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPEY", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPEY", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPEY", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPEY", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPEY", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPEY", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPEY", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPEY", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPEY", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPEY", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPEY", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPEY", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPEY", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPEY", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPEY", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPEY", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPEY", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPEY", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPEY", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPEY", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPEY", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPEY", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPEY", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPEY", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPEY", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPEY", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPEY", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPEY", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPEY", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPEY", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPEY", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPEY", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPEY", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPEY", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPEY", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPEY", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPEY", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPEY", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPEY", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPEY", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPEY", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPEY", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPEY", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPEY", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPEY", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPEY", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPEY", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPEY", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPEY", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPEY", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPEY", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPEY", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPEY", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPEY", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPEY", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPEY", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPEY", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPEY", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPEY", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPEY", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPEY", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPEY", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPEY", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPEY", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPEY", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPEY", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPEY", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPEY", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPEY", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPEY", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPEY", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPEY", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPEY", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPEY", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPEY", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPEY", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPEY", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPEY", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPEY", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPEY", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPEY", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPEY", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPEY", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_SCOUTH_UC #SCOUT HONOR BROWN
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPE", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPE", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPE", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPE", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPE", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPE", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPE", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPE", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPE", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPE", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPE", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPE", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPE", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPE", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPE", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPE", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPE", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPE", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPE", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPE", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPE", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPE", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPE", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPE", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPE", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPE", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPE", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPE", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPE", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPE", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPE", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPE", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPE", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPE", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPE", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPE", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPE", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPE", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPE", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPE", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPE", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPE", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPE", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPE", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPE", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPE", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPE", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPE", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPE", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPE", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPE", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPE", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPE", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPE", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPE", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPE", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPE", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPE", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPE", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPE", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPE", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPE", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPE", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPE", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPE", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPE", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPE", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPE", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPE", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPE", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPE", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPE", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPE", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPE", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPE", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPE", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPE", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPE", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPE", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPE", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPE", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPE", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPE", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPE", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPE", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPE", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPE", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPE", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPE", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPE", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPE", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPE", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPE", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPE", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPE", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPE", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPE", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPE", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPE", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPE", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPE", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPE", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_SCOUTHB_UC #SCOUT HONOR BLACK
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPEB", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPEB", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPEB", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPEB", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPEB", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPEB", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPEB", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPEB", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPEB", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPEB", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPEB", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPEB", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPEB", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPEB", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPEB", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPEB", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPEB", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPEB", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPEB", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPEB", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPEB", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPEB", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPEB", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPEB", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPEB", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPEB", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPEB", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPEB", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPEB", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPEB", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPEB", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPEB", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPEB", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPEB", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPEB", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPEB", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPEB", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPEB", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPEB", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPEB", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPEB", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPEB", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPEB", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPEB", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPEB", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPEB", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPEB", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPEB", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPEB", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPEB", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPEB", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPEB", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPEB", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPEB", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPEB", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPEB", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPEB", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPEB", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPEB", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPEB", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPEB", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPEB", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPEB", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPEB", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPEB", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPEB", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPEB", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPEB", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPEB", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPEB", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPEB", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPEB", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPEB", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPEB", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPEB", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPEB", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPEB", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPEB", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPEB", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPEB", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPEB", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPEB", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPEB", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPEB", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPEB", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPEB", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPEB", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPEB", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPEB", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPEB", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPEB", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPEB", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPEB", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPEB", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPEB", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPEB", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPEB", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPEB", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPEB", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPEB", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPEB", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPEB", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_SCOUTHW_UC #SCOUT HONOR WHITE
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: CAPE
+    layersSpecificPrefix:
+      1: SCOUTH
+      3: GOGGLES
+    layersDefinition:
+      M0: ["CAPEW", "AHSCOUTM", "M0_HEAD", "GOGGLES"]
+      M1: ["CAPEW", "AHSCOUTM", "M1_HEAD", "GOGGLES"]
+      M2: ["CAPEW", "AHSCOUTM", "M2_HEAD", "GOGGLES"]
+      M3: ["CAPEW", "AHSCOUTM", "M3_HEAD", "GOGGLES"]
+      M4: ["CAPEW", "AHSCOUTM", "M4_HEAD", "GOGGLES"]
+      M5: ["CAPEW", "AHSCOUTM", "M5_HEAD", "GOGGLES"]
+      M6: ["CAPEW", "AHSCOUTM", "M6_HEAD", "GOGGLES"]
+      M7: ["CAPEW", "AHSCOUTM", "M7_HEAD", "GOGGLES"]
+      M8: ["CAPEW", "AHSCOUTM", "M8_HEAD", "GOGGLES"]
+      M9: ["CAPEW", "AHSCOUTM", "M9_HEAD", "GOGGLES"]
+      M10: ["CAPEW", "AHSCOUTM", "M10_HEAD", "GOGGLES"]
+      M11: ["CAPEW", "AHSCOUTM", "M11_HEAD", "GOGGLES"]
+      M12: ["CAPEW", "AHSCOUTM", "M12_HEAD", "GOGGLES"]
+      M13: ["CAPEW", "AHSCOUTM", "M13_HEAD", "GOGGLES"]
+      M14: ["CAPEW", "AHSCOUTM", "M14_HEAD", "GOGGLES"]
+      M15: ["CAPEW", "AHSCOUTM", "M15_HEAD", "GOGGLES"]
+      M16: ["CAPEW", "AHSCOUTM", "M16_HEAD", "GOGGLES"]
+      M17: ["CAPEW", "AHSCOUTM", "M17_HEAD", "GOGGLES"]
+      M18: ["CAPEW", "AHSCOUTM", "M18_HEAD", "GOGGLES"]
+      M19: ["CAPEW", "AHSCOUTM", "M19_HEAD", "GOGGLES"]
+      M20: ["CAPEW", "AHSCOUTM", "M20_HEAD", "GOGGLES"]
+      M21: ["CAPEW", "AHSCOUTM", "M21_HEAD", "GOGGLES"]
+      M22: ["CAPEW", "AHSCOUTM", "M22_HEAD", "GOGGLES"]
+      M23: ["CAPEW", "AHSCOUTM", "M23_HEAD", "GOGGLES"]
+      M24: ["CAPEW", "AHSCOUTM", "M24_HEAD", "GOGGLES"]
+      M25: ["CAPEW", "AHSCOUTM", "M25_HEAD", "GOGGLES"]
+      M26: ["CAPEW", "AHSCOUTM", "M26_HEAD", "GOGGLES"]
+      M27: ["CAPEW", "AHSCOUTM", "M27_HEAD", "GOGGLES"]
+      M28: ["CAPEW", "AHSCOUTM", "M28_HEAD", "GOGGLES"]
+      M29: ["CAPEW", "AHSCOUTM", "M29_HEAD", "GOGGLES"]
+      M30: ["CAPEW", "AHSCOUTM", "M30_HEAD", "GOGGLES"]
+      M31: ["CAPEW", "AHSCOUTM", "M31_HEAD", "GOGGLES"]
+      M32: ["CAPEW", "AHSCOUTM", "M32_HEAD", "GOGGLES"]
+      M33: ["CAPEW", "AHSCOUTM", "M33_HEAD", "GOGGLES"]
+      M34: ["CAPEW", "AHSCOUTM", "M34_HEAD", "GOGGLES"]
+      M35: ["CAPEW", "AHSCOUTM", "M35_HEAD", "GOGGLES"]
+      M36: ["CAPEW", "AHSCOUTM", "M36_HEAD", "GOGGLES"]
+      M37: ["CAPEW", "AHSCOUTM", "M37_HEAD", "GOGGLES"]
+      M38: ["CAPEW", "AHSCOUTM", "M38_HEAD", "GOGGLES"]
+      M39: ["CAPEW", "AHSCOUTM", "M39_HEAD", "GOGGLES"]
+      M40: ["CAPEW", "AHSCOUTM", "M40_HEAD", "GOGGLES"]
+      M41: ["CAPEW", "AHSCOUTM", "M41_HEAD", "GOGGLES"]
+      M42: ["CAPEW", "AHSCOUTM", "M42_HEAD", "GOGGLES"]
+      M43: ["CAPEW", "AHSCOUTM", "M43_HEAD", "GOGGLES"]
+      M44: ["CAPEW", "AHSCOUTM", "M44_HEAD", "GOGGLES"]
+      M45: ["CAPEW", "AHSCOUTM", "M45_HEAD", "GOGGLES"]
+      M46: ["CAPEW", "AHSCOUTM", "M46_HEAD", "GOGGLES"]
+      M47: ["CAPEW", "AHSCOUTM", "M47_HEAD", "GOGGLES"]
+      M48: ["CAPEW", "AHSCOUTM", "F0_HEAD", "GOGGLES"]
+      M49: ["CAPEW", "AHSCOUTM", "F1_HEAD", "GOGGLES"]
+      M50: ["CAPEW", "AHSCOUTM", "F2_HEAD", "GOGGLES"]
+      M51: ["CAPEW", "AHSCOUTM", "F3_HEAD", "GOGGLES"]
+      M52: ["CAPEW", "AHSCOUTM", "F4_HEAD", "GOGGLES"]
+      M53: ["CAPEW", "AHSCOUTM", "F5_HEAD", "GOGGLES"]
+      M54: ["CAPEW", "AHSCOUTM", "F6_HEAD", "GOGGLES"]
+      M55: ["CAPEW", "AHSCOUTM", "F7_HEAD", "GOGGLES"]
+      M56: ["CAPEW", "AHSCOUTM", "F8_HEAD", "GOGGLES"]
+      M57: ["CAPEW", "AHSCOUTM", "F9_HEAD", "GOGGLES"]
+      M58: ["CAPEW", "AHSCOUTM", "F10_HEAD", "GOGGLES"]
+      M59: ["CAPEW", "AHSCOUTM", "F11_HEAD", "GOGGLES"]
+      M60: ["CAPEW", "AHSCOUTM", "F12_HEAD", "GOGGLES"]
+      M61: ["CAPEW", "AHSCOUTM", "F13_HEAD", "GOGGLES"]
+      M62: ["CAPEW", "AHSCOUTM", "F14_HEAD", "GOGGLES"]
+      M63: ["CAPEW", "AHSCOUTM", "F15_HEAD", "GOGGLES"]
+      M64: ["CAPEW", "AHSCOUTM", "F16_HEAD", "GOGGLES"]
+      M65: ["CAPEW", "AHSCOUTM", "F17_HEAD", "GOGGLES"]
+      M66: ["CAPEW", "AHSCOUTM", "F18_HEAD", "GOGGLES"]
+      M67: ["CAPEW", "AHSCOUTM", "F19_HEAD", "GOGGLES"]
+      M68: ["CAPEW", "AHSCOUTM", "F20_HEAD", "GOGGLES"]
+      M69: ["CAPEW", "AHSCOUTM", "F21_HEAD", "GOGGLES"]
+      M70: ["CAPEW", "AHSCOUTM", "F22_HEAD", "GOGGLES"]
+      M71: ["CAPEW", "AHSCOUTM", "F23_HEAD", "GOGGLES"]
+      M72: ["CAPEW", "AHSCOUTM", "F24_HEAD", "GOGGLES"]
+      M73: ["CAPEW", "AHSCOUTM", "F25_HEAD", "GOGGLES"]
+      M74: ["CAPEW", "AHSCOUTM", "F26_HEAD", "GOGGLES"]
+      M75: ["CAPEW", "AHSCOUTM", "F27_HEAD", "GOGGLES"]
+      M76: ["CAPEW", "AHSCOUTM", "F28_HEAD", "GOGGLES"]
+      M77: ["CAPEW", "AHSCOUTM", "F29_HEAD", "GOGGLES"]
+      M78: ["CAPEW", "AHSCOUTM", "F30_HEAD", "GOGGLES"]
+      M79: ["CAPEW", "AHSCOUTM", "F31_HEAD", "GOGGLES"]
+      M80: ["CAPEW", "AHSCOUTM", "F32_HEAD", "GOGGLES"]
+      M81: ["CAPEW", "AHSCOUTM", "F33_HEAD", "GOGGLES"]
+      M82: ["CAPEW", "AHSCOUTM", "F34_HEAD", "GOGGLES"]
+      M83: ["CAPEW", "AHSCOUTM", "F35_HEAD", "GOGGLES"]
+      M84: ["CAPEW", "AHSCOUTM", "F36_HEAD", "GOGGLES"]
+      M85: ["CAPEW", "AHSCOUTM", "F37_HEAD", "GOGGLES"]
+      M86: ["CAPEW", "AHSCOUTM", "F38_HEAD", "GOGGLES"]
+      M87: ["CAPEW", "AHSCOUTM", "F39_HEAD", "GOGGLES"]
+      M88: ["CAPEW", "AHSCOUTM", "F40_HEAD", "GOGGLES"]
+      M89: ["CAPEW", "AHSCOUTM", "F41_HEAD", "GOGGLES"]
+      M90: ["CAPEW", "AHSCOUTM", "F42_HEAD", "GOGGLES"]
+      M91: ["CAPEW", "AHSCOUTM", "F43_HEAD", "GOGGLES"]
+      M92: ["CAPEW", "AHSCOUTM", "F44_HEAD", "GOGGLES"]
+      M93: ["CAPEW", "AHSCOUTM", "F45_HEAD", "GOGGLES"]
+      M94: ["CAPEW", "AHSCOUTM", "F46_HEAD", "GOGGLES"]
+      M95: ["CAPEW", "AHSCOUTM", "F47_HEAD", "GOGGLES"]
+      F0: ["CAPEW", "AHSCOUTF", "F0_HEAD", "GOGGLES"]
+      F1: ["CAPEW", "AHSCOUTF", "F1_HEAD", "GOGGLES"]
+      F2: ["CAPEW", "AHSCOUTF", "F2_HEAD", "GOGGLES"]
+      F3: ["CAPEW", "AHSCOUTF", "F3_HEAD", "GOGGLES"]
+      F4: ["CAPEW", "AHSCOUTF", "F4_HEAD", "GOGGLES"]
+      F5: ["CAPEW", "AHSCOUTF", "F5_HEAD", "GOGGLES"]
+  - type: STR_PERSONAL_ARMOR_UC #TATICAl
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TATICAL
+    layersDefinition:
+      F0: ["0", "TATICALF", "F0_HEAD"]
+      F1: ["0", "TATICALF", "F1_HEAD"]
+      F2: ["0", "TATICALF", "F2_HEAD"]
+      F3: ["0", "TATICALF", "F3_HEAD"]
+      F4: ["0", "TATICALF", "F4_HEAD"]
+      F5: ["0", "TATICALF", "F5_HEAD"]
+      M0: ["0", "TATICALM", "M0_HEAD"]
+      M1: ["0", "TATICALM", "M1_HEAD"]
+      M2: ["0", "TATICALM", "M2_HEAD"]
+      M3: ["0", "TATICALM", "M3_HEAD"]
+      M4: ["0", "TATICALM", "M4_HEAD"]
+      M5: ["0", "TATICALM", "M5_HEAD"]
+      M6: ["0", "TATICALM", "M6_HEAD"]
+      M7: ["0", "TATICALM", "M7_HEAD"]
+      M8: ["0", "TATICALM", "M8_HEAD"]
+      M9: ["0", "TATICALM", "M9_HEAD"]
+      M10: ["0", "TATICALM", "M10_HEAD"]
+      M11: ["0", "TATICALM", "M11_HEAD"]
+      M12: ["0", "TATICALM", "M12_HEAD"]
+      M13: ["0", "TATICALM", "M13_HEAD"]
+      M14: ["0", "TATICALM", "M14_HEAD"]
+      M15: ["0", "TATICALM", "M15_HEAD"]
+      M16: ["0", "TATICALM", "M16_HEAD"]
+      M17: ["0", "TATICALM", "M17_HEAD"]
+      M18: ["0", "TATICALM", "M18_HEAD"]
+      M19: ["0", "TATICALM", "M19_HEAD"]
+      M20: ["0", "TATICALM", "M20_HEAD"]
+      M21: ["0", "TATICALM", "M21_HEAD"]
+      M22: ["0", "TATICALM", "M22_HEAD"]
+      M23: ["0", "TATICALM", "M23_HEAD"]
+      M24: ["0", "TATICALM", "M24_HEAD"]
+      M25: ["0", "TATICALM", "M25_HEAD"]
+      M26: ["0", "TATICALM", "M26_HEAD"]
+      M27: ["0", "TATICALM", "M27_HEAD"]
+      M28: ["0", "TATICALM", "M28_HEAD"]
+      M29: ["0", "TATICALM", "M29_HEAD"]
+      M30: ["0", "TATICALM", "M30_HEAD"]
+      M31: ["0", "TATICALM", "M31_HEAD"]
+      M32: ["0", "TATICALM", "M32_HEAD"]
+      M33: ["0", "TATICALM", "M33_HEAD"]
+      M34: ["0", "TATICALM", "M34_HEAD"]
+      M35: ["0", "TATICALM", "M35_HEAD"]
+      M36: ["0", "TATICALM", "M36_HEAD"]
+      M37: ["0", "TATICALM", "M37_HEAD"]
+      M38: ["0", "TATICALM", "M38_HEAD"]
+      M39: ["0", "TATICALM", "M39_HEAD"]
+      M40: ["0", "TATICALM", "M40_HEAD"]
+      M41: ["0", "TATICALM", "M41_HEAD"]
+      M42: ["0", "TATICALM", "M42_HEAD"]
+      M43: ["0", "TATICALM", "M43_HEAD"]
+      M44: ["0", "TATICALM", "M44_HEAD"]
+      M45: ["0", "TATICALM", "M45_HEAD"]
+      M46: ["0", "TATICALM", "M46_HEAD"]
+      M47: ["0", "TATICALM", "M47_HEAD"]
+      M48: ["0", "TATICALM", "F0_HEAD"]
+      M49: ["0", "TATICALM", "F1_HEAD"]
+      M50: ["0", "TATICALM", "F2_HEAD"]
+      M51: ["0", "TATICALM", "F3_HEAD"]
+      M52: ["0", "TATICALM", "F4_HEAD"]
+      M53: ["0", "TATICALM", "F5_HEAD"]
+      M54: ["0", "TATICALM", "F6_HEAD"]
+      M55: ["0", "TATICALM", "F7_HEAD"]
+      M56: ["0", "TATICALM", "F8_HEAD"]
+      M57: ["0", "TATICALM", "F9_HEAD"]
+      M58: ["0", "TATICALM", "F10_HEAD"]
+      M59: ["0", "TATICALM", "F11_HEAD"]
+      M60: ["0", "TATICALM", "F12_HEAD"]
+      M61: ["0", "TATICALM", "F13_HEAD"]
+      M62: ["0", "TATICALM", "F14_HEAD"]
+      M63: ["0", "TATICALM", "F15_HEAD"]
+      M64: ["0", "TATICALM", "F16_HEAD"]
+      M65: ["0", "TATICALM", "F17_HEAD"]
+      M66: ["0", "TATICALM", "F18_HEAD"]
+      M67: ["0", "TATICALM", "F19_HEAD"]
+      M68: ["0", "TATICALM", "F20_HEAD"]
+      M69: ["0", "TATICALM", "F21_HEAD"]
+      M70: ["0", "TATICALM", "F22_HEAD"]
+      M71: ["0", "TATICALM", "F23_HEAD"]
+      M72: ["0", "TATICALM", "F24_HEAD"]
+      M73: ["0", "TATICALM", "F25_HEAD"]
+      M74: ["0", "TATICALM", "F26_HEAD"]
+      M75: ["0", "TATICALM", "F27_HEAD"]
+      M76: ["0", "TATICALM", "F28_HEAD"]
+      M77: ["0", "TATICALM", "F29_HEAD"]
+      M78: ["0", "TATICALM", "F30_HEAD"]
+      M79: ["0", "TATICALM", "F31_HEAD"]
+      M80: ["0", "TATICALM", "F32_HEAD"]
+      M81: ["0", "TATICALM", "F33_HEAD"]
+      M82: ["0", "TATICALM", "F34_HEAD"]
+      M83: ["0", "TATICALM", "F35_HEAD"]
+      M84: ["0", "TATICALM", "F36_HEAD"]
+      M85: ["0", "TATICALM", "F37_HEAD"]
+      M86: ["0", "TATICALM", "F38_HEAD"]
+      M87: ["0", "TATICALM", "F39_HEAD"]
+      M88: ["0", "TATICALM", "F40_HEAD"]
+      M89: ["0", "TATICALM", "F41_HEAD"]
+      M90: ["0", "TATICALM", "F42_HEAD"]
+      M91: ["0", "TATICALM", "F43_HEAD"]
+      M92: ["0", "TATICALM", "F44_HEAD"]
+      M93: ["0", "TATICALM", "F45_HEAD"]
+      M94: ["0", "TATICALM", "F46_HEAD"]
+      M95: ["0", "TATICALM", "F47_HEAD"]
+
+  - type: STR_SIGNAL_ARMOR_UC #SIGNAL
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: SIGNAL
+    layersDefinition:
+      M0: ["0", "SIGNALM", "M0_HEAD"]
+      M1: ["0", "SIGNALM", "M1_HEAD"]
+      M2: ["0", "SIGNALM", "M2_HEAD"]
+      M3: ["0", "SIGNALM", "M3_HEAD"]
+      M4: ["0", "SIGNALM", "M4_HEAD"]
+      M5: ["0", "SIGNALM", "M5_HEAD"]
+      M6: ["0", "SIGNALM", "M6_HEAD"]
+      M7: ["0", "SIGNALM", "M7_HEAD"]
+      M8: ["0", "SIGNALM", "M8_HEAD"]
+      M9: ["0", "SIGNALM", "M9_HEAD"]
+      M10: ["0", "SIGNALM", "M10_HEAD"]
+      M11: ["0", "SIGNALM", "M11_HEAD"]
+      M12: ["0", "SIGNALM", "M12_HEAD"]
+      M13: ["0", "SIGNALM", "M13_HEAD"]
+      M14: ["0", "SIGNALM", "M14_HEAD"]
+      M15: ["0", "SIGNALM", "M15_HEAD"]
+      M16: ["0", "SIGNALM", "M16_HEAD"]
+      M17: ["0", "SIGNALM", "M17_HEAD"]
+      M18: ["0", "SIGNALM", "M18_HEAD"]
+      M19: ["0", "SIGNALM", "M19_HEAD"]
+      M20: ["0", "SIGNALM", "M20_HEAD"]
+      M21: ["0", "SIGNALM", "M21_HEAD"]
+      M22: ["0", "SIGNALM", "M22_HEAD"]
+      M23: ["0", "SIGNALM", "M23_HEAD"]
+      M24: ["0", "SIGNALM", "M24_HEAD"]
+      M25: ["0", "SIGNALM", "M25_HEAD"]
+      M26: ["0", "SIGNALM", "M26_HEAD"]
+      M27: ["0", "SIGNALM", "M27_HEAD"]
+      M28: ["0", "SIGNALM", "M28_HEAD"]
+      M29: ["0", "SIGNALM", "M29_HEAD"]
+      M30: ["0", "SIGNALM", "M30_HEAD"]
+      M31: ["0", "SIGNALM", "M31_HEAD"]
+      M32: ["0", "SIGNALM", "M32_HEAD"]
+      M33: ["0", "SIGNALM", "M33_HEAD"]
+      M34: ["0", "SIGNALM", "M34_HEAD"]
+      M35: ["0", "SIGNALM", "M35_HEAD"]
+      M36: ["0", "SIGNALM", "M36_HEAD"]
+      M37: ["0", "SIGNALM", "M37_HEAD"]
+      M38: ["0", "SIGNALM", "M38_HEAD"]
+      M39: ["0", "SIGNALM", "M39_HEAD"]
+      M40: ["0", "SIGNALM", "M40_HEAD"]
+      M41: ["0", "SIGNALM", "M41_HEAD"]
+      M42: ["0", "SIGNALM", "M42_HEAD"]
+      M43: ["0", "SIGNALM", "M43_HEAD"]
+      M44: ["0", "SIGNALM", "M44_HEAD"]
+      M45: ["0", "SIGNALM", "M45_HEAD"]
+      M46: ["0", "SIGNALM", "M46_HEAD"]
+      M47: ["0", "SIGNALM", "M47_HEAD"]
+      M48: ["0", "SIGNALM", "F0_HEAD"]
+      M49: ["0", "SIGNALM", "F1_HEAD"]
+      M50: ["0", "SIGNALM", "F2_HEAD"]
+      M51: ["0", "SIGNALM", "F3_HEAD"]
+      M52: ["0", "SIGNALM", "F4_HEAD"]
+      M53: ["0", "SIGNALM", "F5_HEAD"]
+      M54: ["0", "SIGNALM", "F6_HEAD"]
+      M55: ["0", "SIGNALM", "F7_HEAD"]
+      M56: ["0", "SIGNALM", "F8_HEAD"]
+      M57: ["0", "SIGNALM", "F9_HEAD"]
+      M58: ["0", "SIGNALM", "F10_HEAD"]
+      M59: ["0", "SIGNALM", "F11_HEAD"]
+      M60: ["0", "SIGNALM", "F12_HEAD"]
+      M61: ["0", "SIGNALM", "F13_HEAD"]
+      M62: ["0", "SIGNALM", "F14_HEAD"]
+      M63: ["0", "SIGNALM", "F15_HEAD"]
+      M64: ["0", "SIGNALM", "F16_HEAD"]
+      M65: ["0", "SIGNALM", "F17_HEAD"]
+      M66: ["0", "SIGNALM", "F18_HEAD"]
+      M67: ["0", "SIGNALM", "F19_HEAD"]
+      M68: ["0", "SIGNALM", "F20_HEAD"]
+      M69: ["0", "SIGNALM", "F21_HEAD"]
+      M70: ["0", "SIGNALM", "F22_HEAD"]
+      M71: ["0", "SIGNALM", "F23_HEAD"]
+      M72: ["0", "SIGNALM", "F24_HEAD"]
+      M73: ["0", "SIGNALM", "F25_HEAD"]
+      M74: ["0", "SIGNALM", "F26_HEAD"]
+      M75: ["0", "SIGNALM", "F27_HEAD"]
+      M76: ["0", "SIGNALM", "F28_HEAD"]
+      M77: ["0", "SIGNALM", "F29_HEAD"]
+      M78: ["0", "SIGNALM", "F30_HEAD"]
+      M79: ["0", "SIGNALM", "F31_HEAD"]
+      M80: ["0", "SIGNALM", "F32_HEAD"]
+      M81: ["0", "SIGNALM", "F33_HEAD"]
+      M82: ["0", "SIGNALM", "F34_HEAD"]
+      M83: ["0", "SIGNALM", "F35_HEAD"]
+      M84: ["0", "SIGNALM", "F36_HEAD"]
+      M85: ["0", "SIGNALM", "F37_HEAD"]
+      M86: ["0", "SIGNALM", "F38_HEAD"]
+      M87: ["0", "SIGNALM", "F39_HEAD"]
+      M88: ["0", "SIGNALM", "F40_HEAD"]
+      M89: ["0", "SIGNALM", "F41_HEAD"]
+      M90: ["0", "SIGNALM", "F42_HEAD"]
+      M91: ["0", "SIGNALM", "F43_HEAD"]
+      M92: ["0", "SIGNALM", "F44_HEAD"]
+      M93: ["0", "SIGNALM", "F45_HEAD"]
+      M94: ["0", "SIGNALM", "F46_HEAD"]
+      M95: ["0", "SIGNALM", "F47_HEAD"]
+      F0: ["0", "SIGNALF", "F0_HEAD"]
+      F1: ["0", "SIGNALF", "F1_HEAD"]
+      F2: ["0", "SIGNALF", "F2_HEAD"]
+      F3: ["0", "SIGNALF", "F3_HEAD"]
+      F4: ["0", "SIGNALF", "F4_HEAD"]
+      F5: ["0", "SIGNALF", "F5_HEAD"]
+
+  - type: STR_SIGNALFALSE_ARMOR_UC #SIGNAL
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: SIGNAL
+    layersDefinition:
+      M0: ["0", "SIGNALM", "M0_HEAD"]
+      M1: ["0", "SIGNALM", "M1_HEAD"]
+      M2: ["0", "SIGNALM", "M2_HEAD"]
+      M3: ["0", "SIGNALM", "M3_HEAD"]
+      M4: ["0", "SIGNALM", "M4_HEAD"]
+      M5: ["0", "SIGNALM", "M5_HEAD"]
+      M6: ["0", "SIGNALM", "M6_HEAD"]
+      M7: ["0", "SIGNALM", "M7_HEAD"]
+      M8: ["0", "SIGNALM", "M8_HEAD"]
+      M9: ["0", "SIGNALM", "M9_HEAD"]
+      M10: ["0", "SIGNALM", "M10_HEAD"]
+      M11: ["0", "SIGNALM", "M11_HEAD"]
+      M12: ["0", "SIGNALM", "M12_HEAD"]
+      M13: ["0", "SIGNALM", "M13_HEAD"]
+      M14: ["0", "SIGNALM", "M14_HEAD"]
+      M15: ["0", "SIGNALM", "M15_HEAD"]
+      M16: ["0", "SIGNALM", "M16_HEAD"]
+      M17: ["0", "SIGNALM", "M17_HEAD"]
+      M18: ["0", "SIGNALM", "M18_HEAD"]
+      M19: ["0", "SIGNALM", "M19_HEAD"]
+      M20: ["0", "SIGNALM", "M20_HEAD"]
+      M21: ["0", "SIGNALM", "M21_HEAD"]
+      M22: ["0", "SIGNALM", "M22_HEAD"]
+      M23: ["0", "SIGNALM", "M23_HEAD"]
+      M24: ["0", "SIGNALM", "M24_HEAD"]
+      M25: ["0", "SIGNALM", "M25_HEAD"]
+      M26: ["0", "SIGNALM", "M26_HEAD"]
+      M27: ["0", "SIGNALM", "M27_HEAD"]
+      M28: ["0", "SIGNALM", "M28_HEAD"]
+      M29: ["0", "SIGNALM", "M29_HEAD"]
+      M30: ["0", "SIGNALM", "M30_HEAD"]
+      M31: ["0", "SIGNALM", "M31_HEAD"]
+      M32: ["0", "SIGNALM", "M32_HEAD"]
+      M33: ["0", "SIGNALM", "M33_HEAD"]
+      M34: ["0", "SIGNALM", "M34_HEAD"]
+      M35: ["0", "SIGNALM", "M35_HEAD"]
+      M36: ["0", "SIGNALM", "M36_HEAD"]
+      M37: ["0", "SIGNALM", "M37_HEAD"]
+      M38: ["0", "SIGNALM", "M38_HEAD"]
+      M39: ["0", "SIGNALM", "M39_HEAD"]
+      M40: ["0", "SIGNALM", "M40_HEAD"]
+      M41: ["0", "SIGNALM", "M41_HEAD"]
+      M42: ["0", "SIGNALM", "M42_HEAD"]
+      M43: ["0", "SIGNALM", "M43_HEAD"]
+      M44: ["0", "SIGNALM", "M44_HEAD"]
+      M45: ["0", "SIGNALM", "M45_HEAD"]
+      M46: ["0", "SIGNALM", "M46_HEAD"]
+      M47: ["0", "SIGNALM", "M47_HEAD"]
+      M48: ["0", "SIGNALM", "F0_HEAD"]
+      M49: ["0", "SIGNALM", "F1_HEAD"]
+      M50: ["0", "SIGNALM", "F2_HEAD"]
+      M51: ["0", "SIGNALM", "F3_HEAD"]
+      M52: ["0", "SIGNALM", "F4_HEAD"]
+      M53: ["0", "SIGNALM", "F5_HEAD"]
+      M54: ["0", "SIGNALM", "F6_HEAD"]
+      M55: ["0", "SIGNALM", "F7_HEAD"]
+      M56: ["0", "SIGNALM", "F8_HEAD"]
+      M57: ["0", "SIGNALM", "F9_HEAD"]
+      M58: ["0", "SIGNALM", "F10_HEAD"]
+      M59: ["0", "SIGNALM", "F11_HEAD"]
+      M60: ["0", "SIGNALM", "F12_HEAD"]
+      M61: ["0", "SIGNALM", "F13_HEAD"]
+      M62: ["0", "SIGNALM", "F14_HEAD"]
+      M63: ["0", "SIGNALM", "F15_HEAD"]
+      M64: ["0", "SIGNALM", "F16_HEAD"]
+      M65: ["0", "SIGNALM", "F17_HEAD"]
+      M66: ["0", "SIGNALM", "F18_HEAD"]
+      M67: ["0", "SIGNALM", "F19_HEAD"]
+      M68: ["0", "SIGNALM", "F20_HEAD"]
+      M69: ["0", "SIGNALM", "F21_HEAD"]
+      M70: ["0", "SIGNALM", "F22_HEAD"]
+      M71: ["0", "SIGNALM", "F23_HEAD"]
+      M72: ["0", "SIGNALM", "F24_HEAD"]
+      M73: ["0", "SIGNALM", "F25_HEAD"]
+      M74: ["0", "SIGNALM", "F26_HEAD"]
+      M75: ["0", "SIGNALM", "F27_HEAD"]
+      M76: ["0", "SIGNALM", "F28_HEAD"]
+      M77: ["0", "SIGNALM", "F29_HEAD"]
+      M78: ["0", "SIGNALM", "F30_HEAD"]
+      M79: ["0", "SIGNALM", "F31_HEAD"]
+      M80: ["0", "SIGNALM", "F32_HEAD"]
+      M81: ["0", "SIGNALM", "F33_HEAD"]
+      M82: ["0", "SIGNALM", "F34_HEAD"]
+      M83: ["0", "SIGNALM", "F35_HEAD"]
+      M84: ["0", "SIGNALM", "F36_HEAD"]
+      M85: ["0", "SIGNALM", "F37_HEAD"]
+      M86: ["0", "SIGNALM", "F38_HEAD"]
+      M87: ["0", "SIGNALM", "F39_HEAD"]
+      M88: ["0", "SIGNALM", "F40_HEAD"]
+      M89: ["0", "SIGNALM", "F41_HEAD"]
+      M90: ["0", "SIGNALM", "F42_HEAD"]
+      M91: ["0", "SIGNALM", "F43_HEAD"]
+      M92: ["0", "SIGNALM", "F44_HEAD"]
+      M93: ["0", "SIGNALM", "F45_HEAD"]
+      M94: ["0", "SIGNALM", "F46_HEAD"]
+      M95: ["0", "SIGNALM", "F47_HEAD"]
+      F0: ["0", "SIGNALF", "F0_HEAD"]
+      F1: ["0", "SIGNALF", "F1_HEAD"]
+      F2: ["0", "SIGNALF", "F2_HEAD"]
+      F3: ["0", "SIGNALF", "F3_HEAD"]
+      F4: ["0", "SIGNALF", "F4_HEAD"]
+      F5: ["0", "SIGNALF", "F5_HEAD"]
+  - type: STR_HONOR_ARMOR_UC #HONOR
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: HONOR
+    layersDefinition:
+      M0: ["0", "HONORM", "M0_HEAD"]
+      M1: ["0", "HONORM", "M1_HEAD"]
+      M2: ["0", "HONORM", "M2_HEAD"]
+      M3: ["0", "HONORM", "M3_HEAD"]
+      M4: ["0", "HONORM", "M4_HEAD"]
+      M5: ["0", "HONORM", "M5_HEAD"]
+      M6: ["0", "HONORM", "M6_HEAD"]
+      M7: ["0", "HONORM", "M7_HEAD"]
+      M8: ["0", "HONORM", "M8_HEAD"]
+      M9: ["0", "HONORM", "M9_HEAD"]
+      M10: ["0", "HONORM", "M10_HEAD"]
+      M11: ["0", "HONORM", "M11_HEAD"]
+      M12: ["0", "HONORM", "M12_HEAD"]
+      M13: ["0", "HONORM", "M13_HEAD"]
+      M14: ["0", "HONORM", "M14_HEAD"]
+      M15: ["0", "HONORM", "M15_HEAD"]
+      M16: ["0", "HONORM", "M16_HEAD"]
+      M17: ["0", "HONORM", "M17_HEAD"]
+      M18: ["0", "HONORM", "M18_HEAD"]
+      M19: ["0", "HONORM", "M19_HEAD"]
+      M20: ["0", "HONORM", "M20_HEAD"]
+      M21: ["0", "HONORM", "M21_HEAD"]
+      M22: ["0", "HONORM", "M22_HEAD"]
+      M23: ["0", "HONORM", "M23_HEAD"]
+      M24: ["0", "HONORM", "M24_HEAD"]
+      M25: ["0", "HONORM", "M25_HEAD"]
+      M26: ["0", "HONORM", "M26_HEAD"]
+      M27: ["0", "HONORM", "M27_HEAD"]
+      M28: ["0", "HONORM", "M28_HEAD"]
+      M29: ["0", "HONORM", "M29_HEAD"]
+      M30: ["0", "HONORM", "M30_HEAD"]
+      M31: ["0", "HONORM", "M31_HEAD"]
+      M32: ["0", "HONORM", "M32_HEAD"]
+      M33: ["0", "HONORM", "M33_HEAD"]
+      M34: ["0", "HONORM", "M34_HEAD"]
+      M35: ["0", "HONORM", "M35_HEAD"]
+      M36: ["0", "HONORM", "M36_HEAD"]
+      M37: ["0", "HONORM", "M37_HEAD"]
+      M38: ["0", "HONORM", "M38_HEAD"]
+      M39: ["0", "HONORM", "M39_HEAD"]
+      M40: ["0", "HONORM", "M40_HEAD"]
+      M41: ["0", "HONORM", "M41_HEAD"]
+      M42: ["0", "HONORM", "M42_HEAD"]
+      M43: ["0", "HONORM", "M43_HEAD"]
+      M44: ["0", "HONORM", "M44_HEAD"]
+      M45: ["0", "HONORM", "M45_HEAD"]
+      M46: ["0", "HONORM", "M46_HEAD"]
+      M47: ["0", "HONORM", "M47_HEAD"]
+      M48: ["0", "HONORM", "F0_HEAD"]
+      M49: ["0", "HONORM", "F1_HEAD"]
+      M50: ["0", "HONORM", "F2_HEAD"]
+      M51: ["0", "HONORM", "F3_HEAD"]
+      M52: ["0", "HONORM", "F4_HEAD"]
+      M53: ["0", "HONORM", "F5_HEAD"]
+      M54: ["0", "HONORM", "F6_HEAD"]
+      M55: ["0", "HONORM", "F7_HEAD"]
+      M56: ["0", "HONORM", "F8_HEAD"]
+      M57: ["0", "HONORM", "F9_HEAD"]
+      M58: ["0", "HONORM", "F10_HEAD"]
+      M59: ["0", "HONORM", "F11_HEAD"]
+      M60: ["0", "HONORM", "F12_HEAD"]
+      M61: ["0", "HONORM", "F13_HEAD"]
+      M62: ["0", "HONORM", "F14_HEAD"]
+      M63: ["0", "HONORM", "F15_HEAD"]
+      M64: ["0", "HONORM", "F16_HEAD"]
+      M65: ["0", "HONORM", "F17_HEAD"]
+      M66: ["0", "HONORM", "F18_HEAD"]
+      M67: ["0", "HONORM", "F19_HEAD"]
+      M68: ["0", "HONORM", "F20_HEAD"]
+      M69: ["0", "HONORM", "F21_HEAD"]
+      M70: ["0", "HONORM", "F22_HEAD"]
+      M71: ["0", "HONORM", "F23_HEAD"]
+      M72: ["0", "HONORM", "F24_HEAD"]
+      M73: ["0", "HONORM", "F25_HEAD"]
+      M74: ["0", "HONORM", "F26_HEAD"]
+      M75: ["0", "HONORM", "F27_HEAD"]
+      M76: ["0", "HONORM", "F28_HEAD"]
+      M77: ["0", "HONORM", "F29_HEAD"]
+      M78: ["0", "HONORM", "F30_HEAD"]
+      M79: ["0", "HONORM", "F31_HEAD"]
+      M80: ["0", "HONORM", "F32_HEAD"]
+      M81: ["0", "HONORM", "F33_HEAD"]
+      M82: ["0", "HONORM", "F34_HEAD"]
+      M83: ["0", "HONORM", "F35_HEAD"]
+      M84: ["0", "HONORM", "F36_HEAD"]
+      M85: ["0", "HONORM", "F37_HEAD"]
+      M86: ["0", "HONORM", "F38_HEAD"]
+      M87: ["0", "HONORM", "F39_HEAD"]
+      M88: ["0", "HONORM", "F40_HEAD"]
+      M89: ["0", "HONORM", "F41_HEAD"]
+      M90: ["0", "HONORM", "F42_HEAD"]
+      M91: ["0", "HONORM", "F43_HEAD"]
+      M92: ["0", "HONORM", "F44_HEAD"]
+      M93: ["0", "HONORM", "F45_HEAD"]
+      M94: ["0", "HONORM", "F46_HEAD"]
+      M95: ["0", "HONORM", "F47_HEAD"]
+      F0: ["0", "HONORF", "F0_HEAD"]
+      F1: ["0", "HONORF", "F1_HEAD"]
+      F2: ["0", "HONORF", "F2_HEAD"]
+      F3: ["0", "HONORF", "F3_HEAD"]
+      F4: ["0", "HONORF", "F4_HEAD"]
+      F5: ["0", "HONORF", "F5_HEAD"]
+  - type: STR_ASS_ARMOR_HONOR_UC #HONOR ASSAULT
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: HONORASS
+    layersDefinition:
+      M0: ["0", "ASSAULTMH", "M0_HEAD"]
+      M1: ["0", "ASSAULTMH", "M1_HEAD"]
+      M2: ["0", "ASSAULTMH", "M2_HEAD"]
+      M3: ["0", "ASSAULTMH", "M3_HEAD"]
+      M4: ["0", "ASSAULTMH", "M4_HEAD"]
+      M5: ["0", "ASSAULTMH", "M5_HEAD"]
+      M6: ["0", "ASSAULTMH", "M6_HEAD"]
+      M7: ["0", "ASSAULTMH", "M7_HEAD"]
+      M8: ["0", "ASSAULTMH", "M8_HEAD"]
+      M9: ["0", "ASSAULTMH", "M9_HEAD"]
+      M10: ["0", "ASSAULTMH", "M10_HEAD"]
+      M11: ["0", "ASSAULTMH", "M11_HEAD"]
+      M12: ["0", "ASSAULTMH", "M12_HEAD"]
+      M13: ["0", "ASSAULTMH", "M13_HEAD"]
+      M14: ["0", "ASSAULTMH", "M14_HEAD"]
+      M15: ["0", "ASSAULTMH", "M15_HEAD"]
+      M16: ["0", "ASSAULTMH", "M16_HEAD"]
+      M17: ["0", "ASSAULTMH", "M17_HEAD"]
+      M18: ["0", "ASSAULTMH", "M18_HEAD"]
+      M19: ["0", "ASSAULTMH", "M19_HEAD"]
+      M20: ["0", "ASSAULTMH", "M20_HEAD"]
+      M21: ["0", "ASSAULTMH", "M21_HEAD"]
+      M22: ["0", "ASSAULTMH", "M22_HEAD"]
+      M23: ["0", "ASSAULTMH", "M23_HEAD"]
+      M24: ["0", "ASSAULTMH", "M24_HEAD"]
+      M25: ["0", "ASSAULTMH", "M25_HEAD"]
+      M26: ["0", "ASSAULTMH", "M26_HEAD"]
+      M27: ["0", "ASSAULTMH", "M27_HEAD"]
+      M28: ["0", "ASSAULTMH", "M28_HEAD"]
+      M29: ["0", "ASSAULTMH", "M29_HEAD"]
+      M30: ["0", "ASSAULTMH", "M30_HEAD"]
+      M31: ["0", "ASSAULTMH", "M31_HEAD"]
+      M32: ["0", "ASSAULTMH", "M32_HEAD"]
+      M33: ["0", "ASSAULTMH", "M33_HEAD"]
+      M34: ["0", "ASSAULTMH", "M34_HEAD"]
+      M35: ["0", "ASSAULTMH", "M35_HEAD"]
+      M36: ["0", "ASSAULTMH", "M36_HEAD"]
+      M37: ["0", "ASSAULTMH", "M37_HEAD"]
+      M38: ["0", "ASSAULTMH", "M38_HEAD"]
+      M39: ["0", "ASSAULTMH", "M39_HEAD"]
+      M40: ["0", "ASSAULTMH", "M40_HEAD"]
+      M41: ["0", "ASSAULTMH", "M41_HEAD"]
+      M42: ["0", "ASSAULTMH", "M42_HEAD"]
+      M43: ["0", "ASSAULTMH", "M43_HEAD"]
+      M44: ["0", "ASSAULTMH", "M44_HEAD"]
+      M45: ["0", "ASSAULTMH", "M45_HEAD"]
+      M46: ["0", "ASSAULTMH", "M46_HEAD"]
+      M47: ["0", "ASSAULTMH", "M47_HEAD"]
+      M48: ["0", "ASSAULTMH", "F0_HEAD"]
+      M49: ["0", "ASSAULTMH", "F1_HEAD"]
+      M50: ["0", "ASSAULTMH", "F2_HEAD"]
+      M51: ["0", "ASSAULTMH", "F3_HEAD"]
+      M52: ["0", "ASSAULTMH", "F4_HEAD"]
+      M53: ["0", "ASSAULTMH", "F5_HEAD"]
+      M54: ["0", "ASSAULTMH", "F6_HEAD"]
+      M55: ["0", "ASSAULTMH", "F7_HEAD"]
+      M56: ["0", "ASSAULTMH", "F8_HEAD"]
+      M57: ["0", "ASSAULTMH", "F9_HEAD"]
+      M58: ["0", "ASSAULTMH", "F10_HEAD"]
+      M59: ["0", "ASSAULTMH", "F11_HEAD"]
+      M60: ["0", "ASSAULTMH", "F12_HEAD"]
+      M61: ["0", "ASSAULTMH", "F13_HEAD"]
+      M62: ["0", "ASSAULTMH", "F14_HEAD"]
+      M63: ["0", "ASSAULTMH", "F15_HEAD"]
+      M64: ["0", "ASSAULTMH", "F16_HEAD"]
+      M65: ["0", "ASSAULTMH", "F17_HEAD"]
+      M66: ["0", "ASSAULTMH", "F18_HEAD"]
+      M67: ["0", "ASSAULTMH", "F19_HEAD"]
+      M68: ["0", "ASSAULTMH", "F20_HEAD"]
+      M69: ["0", "ASSAULTMH", "F21_HEAD"]
+      M70: ["0", "ASSAULTMH", "F22_HEAD"]
+      M71: ["0", "ASSAULTMH", "F23_HEAD"]
+      M72: ["0", "ASSAULTMH", "F24_HEAD"]
+      M73: ["0", "ASSAULTMH", "F25_HEAD"]
+      M74: ["0", "ASSAULTMH", "F26_HEAD"]
+      M75: ["0", "ASSAULTMH", "F27_HEAD"]
+      M76: ["0", "ASSAULTMH", "F28_HEAD"]
+      M77: ["0", "ASSAULTMH", "F29_HEAD"]
+      M78: ["0", "ASSAULTMH", "F30_HEAD"]
+      M79: ["0", "ASSAULTMH", "F31_HEAD"]
+      M80: ["0", "ASSAULTMH", "F32_HEAD"]
+      M81: ["0", "ASSAULTMH", "F33_HEAD"]
+      M82: ["0", "ASSAULTMH", "F34_HEAD"]
+      M83: ["0", "ASSAULTMH", "F35_HEAD"]
+      M84: ["0", "ASSAULTMH", "F36_HEAD"]
+      M85: ["0", "ASSAULTMH", "F37_HEAD"]
+      M86: ["0", "ASSAULTMH", "F38_HEAD"]
+      M87: ["0", "ASSAULTMH", "F39_HEAD"]
+      M88: ["0", "ASSAULTMH", "F40_HEAD"]
+      M89: ["0", "ASSAULTMH", "F41_HEAD"]
+      M90: ["0", "ASSAULTMH", "F42_HEAD"]
+      M91: ["0", "ASSAULTMH", "F43_HEAD"]
+      M92: ["0", "ASSAULTMH", "F44_HEAD"]
+      M93: ["0", "ASSAULTMH", "F45_HEAD"]
+      M94: ["0", "ASSAULTMH", "F46_HEAD"]
+      M95: ["0", "ASSAULTMH", "F47_HEAD"]
+      F0: ["0", "ASSAULTFH", "F0_HEAD"]
+      F1: ["0", "ASSAULTFH", "F1_HEAD"]
+      F2: ["0", "ASSAULTFH", "F2_HEAD"]
+      F3: ["0", "ASSAULTFH", "F3_HEAD"]
+      F4: ["0", "ASSAULTFH", "F4_HEAD"]
+      F5: ["0", "ASSAULTFH", "F5_HEAD"]
+  - type: STR_ASS_ARMOR_UC #ASSAULT
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: ASSAULT
+    layersDefinition:
+      M0: ["0", "ASSAULTM", "M0_HEAD"]
+      M1: ["0", "ASSAULTM", "M1_HEAD"]
+      M2: ["0", "ASSAULTM", "M2_HEAD"]
+      M3: ["0", "ASSAULTM", "M3_HEAD"]
+      M4: ["0", "ASSAULTM", "M4_HEAD"]
+      M5: ["0", "ASSAULTM", "M5_HEAD"]
+      M6: ["0", "ASSAULTM", "M6_HEAD"]
+      M7: ["0", "ASSAULTM", "M7_HEAD"]
+      M8: ["0", "ASSAULTM", "M8_HEAD"]
+      M9: ["0", "ASSAULTM", "M9_HEAD"]
+      M10: ["0", "ASSAULTM", "M10_HEAD"]
+      M11: ["0", "ASSAULTM", "M11_HEAD"]
+      M12: ["0", "ASSAULTM", "M12_HEAD"]
+      M13: ["0", "ASSAULTM", "M13_HEAD"]
+      M14: ["0", "ASSAULTM", "M14_HEAD"]
+      M15: ["0", "ASSAULTM", "M15_HEAD"]
+      M16: ["0", "ASSAULTM", "M16_HEAD"]
+      M17: ["0", "ASSAULTM", "M17_HEAD"]
+      M18: ["0", "ASSAULTM", "M18_HEAD"]
+      M19: ["0", "ASSAULTM", "M19_HEAD"]
+      M20: ["0", "ASSAULTM", "M20_HEAD"]
+      M21: ["0", "ASSAULTM", "M21_HEAD"]
+      M22: ["0", "ASSAULTM", "M22_HEAD"]
+      M23: ["0", "ASSAULTM", "M23_HEAD"]
+      M24: ["0", "ASSAULTM", "M24_HEAD"]
+      M25: ["0", "ASSAULTM", "M25_HEAD"]
+      M26: ["0", "ASSAULTM", "M26_HEAD"]
+      M27: ["0", "ASSAULTM", "M27_HEAD"]
+      M28: ["0", "ASSAULTM", "M28_HEAD"]
+      M29: ["0", "ASSAULTM", "M29_HEAD"]
+      M30: ["0", "ASSAULTM", "M30_HEAD"]
+      M31: ["0", "ASSAULTM", "M31_HEAD"]
+      M32: ["0", "ASSAULTM", "M32_HEAD"]
+      M33: ["0", "ASSAULTM", "M33_HEAD"]
+      M34: ["0", "ASSAULTM", "M34_HEAD"]
+      M35: ["0", "ASSAULTM", "M35_HEAD"]
+      M36: ["0", "ASSAULTM", "M36_HEAD"]
+      M37: ["0", "ASSAULTM", "M37_HEAD"]
+      M38: ["0", "ASSAULTM", "M38_HEAD"]
+      M39: ["0", "ASSAULTM", "M39_HEAD"]
+      M40: ["0", "ASSAULTM", "M40_HEAD"]
+      M41: ["0", "ASSAULTM", "M41_HEAD"]
+      M42: ["0", "ASSAULTM", "M42_HEAD"]
+      M43: ["0", "ASSAULTM", "M43_HEAD"]
+      M44: ["0", "ASSAULTM", "M44_HEAD"]
+      M45: ["0", "ASSAULTM", "M45_HEAD"]
+      M46: ["0", "ASSAULTM", "M46_HEAD"]
+      M47: ["0", "ASSAULTM", "M47_HEAD"]
+      M48: ["0", "ASSAULTM", "F0_HEAD"]
+      M49: ["0", "ASSAULTM", "F1_HEAD"]
+      M50: ["0", "ASSAULTM", "F2_HEAD"]
+      M51: ["0", "ASSAULTM", "F3_HEAD"]
+      M52: ["0", "ASSAULTM", "F4_HEAD"]
+      M53: ["0", "ASSAULTM", "F5_HEAD"]
+      M54: ["0", "ASSAULTM", "F6_HEAD"]
+      M55: ["0", "ASSAULTM", "F7_HEAD"]
+      M56: ["0", "ASSAULTM", "F8_HEAD"]
+      M57: ["0", "ASSAULTM", "F9_HEAD"]
+      M58: ["0", "ASSAULTM", "F10_HEAD"]
+      M59: ["0", "ASSAULTM", "F11_HEAD"]
+      M60: ["0", "ASSAULTM", "F12_HEAD"]
+      M61: ["0", "ASSAULTM", "F13_HEAD"]
+      M62: ["0", "ASSAULTM", "F14_HEAD"]
+      M63: ["0", "ASSAULTM", "F15_HEAD"]
+      M64: ["0", "ASSAULTM", "F16_HEAD"]
+      M65: ["0", "ASSAULTM", "F17_HEAD"]
+      M66: ["0", "ASSAULTM", "F18_HEAD"]
+      M67: ["0", "ASSAULTM", "F19_HEAD"]
+      M68: ["0", "ASSAULTM", "F20_HEAD"]
+      M69: ["0", "ASSAULTM", "F21_HEAD"]
+      M70: ["0", "ASSAULTM", "F22_HEAD"]
+      M71: ["0", "ASSAULTM", "F23_HEAD"]
+      M72: ["0", "ASSAULTM", "F24_HEAD"]
+      M73: ["0", "ASSAULTM", "F25_HEAD"]
+      M74: ["0", "ASSAULTM", "F26_HEAD"]
+      M75: ["0", "ASSAULTM", "F27_HEAD"]
+      M76: ["0", "ASSAULTM", "F28_HEAD"]
+      M77: ["0", "ASSAULTM", "F29_HEAD"]
+      M78: ["0", "ASSAULTM", "F30_HEAD"]
+      M79: ["0", "ASSAULTM", "F31_HEAD"]
+      M80: ["0", "ASSAULTM", "F32_HEAD"]
+      M81: ["0", "ASSAULTM", "F33_HEAD"]
+      M82: ["0", "ASSAULTM", "F34_HEAD"]
+      M83: ["0", "ASSAULTM", "F35_HEAD"]
+      M84: ["0", "ASSAULTM", "F36_HEAD"]
+      M85: ["0", "ASSAULTM", "F37_HEAD"]
+      M86: ["0", "ASSAULTM", "F38_HEAD"]
+      M87: ["0", "ASSAULTM", "F39_HEAD"]
+      M88: ["0", "ASSAULTM", "F40_HEAD"]
+      M89: ["0", "ASSAULTM", "F41_HEAD"]
+      M90: ["0", "ASSAULTM", "F42_HEAD"]
+      M91: ["0", "ASSAULTM", "F43_HEAD"]
+      M92: ["0", "ASSAULTM", "F44_HEAD"]
+      M93: ["0", "ASSAULTM", "F45_HEAD"]
+      M94: ["0", "ASSAULTM", "F46_HEAD"]
+      M95: ["0", "ASSAULTM", "F47_HEAD"]
+      F0: ["0", "ASSAULTF", "F0_HEAD"]
+      F1: ["0", "ASSAULTF", "F1_HEAD"]
+      F2: ["0", "ASSAULTF", "F2_HEAD"]
+      F3: ["0", "ASSAULTF", "F3_HEAD"]
+      F4: ["0", "ASSAULTF", "F4_HEAD"]
+      F5: ["0", "ASSAULTF", "F5_HEAD"]
+  - type: STR_DEV_ARMOR_UC #DEVASTATOR
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: DEVASTATOR
+    layersDefinition:
+      M0: ["0", "DEVASTATORM", "M0_HEAD"]
+      M1: ["0", "DEVASTATORM", "M1_HEAD"]
+      M2: ["0", "DEVASTATORM", "M2_HEAD"]
+      M3: ["0", "DEVASTATORM", "M3_HEAD"]
+      M4: ["0", "DEVASTATORM", "M4_HEAD"]
+      M5: ["0", "DEVASTATORM", "M5_HEAD"]
+      M6: ["0", "DEVASTATORM", "M6_HEAD"]
+      M7: ["0", "DEVASTATORM", "M7_HEAD"]
+      M8: ["0", "DEVASTATORM", "M8_HEAD"]
+      M9: ["0", "DEVASTATORM", "M9_HEAD"]
+      M10: ["0", "DEVASTATORM", "M10_HEAD"]
+      M11: ["0", "DEVASTATORM", "M11_HEAD"]
+      M12: ["0", "DEVASTATORM", "M12_HEAD"]
+      M13: ["0", "DEVASTATORM", "M13_HEAD"]
+      M14: ["0", "DEVASTATORM", "M14_HEAD"]
+      M15: ["0", "DEVASTATORM", "M15_HEAD"]
+      M16: ["0", "DEVASTATORM", "M16_HEAD"]
+      M17: ["0", "DEVASTATORM", "M17_HEAD"]
+      M18: ["0", "DEVASTATORM", "M18_HEAD"]
+      M19: ["0", "DEVASTATORM", "M19_HEAD"]
+      M20: ["0", "DEVASTATORM", "M20_HEAD"]
+      M21: ["0", "DEVASTATORM", "M21_HEAD"]
+      M22: ["0", "DEVASTATORM", "M22_HEAD"]
+      M23: ["0", "DEVASTATORM", "M23_HEAD"]
+      M24: ["0", "DEVASTATORM", "M24_HEAD"]
+      M25: ["0", "DEVASTATORM", "M25_HEAD"]
+      M26: ["0", "DEVASTATORM", "M26_HEAD"]
+      M27: ["0", "DEVASTATORM", "M27_HEAD"]
+      M28: ["0", "DEVASTATORM", "M28_HEAD"]
+      M29: ["0", "DEVASTATORM", "M29_HEAD"]
+      M30: ["0", "DEVASTATORM", "M30_HEAD"]
+      M31: ["0", "DEVASTATORM", "M31_HEAD"]
+      M32: ["0", "DEVASTATORM", "M32_HEAD"]
+      M33: ["0", "DEVASTATORM", "M33_HEAD"]
+      M34: ["0", "DEVASTATORM", "M34_HEAD"]
+      M35: ["0", "DEVASTATORM", "M35_HEAD"]
+      M36: ["0", "DEVASTATORM", "M36_HEAD"]
+      M37: ["0", "DEVASTATORM", "M37_HEAD"]
+      M38: ["0", "DEVASTATORM", "M38_HEAD"]
+      M39: ["0", "DEVASTATORM", "M39_HEAD"]
+      M40: ["0", "DEVASTATORM", "M40_HEAD"]
+      M41: ["0", "DEVASTATORM", "M41_HEAD"]
+      M42: ["0", "DEVASTATORM", "M42_HEAD"]
+      M43: ["0", "DEVASTATORM", "M43_HEAD"]
+      M44: ["0", "DEVASTATORM", "M44_HEAD"]
+      M45: ["0", "DEVASTATORM", "M45_HEAD"]
+      M46: ["0", "DEVASTATORM", "M46_HEAD"]
+      M47: ["0", "DEVASTATORM", "M47_HEAD"]
+      M48: ["0", "DEVASTATORM", "F0_HEAD"]
+      M49: ["0", "DEVASTATORM", "F1_HEAD"]
+      M50: ["0", "DEVASTATORM", "F2_HEAD"]
+      M51: ["0", "DEVASTATORM", "F3_HEAD"]
+      M52: ["0", "DEVASTATORM", "F4_HEAD"]
+      M53: ["0", "DEVASTATORM", "F5_HEAD"]
+      M54: ["0", "DEVASTATORM", "F6_HEAD"]
+      M55: ["0", "DEVASTATORM", "F7_HEAD"]
+      M56: ["0", "DEVASTATORM", "F8_HEAD"]
+      M57: ["0", "DEVASTATORM", "F9_HEAD"]
+      M58: ["0", "DEVASTATORM", "F10_HEAD"]
+      M59: ["0", "DEVASTATORM", "F11_HEAD"]
+      M60: ["0", "DEVASTATORM", "F12_HEAD"]
+      M61: ["0", "DEVASTATORM", "F13_HEAD"]
+      M62: ["0", "DEVASTATORM", "F14_HEAD"]
+      M63: ["0", "DEVASTATORM", "F15_HEAD"]
+      M64: ["0", "DEVASTATORM", "F16_HEAD"]
+      M65: ["0", "DEVASTATORM", "F17_HEAD"]
+      M66: ["0", "DEVASTATORM", "F18_HEAD"]
+      M67: ["0", "DEVASTATORM", "F19_HEAD"]
+      M68: ["0", "DEVASTATORM", "F20_HEAD"]
+      M69: ["0", "DEVASTATORM", "F21_HEAD"]
+      M70: ["0", "DEVASTATORM", "F22_HEAD"]
+      M71: ["0", "DEVASTATORM", "F23_HEAD"]
+      M72: ["0", "DEVASTATORM", "F24_HEAD"]
+      M73: ["0", "DEVASTATORM", "F25_HEAD"]
+      M74: ["0", "DEVASTATORM", "F26_HEAD"]
+      M75: ["0", "DEVASTATORM", "F27_HEAD"]
+      M76: ["0", "DEVASTATORM", "F28_HEAD"]
+      M77: ["0", "DEVASTATORM", "F29_HEAD"]
+      M78: ["0", "DEVASTATORM", "F30_HEAD"]
+      M79: ["0", "DEVASTATORM", "F31_HEAD"]
+      M80: ["0", "DEVASTATORM", "F32_HEAD"]
+      M81: ["0", "DEVASTATORM", "F33_HEAD"]
+      M82: ["0", "DEVASTATORM", "F34_HEAD"]
+      M83: ["0", "DEVASTATORM", "F35_HEAD"]
+      M84: ["0", "DEVASTATORM", "F36_HEAD"]
+      M85: ["0", "DEVASTATORM", "F37_HEAD"]
+      M86: ["0", "DEVASTATORM", "F38_HEAD"]
+      M87: ["0", "DEVASTATORM", "F39_HEAD"]
+      M88: ["0", "DEVASTATORM", "F40_HEAD"]
+      M89: ["0", "DEVASTATORM", "F41_HEAD"]
+      M90: ["0", "DEVASTATORM", "F42_HEAD"]
+      M91: ["0", "DEVASTATORM", "F43_HEAD"]
+      M92: ["0", "DEVASTATORM", "F44_HEAD"]
+      M93: ["0", "DEVASTATORM", "F45_HEAD"]
+      M94: ["0", "DEVASTATORM", "F46_HEAD"]
+      M95: ["0", "DEVASTATORM", "F47_HEAD"]
+      F0: ["0", "DEVASTATORF", "F0_HEAD"]
+      F1: ["0", "DEVASTATORF", "F1_HEAD"]
+      F2: ["0", "DEVASTATORF", "F2_HEAD"]
+      F3: ["0", "DEVASTATORF", "F3_HEAD"]
+      F4: ["0", "DEVASTATORF", "F4_HEAD"]
+      F5: ["0", "DEVASTATORF", "F5_HEAD"]
+  - type: STR_CHAP_ARMOR_UC ##CHAPLAIN
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: CHAPLAIN
+    layersDefinition:
+      M0: ["0", "CHAPLAINM", "M0_HEAD"]
+      M1: ["0", "CHAPLAINM", "M1_HEAD"]
+      M2: ["0", "CHAPLAINM", "M2_HEAD"]
+      M3: ["0", "CHAPLAINM", "M3_HEAD"]
+      M4: ["0", "CHAPLAINM", "M4_HEAD"]
+      M5: ["0", "CHAPLAINM", "M5_HEAD"]
+      M6: ["0", "CHAPLAINM", "M6_HEAD"]
+      M7: ["0", "CHAPLAINM", "M7_HEAD"]
+      M8: ["0", "CHAPLAINM", "M8_HEAD"]
+      M9: ["0", "CHAPLAINM", "M9_HEAD"]
+      M10: ["0", "CHAPLAINM", "M10_HEAD"]
+      M11: ["0", "CHAPLAINM", "M11_HEAD"]
+      M12: ["0", "CHAPLAINM", "M12_HEAD"]
+      M13: ["0", "CHAPLAINM", "M13_HEAD"]
+      M14: ["0", "CHAPLAINM", "M14_HEAD"]
+      M15: ["0", "CHAPLAINM", "M15_HEAD"]
+      M16: ["0", "CHAPLAINM", "M16_HEAD"]
+      M17: ["0", "CHAPLAINM", "M17_HEAD"]
+      M18: ["0", "CHAPLAINM", "M18_HEAD"]
+      M19: ["0", "CHAPLAINM", "M19_HEAD"]
+      M20: ["0", "CHAPLAINM", "M20_HEAD"]
+      M21: ["0", "CHAPLAINM", "M21_HEAD"]
+      M22: ["0", "CHAPLAINM", "M22_HEAD"]
+      M23: ["0", "CHAPLAINM", "M23_HEAD"]
+      M24: ["0", "CHAPLAINM", "M24_HEAD"]
+      M25: ["0", "CHAPLAINM", "M25_HEAD"]
+      M26: ["0", "CHAPLAINM", "M26_HEAD"]
+      M27: ["0", "CHAPLAINM", "M27_HEAD"]
+      M28: ["0", "CHAPLAINM", "M28_HEAD"]
+      M29: ["0", "CHAPLAINM", "M29_HEAD"]
+      M30: ["0", "CHAPLAINM", "M30_HEAD"]
+      M31: ["0", "CHAPLAINM", "M31_HEAD"]
+      M32: ["0", "CHAPLAINM", "M32_HEAD"]
+      M33: ["0", "CHAPLAINM", "M33_HEAD"]
+      M34: ["0", "CHAPLAINM", "M34_HEAD"]
+      M35: ["0", "CHAPLAINM", "M35_HEAD"]
+      M36: ["0", "CHAPLAINM", "M36_HEAD"]
+      M37: ["0", "CHAPLAINM", "M37_HEAD"]
+      M38: ["0", "CHAPLAINM", "M38_HEAD"]
+      M39: ["0", "CHAPLAINM", "M39_HEAD"]
+      M40: ["0", "CHAPLAINM", "M40_HEAD"]
+      M41: ["0", "CHAPLAINM", "M41_HEAD"]
+      M42: ["0", "CHAPLAINM", "M42_HEAD"]
+      M43: ["0", "CHAPLAINM", "M43_HEAD"]
+      M44: ["0", "CHAPLAINM", "M44_HEAD"]
+      M45: ["0", "CHAPLAINM", "M45_HEAD"]
+      M46: ["0", "CHAPLAINM", "M46_HEAD"]
+      M47: ["0", "CHAPLAINM", "M47_HEAD"]
+      M48: ["0", "CHAPLAINM", "F0_HEAD"]
+      M49: ["0", "CHAPLAINM", "F1_HEAD"]
+      M50: ["0", "CHAPLAINM", "F2_HEAD"]
+      M51: ["0", "CHAPLAINM", "F3_HEAD"]
+      M52: ["0", "CHAPLAINM", "F4_HEAD"]
+      M53: ["0", "CHAPLAINM", "F5_HEAD"]
+      M54: ["0", "CHAPLAINM", "F6_HEAD"]
+      M55: ["0", "CHAPLAINM", "F7_HEAD"]
+      M56: ["0", "CHAPLAINM", "F8_HEAD"]
+      M57: ["0", "CHAPLAINM", "F9_HEAD"]
+      M58: ["0", "CHAPLAINM", "F10_HEAD"]
+      M59: ["0", "CHAPLAINM", "F11_HEAD"]
+      M60: ["0", "CHAPLAINM", "F12_HEAD"]
+      M61: ["0", "CHAPLAINM", "F13_HEAD"]
+      M62: ["0", "CHAPLAINM", "F14_HEAD"]
+      M63: ["0", "CHAPLAINM", "F15_HEAD"]
+      M64: ["0", "CHAPLAINM", "F16_HEAD"]
+      M65: ["0", "CHAPLAINM", "F17_HEAD"]
+      M66: ["0", "CHAPLAINM", "F18_HEAD"]
+      M67: ["0", "CHAPLAINM", "F19_HEAD"]
+      M68: ["0", "CHAPLAINM", "F20_HEAD"]
+      M69: ["0", "CHAPLAINM", "F21_HEAD"]
+      M70: ["0", "CHAPLAINM", "F22_HEAD"]
+      M71: ["0", "CHAPLAINM", "F23_HEAD"]
+      M72: ["0", "CHAPLAINM", "F24_HEAD"]
+      M73: ["0", "CHAPLAINM", "F25_HEAD"]
+      M74: ["0", "CHAPLAINM", "F26_HEAD"]
+      M75: ["0", "CHAPLAINM", "F27_HEAD"]
+      M76: ["0", "CHAPLAINM", "F28_HEAD"]
+      M77: ["0", "CHAPLAINM", "F29_HEAD"]
+      M78: ["0", "CHAPLAINM", "F30_HEAD"]
+      M79: ["0", "CHAPLAINM", "F31_HEAD"]
+      M80: ["0", "CHAPLAINM", "F32_HEAD"]
+      M81: ["0", "CHAPLAINM", "F33_HEAD"]
+      M82: ["0", "CHAPLAINM", "F34_HEAD"]
+      M83: ["0", "CHAPLAINM", "F35_HEAD"]
+      M84: ["0", "CHAPLAINM", "F36_HEAD"]
+      M85: ["0", "CHAPLAINM", "F37_HEAD"]
+      M86: ["0", "CHAPLAINM", "F38_HEAD"]
+      M87: ["0", "CHAPLAINM", "F39_HEAD"]
+      M88: ["0", "CHAPLAINM", "F40_HEAD"]
+      M89: ["0", "CHAPLAINM", "F41_HEAD"]
+      M90: ["0", "CHAPLAINM", "F42_HEAD"]
+      M91: ["0", "CHAPLAINM", "F43_HEAD"]
+      M92: ["0", "CHAPLAINM", "F44_HEAD"]
+      M93: ["0", "CHAPLAINM", "F45_HEAD"]
+      M94: ["0", "CHAPLAINM", "F46_HEAD"]
+      M95: ["0", "CHAPLAINM", "F47_HEAD"]
+      F0: ["0", "CHAPLAINF", "F0_HEAD"]
+      F1: ["0", "CHAPLAINF", "F1_HEAD"]
+      F2: ["0", "CHAPLAINF", "F2_HEAD"]
+      F3: ["0", "CHAPLAINF", "F3_HEAD"]
+      F4: ["0", "CHAPLAINF", "F4_HEAD"]
+      F5: ["0", "CHAPLAINF", "F5_HEAD"]
+  - &STR_LIB_ARMOR_UC
+    type: STR_LIB_ARMOR_UC #LIBRA
+    spriteFaceGroup: 6
+    spriteFaceColor: [97, 97, 97, 97, 95, 161, 161, 163, 162, 161, 163, 96, 96, 161, 160, 162, 96, 162, 161, 162, 96, 96, 163, 162, 163, 163, 161, 161, 163, 161, 96, 98, 97, 160, 161, 96, 163, 163, 161, 161, 96, 163, 162, 96, 162, 163, 162, 161, 161, 98, 163, 162, 96, 162, 162, 161, 163, 96, 161, 161, 162, 96, 96, 96, 98, 162, 96, 160, 162, 162, 163, 161, 96, 97, 97, 159, 159, 161, 160, 162, 98, 98, 98, 160, 161, 163, 163, 163, 96, 99, 96, 160, 97, 163, 162, 162]
+    spriteHairGroup: 9
+    spriteHairColor: [96, 144, 160, 36, 246, 246, 246, 21, 246, 246, 54, 163, 64, 35, 159, 164, 162, 162, 160, 244, 144, 34, 246, 245, 4, 50, 2, 160, 246, 133, 117, 117, 163, 146, 163, 148, 246, 246, 245, 129, 85, 38, 244, 34, 159, 66, 245, 51, 244, 22, 162, 244, 160, 196, 38, 246, 196, 160, 246, 164, 163, 50, 162, 227, 161, 245, 163, 147, 246, 134, 246, 159, 146, 144, 96, 163, 245, 245, 159, 240, 246, 36, 97, 3, 245, 246, 162, 246, 5, 159, 95, 37, 96, 244, 38, 246]
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: LIB
+    layersDefinition:
+      M0: ["0", "LIBM", "M0_HEAD"]
+      M1: ["0", "LIBM", "M1_HEAD"]
+      M2: ["0", "LIBM", "M2_HEAD"]
+      M3: ["0", "LIBM", "M3_HEAD"]
+      M4: ["0", "LIBM", "M4_HEAD"]
+      M5: ["0", "LIBM", "M5_HEAD"]
+      M6: ["0", "LIBM", "M6_HEAD"]
+      M7: ["0", "LIBM", "M7_HEAD"]
+      M8: ["0", "LIBM", "M8_HEAD"]
+      M9: ["0", "LIBM", "M9_HEAD"]
+      M10: ["0", "LIBM", "M10_HEAD"]
+      M11: ["0", "LIBM", "M11_HEAD"]
+      M12: ["0", "LIBM", "M12_HEAD"]
+      M13: ["0", "LIBM", "M13_HEAD"]
+      M14: ["0", "LIBM", "M14_HEAD"]
+      M15: ["0", "LIBM", "M15_HEAD"]
+      M16: ["0", "LIBM", "M16_HEAD"]
+      M17: ["0", "LIBM", "M17_HEAD"]
+      M18: ["0", "LIBM", "M18_HEAD"]
+      M19: ["0", "LIBM", "M19_HEAD"]
+      M20: ["0", "LIBM", "M20_HEAD"]
+      M21: ["0", "LIBM", "M21_HEAD"]
+      M22: ["0", "LIBM", "M22_HEAD"]
+      M23: ["0", "LIBM", "M23_HEAD"]
+      M24: ["0", "LIBM", "M24_HEAD"]
+      M25: ["0", "LIBM", "M25_HEAD"]
+      M26: ["0", "LIBM", "M26_HEAD"]
+      M27: ["0", "LIBM", "M27_HEAD"]
+      M28: ["0", "LIBM", "M28_HEAD"]
+      M29: ["0", "LIBM", "M29_HEAD"]
+      M30: ["0", "LIBM", "M30_HEAD"]
+      M31: ["0", "LIBM", "M31_HEAD"]
+      M32: ["0", "LIBM", "M32_HEAD"]
+      M33: ["0", "LIBM", "M33_HEAD"]
+      M34: ["0", "LIBM", "M34_HEAD"]
+      M35: ["0", "LIBM", "M35_HEAD"]
+      M36: ["0", "LIBM", "M36_HEAD"]
+      M37: ["0", "LIBM", "M37_HEAD"]
+      M38: ["0", "LIBM", "M38_HEAD"]
+      M39: ["0", "LIBM", "M39_HEAD"]
+      M40: ["0", "LIBM", "M40_HEAD"]
+      M41: ["0", "LIBM", "M41_HEAD"]
+      M42: ["0", "LIBM", "M42_HEAD"]
+      M43: ["0", "LIBM", "M43_HEAD"]
+      M44: ["0", "LIBM", "M44_HEAD"]
+      M45: ["0", "LIBM", "M45_HEAD"]
+      M46: ["0", "LIBM", "M46_HEAD"]
+      M47: ["0", "LIBM", "M47_HEAD"]
+      M48: ["0", "LIBM", "F0_HEAD"]
+      M49: ["0", "LIBM", "F1_HEAD"]
+      M50: ["0", "LIBM", "F2_HEAD"]
+      M51: ["0", "LIBM", "F3_HEAD"]
+      M52: ["0", "LIBM", "F4_HEAD"]
+      M53: ["0", "LIBM", "F5_HEAD"]
+      M54: ["0", "LIBM", "F6_HEAD"]
+      M55: ["0", "LIBM", "F7_HEAD"]
+      M56: ["0", "LIBM", "F8_HEAD"]
+      M57: ["0", "LIBM", "F9_HEAD"]
+      M58: ["0", "LIBM", "F10_HEAD"]
+      M59: ["0", "LIBM", "F11_HEAD"]
+      M60: ["0", "LIBM", "F12_HEAD"]
+      M61: ["0", "LIBM", "F13_HEAD"]
+      M62: ["0", "LIBM", "F14_HEAD"]
+      M63: ["0", "LIBM", "F15_HEAD"]
+      M64: ["0", "LIBM", "F16_HEAD"]
+      M65: ["0", "LIBM", "F17_HEAD"]
+      M66: ["0", "LIBM", "F18_HEAD"]
+      M67: ["0", "LIBM", "F19_HEAD"]
+      M68: ["0", "LIBM", "F20_HEAD"]
+      M69: ["0", "LIBM", "F21_HEAD"]
+      M70: ["0", "LIBM", "F22_HEAD"]
+      M71: ["0", "LIBM", "F23_HEAD"]
+      M72: ["0", "LIBM", "F24_HEAD"]
+      M73: ["0", "LIBM", "F25_HEAD"]
+      M74: ["0", "LIBM", "F26_HEAD"]
+      M75: ["0", "LIBM", "F27_HEAD"]
+      M76: ["0", "LIBM", "F28_HEAD"]
+      M77: ["0", "LIBM", "F29_HEAD"]
+      M78: ["0", "LIBM", "F30_HEAD"]
+      M79: ["0", "LIBM", "F31_HEAD"]
+      M80: ["0", "LIBM", "F32_HEAD"]
+      M81: ["0", "LIBM", "F33_HEAD"]
+      M82: ["0", "LIBM", "F34_HEAD"]
+      M83: ["0", "LIBM", "F35_HEAD"]
+      M84: ["0", "LIBM", "F36_HEAD"]
+      M85: ["0", "LIBM", "F37_HEAD"]
+      M86: ["0", "LIBM", "F38_HEAD"]
+      M87: ["0", "LIBM", "F39_HEAD"]
+      M88: ["0", "LIBM", "F40_HEAD"]
+      M89: ["0", "LIBM", "F41_HEAD"]
+      M90: ["0", "LIBM", "F42_HEAD"]
+      M91: ["0", "LIBM", "F43_HEAD"]
+      M92: ["0", "LIBM", "F44_HEAD"]
+      M93: ["0", "LIBM", "F45_HEAD"]
+      M94: ["0", "LIBM", "F46_HEAD"]
+      M95: ["0", "LIBM", "F47_HEAD"]
+      F0: ["0", "LIBF", "F0_HEAD"]
+      F1: ["0", "LIBF", "F1_HEAD"]
+      F2: ["0", "LIBF", "F2_HEAD"]
+      F3: ["0", "LIBF", "F3_HEAD"]
+      F4: ["0", "LIBF", "F4_HEAD"]
+      F5: ["0", "LIBF", "F5_HEAD"]
+  - type: STR_LIB_ARMOR_LOCKDOWN
+    refNode: *STR_LIB_ARMOR_UC
+  - type: STR_LIB_ARMOR_MELEE_INSPIRE
+    refNode: *STR_LIB_ARMOR_UC
+  - type: STR_LIB_ARMOR_SHIELD
+    refNode: *STR_LIB_ARMOR_UC
+  - type: STR_LIB_ARMOR_SMITE
+    refNode: *STR_LIB_ARMOR_UC
+  - type: STR_LIB_ARMOR_STASIS
+    refNode: *STR_LIB_ARMOR_UC
+
+  - type: STR_TECH_ARMOR_UC #TECH
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TECH
+    layersDefinition:
+      M0: ["0", "TECHM", "M0_HEAD"]
+      M1: ["0", "TECHM", "M1_HEAD"]
+      M2: ["0", "TECHM", "M2_HEAD"]
+      M3: ["0", "TECHM", "M3_HEAD"]
+      M4: ["0", "TECHM", "M4_HEAD"]
+      M5: ["0", "TECHM", "M5_HEAD"]
+      M6: ["0", "TECHM", "M6_HEAD"]
+      M7: ["0", "TECHM", "M7_HEAD"]
+      M8: ["0", "TECHM", "M8_HEAD"]
+      M9: ["0", "TECHM", "M9_HEAD"]
+      M10: ["0", "TECHM", "M10_HEAD"]
+      M11: ["0", "TECHM", "M11_HEAD"]
+      M12: ["0", "TECHM", "M12_HEAD"]
+      M13: ["0", "TECHM", "M13_HEAD"]
+      M14: ["0", "TECHM", "M14_HEAD"]
+      M15: ["0", "TECHM", "M15_HEAD"]
+      M16: ["0", "TECHM", "M16_HEAD"]
+      M17: ["0", "TECHM", "M17_HEAD"]
+      M18: ["0", "TECHM", "M18_HEAD"]
+      M19: ["0", "TECHM", "M19_HEAD"]
+      M20: ["0", "TECHM", "M20_HEAD"]
+      M21: ["0", "TECHM", "M21_HEAD"]
+      M22: ["0", "TECHM", "M22_HEAD"]
+      M23: ["0", "TECHM", "M23_HEAD"]
+      M24: ["0", "TECHM", "M24_HEAD"]
+      M25: ["0", "TECHM", "M25_HEAD"]
+      M26: ["0", "TECHM", "M26_HEAD"]
+      M27: ["0", "TECHM", "M27_HEAD"]
+      M28: ["0", "TECHM", "M28_HEAD"]
+      M29: ["0", "TECHM", "M29_HEAD"]
+      M30: ["0", "TECHM", "M30_HEAD"]
+      M31: ["0", "TECHM", "M31_HEAD"]
+      M32: ["0", "TECHM", "M32_HEAD"]
+      M33: ["0", "TECHM", "M33_HEAD"]
+      M34: ["0", "TECHM", "M34_HEAD"]
+      M35: ["0", "TECHM", "M35_HEAD"]
+      M36: ["0", "TECHM", "M36_HEAD"]
+      M37: ["0", "TECHM", "M37_HEAD"]
+      M38: ["0", "TECHM", "M38_HEAD"]
+      M39: ["0", "TECHM", "M39_HEAD"]
+      M40: ["0", "TECHM", "M40_HEAD"]
+      M41: ["0", "TECHM", "M41_HEAD"]
+      M42: ["0", "TECHM", "M42_HEAD"]
+      M43: ["0", "TECHM", "M43_HEAD"]
+      M44: ["0", "TECHM", "M44_HEAD"]
+      M45: ["0", "TECHM", "M45_HEAD"]
+      M46: ["0", "TECHM", "M46_HEAD"]
+      M47: ["0", "TECHM", "M47_HEAD"]
+      M48: ["0", "TECHM", "F0_HEAD"]
+      M49: ["0", "TECHM", "F1_HEAD"]
+      M50: ["0", "TECHM", "F2_HEAD"]
+      M51: ["0", "TECHM", "F3_HEAD"]
+      M52: ["0", "TECHM", "F4_HEAD"]
+      M53: ["0", "TECHM", "F5_HEAD"]
+      M54: ["0", "TECHM", "F6_HEAD"]
+      M55: ["0", "TECHM", "F7_HEAD"]
+      M56: ["0", "TECHM", "F8_HEAD"]
+      M57: ["0", "TECHM", "F9_HEAD"]
+      M58: ["0", "TECHM", "F10_HEAD"]
+      M59: ["0", "TECHM", "F11_HEAD"]
+      M60: ["0", "TECHM", "F12_HEAD"]
+      M61: ["0", "TECHM", "F13_HEAD"]
+      M62: ["0", "TECHM", "F14_HEAD"]
+      M63: ["0", "TECHM", "F15_HEAD"]
+      M64: ["0", "TECHM", "F16_HEAD"]
+      M65: ["0", "TECHM", "F17_HEAD"]
+      M66: ["0", "TECHM", "F18_HEAD"]
+      M67: ["0", "TECHM", "F19_HEAD"]
+      M68: ["0", "TECHM", "F20_HEAD"]
+      M69: ["0", "TECHM", "F21_HEAD"]
+      M70: ["0", "TECHM", "F22_HEAD"]
+      M71: ["0", "TECHM", "F23_HEAD"]
+      M72: ["0", "TECHM", "F24_HEAD"]
+      M73: ["0", "TECHM", "F25_HEAD"]
+      M74: ["0", "TECHM", "F26_HEAD"]
+      M75: ["0", "TECHM", "F27_HEAD"]
+      M76: ["0", "TECHM", "F28_HEAD"]
+      M77: ["0", "TECHM", "F29_HEAD"]
+      M78: ["0", "TECHM", "F30_HEAD"]
+      M79: ["0", "TECHM", "F31_HEAD"]
+      M80: ["0", "TECHM", "F32_HEAD"]
+      M81: ["0", "TECHM", "F33_HEAD"]
+      M82: ["0", "TECHM", "F34_HEAD"]
+      M83: ["0", "TECHM", "F35_HEAD"]
+      M84: ["0", "TECHM", "F36_HEAD"]
+      M85: ["0", "TECHM", "F37_HEAD"]
+      M86: ["0", "TECHM", "F38_HEAD"]
+      M87: ["0", "TECHM", "F39_HEAD"]
+      M88: ["0", "TECHM", "F40_HEAD"]
+      M89: ["0", "TECHM", "F41_HEAD"]
+      M90: ["0", "TECHM", "F42_HEAD"]
+      M91: ["0", "TECHM", "F43_HEAD"]
+      M92: ["0", "TECHM", "F44_HEAD"]
+      M93: ["0", "TECHM", "F45_HEAD"]
+      M94: ["0", "TECHM", "F46_HEAD"]
+      M95: ["0", "TECHM", "F47_HEAD"]
+      F0: ["0", "TECHF", "F0_HEAD"]
+      F1: ["0", "TECHF", "F1_HEAD"]
+      F2: ["0", "TECHF", "F2_HEAD"]
+      F3: ["0", "TECHF", "F3_HEAD"]
+      F4: ["0", "TECHF", "F4_HEAD"]
+      F5: ["0", "TECHF", "F5_HEAD"]
+  - type: STR_APOT_ARMOR_UC #APOTH
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: APOT
+    layersDefinition:
+      M0: ["0", "APOTM", "M0_HEAD"]
+      M1: ["0", "APOTM", "M1_HEAD"]
+      M2: ["0", "APOTM", "M2_HEAD"]
+      M3: ["0", "APOTM", "M3_HEAD"]
+      M4: ["0", "APOTM", "M4_HEAD"]
+      M5: ["0", "APOTM", "M5_HEAD"]
+      M6: ["0", "APOTM", "M6_HEAD"]
+      M7: ["0", "APOTM", "M7_HEAD"]
+      M8: ["0", "APOTM", "M8_HEAD"]
+      M9: ["0", "APOTM", "M9_HEAD"]
+      M10: ["0", "APOTM", "M10_HEAD"]
+      M11: ["0", "APOTM", "M11_HEAD"]
+      M12: ["0", "APOTM", "M12_HEAD"]
+      M13: ["0", "APOTM", "M13_HEAD"]
+      M14: ["0", "APOTM", "M14_HEAD"]
+      M15: ["0", "APOTM", "M15_HEAD"]
+      M16: ["0", "APOTM", "M16_HEAD"]
+      M17: ["0", "APOTM", "M17_HEAD"]
+      M18: ["0", "APOTM", "M18_HEAD"]
+      M19: ["0", "APOTM", "M19_HEAD"]
+      M20: ["0", "APOTM", "M20_HEAD"]
+      M21: ["0", "APOTM", "M21_HEAD"]
+      M22: ["0", "APOTM", "M22_HEAD"]
+      M23: ["0", "APOTM", "M23_HEAD"]
+      M24: ["0", "APOTM", "M24_HEAD"]
+      M25: ["0", "APOTM", "M25_HEAD"]
+      M26: ["0", "APOTM", "M26_HEAD"]
+      M27: ["0", "APOTM", "M27_HEAD"]
+      M28: ["0", "APOTM", "M28_HEAD"]
+      M29: ["0", "APOTM", "M29_HEAD"]
+      M30: ["0", "APOTM", "M30_HEAD"]
+      M31: ["0", "APOTM", "M31_HEAD"]
+      M32: ["0", "APOTM", "M32_HEAD"]
+      M33: ["0", "APOTM", "M33_HEAD"]
+      M34: ["0", "APOTM", "M34_HEAD"]
+      M35: ["0", "APOTM", "M35_HEAD"]
+      M36: ["0", "APOTM", "M36_HEAD"]
+      M37: ["0", "APOTM", "M37_HEAD"]
+      M38: ["0", "APOTM", "M38_HEAD"]
+      M39: ["0", "APOTM", "M39_HEAD"]
+      M40: ["0", "APOTM", "M40_HEAD"]
+      M41: ["0", "APOTM", "M41_HEAD"]
+      M42: ["0", "APOTM", "M42_HEAD"]
+      M43: ["0", "APOTM", "M43_HEAD"]
+      M44: ["0", "APOTM", "M44_HEAD"]
+      M45: ["0", "APOTM", "M45_HEAD"]
+      M46: ["0", "APOTM", "M46_HEAD"]
+      M47: ["0", "APOTM", "M47_HEAD"]
+      M48: ["0", "APOTM", "F0_HEAD"]
+      M49: ["0", "APOTM", "F1_HEAD"]
+      M50: ["0", "APOTM", "F2_HEAD"]
+      M51: ["0", "APOTM", "F3_HEAD"]
+      M52: ["0", "APOTM", "F4_HEAD"]
+      M53: ["0", "APOTM", "F5_HEAD"]
+      M54: ["0", "APOTM", "F6_HEAD"]
+      M55: ["0", "APOTM", "F7_HEAD"]
+      M56: ["0", "APOTM", "F8_HEAD"]
+      M57: ["0", "APOTM", "F9_HEAD"]
+      M58: ["0", "APOTM", "F10_HEAD"]
+      M59: ["0", "APOTM", "F11_HEAD"]
+      M60: ["0", "APOTM", "F12_HEAD"]
+      M61: ["0", "APOTM", "F13_HEAD"]
+      M62: ["0", "APOTM", "F14_HEAD"]
+      M63: ["0", "APOTM", "F15_HEAD"]
+      M64: ["0", "APOTM", "F16_HEAD"]
+      M65: ["0", "APOTM", "F17_HEAD"]
+      M66: ["0", "APOTM", "F18_HEAD"]
+      M67: ["0", "APOTM", "F19_HEAD"]
+      M68: ["0", "APOTM", "F20_HEAD"]
+      M69: ["0", "APOTM", "F21_HEAD"]
+      M70: ["0", "APOTM", "F22_HEAD"]
+      M71: ["0", "APOTM", "F23_HEAD"]
+      M72: ["0", "APOTM", "F24_HEAD"]
+      M73: ["0", "APOTM", "F25_HEAD"]
+      M74: ["0", "APOTM", "F26_HEAD"]
+      M75: ["0", "APOTM", "F27_HEAD"]
+      M76: ["0", "APOTM", "F28_HEAD"]
+      M77: ["0", "APOTM", "F29_HEAD"]
+      M78: ["0", "APOTM", "F30_HEAD"]
+      M79: ["0", "APOTM", "F31_HEAD"]
+      M80: ["0", "APOTM", "F32_HEAD"]
+      M81: ["0", "APOTM", "F33_HEAD"]
+      M82: ["0", "APOTM", "F34_HEAD"]
+      M83: ["0", "APOTM", "F35_HEAD"]
+      M84: ["0", "APOTM", "F36_HEAD"]
+      M85: ["0", "APOTM", "F37_HEAD"]
+      M86: ["0", "APOTM", "F38_HEAD"]
+      M87: ["0", "APOTM", "F39_HEAD"]
+      M88: ["0", "APOTM", "F40_HEAD"]
+      M89: ["0", "APOTM", "F41_HEAD"]
+      M90: ["0", "APOTM", "F42_HEAD"]
+      M91: ["0", "APOTM", "F43_HEAD"]
+      M92: ["0", "APOTM", "F44_HEAD"]
+      M93: ["0", "APOTM", "F45_HEAD"]
+      M94: ["0", "APOTM", "F46_HEAD"]
+      M95: ["0", "APOTM", "F47_HEAD"]
+      F0: ["0", "APOTF", "F0_HEAD"]
+      F1: ["0", "APOTF", "F1_HEAD"]
+      F2: ["0", "APOTF", "F2_HEAD"]
+      F3: ["0", "APOTF", "F3_HEAD"]
+      F4: ["0", "APOTF", "F4_HEAD"]
+      F5: ["0", "APOTF", "F5_HEAD"]
+  - type: STR_CAPTAIN_UC #CAPTAIN
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: CAPTAIN
+    layersDefinition:
+      M0: ["0", "CAPTAINM", "M0_HEAD"]
+      M1: ["0", "CAPTAINM", "M1_HEAD"]
+      M2: ["0", "CAPTAINM", "M2_HEAD"]
+      M3: ["0", "CAPTAINM", "M3_HEAD"]
+      M4: ["0", "CAPTAINM", "M4_HEAD"]
+      M5: ["0", "CAPTAINM", "M5_HEAD"]
+      M6: ["0", "CAPTAINM", "M6_HEAD"]
+      M7: ["0", "CAPTAINM", "M7_HEAD"]
+      M8: ["0", "CAPTAINM", "M8_HEAD"]
+      M9: ["0", "CAPTAINM", "M9_HEAD"]
+      M10: ["0", "CAPTAINM", "M10_HEAD"]
+      M11: ["0", "CAPTAINM", "M11_HEAD"]
+      M12: ["0", "CAPTAINM", "M12_HEAD"]
+      M13: ["0", "CAPTAINM", "M13_HEAD"]
+      M14: ["0", "CAPTAINM", "M14_HEAD"]
+      M15: ["0", "CAPTAINM", "M15_HEAD"]
+      M16: ["0", "CAPTAINM", "M16_HEAD"]
+      M17: ["0", "CAPTAINM", "M17_HEAD"]
+      M18: ["0", "CAPTAINM", "M18_HEAD"]
+      M19: ["0", "CAPTAINM", "M19_HEAD"]
+      M20: ["0", "CAPTAINM", "M20_HEAD"]
+      M21: ["0", "CAPTAINM", "M21_HEAD"]
+      M22: ["0", "CAPTAINM", "M22_HEAD"]
+      M23: ["0", "CAPTAINM", "M23_HEAD"]
+      M24: ["0", "CAPTAINM", "M24_HEAD"]
+      M25: ["0", "CAPTAINM", "M25_HEAD"]
+      M26: ["0", "CAPTAINM", "M26_HEAD"]
+      M27: ["0", "CAPTAINM", "M27_HEAD"]
+      M28: ["0", "CAPTAINM", "M28_HEAD"]
+      M29: ["0", "CAPTAINM", "M29_HEAD"]
+      M30: ["0", "CAPTAINM", "M30_HEAD"]
+      M31: ["0", "CAPTAINM", "M31_HEAD"]
+      M32: ["0", "CAPTAINM", "M32_HEAD"]
+      M33: ["0", "CAPTAINM", "M33_HEAD"]
+      M34: ["0", "CAPTAINM", "M34_HEAD"]
+      M35: ["0", "CAPTAINM", "M35_HEAD"]
+      M36: ["0", "CAPTAINM", "M36_HEAD"]
+      M37: ["0", "CAPTAINM", "M37_HEAD"]
+      M38: ["0", "CAPTAINM", "M38_HEAD"]
+      M39: ["0", "CAPTAINM", "M39_HEAD"]
+      M40: ["0", "CAPTAINM", "M40_HEAD"]
+      M41: ["0", "CAPTAINM", "M41_HEAD"]
+      M42: ["0", "CAPTAINM", "M42_HEAD"]
+      M43: ["0", "CAPTAINM", "M43_HEAD"]
+      M44: ["0", "CAPTAINM", "M44_HEAD"]
+      M45: ["0", "CAPTAINM", "M45_HEAD"]
+      M46: ["0", "CAPTAINM", "M46_HEAD"]
+      M47: ["0", "CAPTAINM", "M47_HEAD"]
+      M48: ["0", "CAPTAINM", "F0_HEAD"]
+      M49: ["0", "CAPTAINM", "F1_HEAD"]
+      M50: ["0", "CAPTAINM", "F2_HEAD"]
+      M51: ["0", "CAPTAINM", "F3_HEAD"]
+      M52: ["0", "CAPTAINM", "F4_HEAD"]
+      M53: ["0", "CAPTAINM", "F5_HEAD"]
+      M54: ["0", "CAPTAINM", "F6_HEAD"]
+      M55: ["0", "CAPTAINM", "F7_HEAD"]
+      M56: ["0", "CAPTAINM", "F8_HEAD"]
+      M57: ["0", "CAPTAINM", "F9_HEAD"]
+      M58: ["0", "CAPTAINM", "F10_HEAD"]
+      M59: ["0", "CAPTAINM", "F11_HEAD"]
+      M60: ["0", "CAPTAINM", "F12_HEAD"]
+      M61: ["0", "CAPTAINM", "F13_HEAD"]
+      M62: ["0", "CAPTAINM", "F14_HEAD"]
+      M63: ["0", "CAPTAINM", "F15_HEAD"]
+      M64: ["0", "CAPTAINM", "F16_HEAD"]
+      M65: ["0", "CAPTAINM", "F17_HEAD"]
+      M66: ["0", "CAPTAINM", "F18_HEAD"]
+      M67: ["0", "CAPTAINM", "F19_HEAD"]
+      M68: ["0", "CAPTAINM", "F20_HEAD"]
+      M69: ["0", "CAPTAINM", "F21_HEAD"]
+      M70: ["0", "CAPTAINM", "F22_HEAD"]
+      M71: ["0", "CAPTAINM", "F23_HEAD"]
+      M72: ["0", "CAPTAINM", "F24_HEAD"]
+      M73: ["0", "CAPTAINM", "F25_HEAD"]
+      M74: ["0", "CAPTAINM", "F26_HEAD"]
+      M75: ["0", "CAPTAINM", "F27_HEAD"]
+      M76: ["0", "CAPTAINM", "F28_HEAD"]
+      M77: ["0", "CAPTAINM", "F29_HEAD"]
+      M78: ["0", "CAPTAINM", "F30_HEAD"]
+      M79: ["0", "CAPTAINM", "F31_HEAD"]
+      M80: ["0", "CAPTAINM", "F32_HEAD"]
+      M81: ["0", "CAPTAINM", "F33_HEAD"]
+      M82: ["0", "CAPTAINM", "F34_HEAD"]
+      M83: ["0", "CAPTAINM", "F35_HEAD"]
+      M84: ["0", "CAPTAINM", "F36_HEAD"]
+      M85: ["0", "CAPTAINM", "F37_HEAD"]
+      M86: ["0", "CAPTAINM", "F38_HEAD"]
+      M87: ["0", "CAPTAINM", "F39_HEAD"]
+      M88: ["0", "CAPTAINM", "F40_HEAD"]
+      M89: ["0", "CAPTAINM", "F41_HEAD"]
+      M90: ["0", "CAPTAINM", "F42_HEAD"]
+      M91: ["0", "CAPTAINM", "F43_HEAD"]
+      M92: ["0", "CAPTAINM", "F44_HEAD"]
+      M93: ["0", "CAPTAINM", "F45_HEAD"]
+      M94: ["0", "CAPTAINM", "F46_HEAD"]
+      M95: ["0", "CAPTAINM", "F47_HEAD"]
+      F0: ["0", "CAPTAINF", "F0_HEAD"]
+      F1: ["0", "CAPTAINF", "F1_HEAD"]
+      F2: ["0", "CAPTAINF", "F2_HEAD"]
+      F3: ["0", "CAPTAINF", "F3_HEAD"]
+      F4: ["0", "CAPTAINF", "F4_HEAD"]
+      F5: ["0", "CAPTAINF", "F5_HEAD"]
+  - type: STR_SARGENT_ARMOR_UC #SARGENT
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: SARGENT
+    layersDefinition:
+      M0: ["0", "SARGENTM", "M0_HEAD"]
+      M1: ["0", "SARGENTM", "M1_HEAD"]
+      M2: ["0", "SARGENTM", "M2_HEAD"]
+      M3: ["0", "SARGENTM", "M3_HEAD"]
+      M4: ["0", "SARGENTM", "M4_HEAD"]
+      M5: ["0", "SARGENTM", "M5_HEAD"]
+      M6: ["0", "SARGENTM", "M6_HEAD"]
+      M7: ["0", "SARGENTM", "M7_HEAD"]
+      M8: ["0", "SARGENTM", "M8_HEAD"]
+      M9: ["0", "SARGENTM", "M9_HEAD"]
+      M10: ["0", "SARGENTM", "M10_HEAD"]
+      M11: ["0", "SARGENTM", "M11_HEAD"]
+      M12: ["0", "SARGENTM", "M12_HEAD"]
+      M13: ["0", "SARGENTM", "M13_HEAD"]
+      M14: ["0", "SARGENTM", "M14_HEAD"]
+      M15: ["0", "SARGENTM", "M15_HEAD"]
+      M16: ["0", "SARGENTM", "M16_HEAD"]
+      M17: ["0", "SARGENTM", "M17_HEAD"]
+      M18: ["0", "SARGENTM", "M18_HEAD"]
+      M19: ["0", "SARGENTM", "M19_HEAD"]
+      M20: ["0", "SARGENTM", "M20_HEAD"]
+      M21: ["0", "SARGENTM", "M21_HEAD"]
+      M22: ["0", "SARGENTM", "M22_HEAD"]
+      M23: ["0", "SARGENTM", "M23_HEAD"]
+      M24: ["0", "SARGENTM", "M24_HEAD"]
+      M25: ["0", "SARGENTM", "M25_HEAD"]
+      M26: ["0", "SARGENTM", "M26_HEAD"]
+      M27: ["0", "SARGENTM", "M27_HEAD"]
+      M28: ["0", "SARGENTM", "M28_HEAD"]
+      M29: ["0", "SARGENTM", "M29_HEAD"]
+      M30: ["0", "SARGENTM", "M30_HEAD"]
+      M31: ["0", "SARGENTM", "M31_HEAD"]
+      M32: ["0", "SARGENTM", "M32_HEAD"]
+      M33: ["0", "SARGENTM", "M33_HEAD"]
+      M34: ["0", "SARGENTM", "M34_HEAD"]
+      M35: ["0", "SARGENTM", "M35_HEAD"]
+      M36: ["0", "SARGENTM", "M36_HEAD"]
+      M37: ["0", "SARGENTM", "M37_HEAD"]
+      M38: ["0", "SARGENTM", "M38_HEAD"]
+      M39: ["0", "SARGENTM", "M39_HEAD"]
+      M40: ["0", "SARGENTM", "M40_HEAD"]
+      M41: ["0", "SARGENTM", "M41_HEAD"]
+      M42: ["0", "SARGENTM", "M42_HEAD"]
+      M43: ["0", "SARGENTM", "M43_HEAD"]
+      M44: ["0", "SARGENTM", "M44_HEAD"]
+      M45: ["0", "SARGENTM", "M45_HEAD"]
+      M46: ["0", "SARGENTM", "M46_HEAD"]
+      M47: ["0", "SARGENTM", "M47_HEAD"]
+      M48: ["0", "SARGENTM", "F0_HEAD"]
+      M49: ["0", "SARGENTM", "F1_HEAD"]
+      M50: ["0", "SARGENTM", "F2_HEAD"]
+      M51: ["0", "SARGENTM", "F3_HEAD"]
+      M52: ["0", "SARGENTM", "F4_HEAD"]
+      M53: ["0", "SARGENTM", "F5_HEAD"]
+      M54: ["0", "SARGENTM", "F6_HEAD"]
+      M55: ["0", "SARGENTM", "F7_HEAD"]
+      M56: ["0", "SARGENTM", "F8_HEAD"]
+      M57: ["0", "SARGENTM", "F9_HEAD"]
+      M58: ["0", "SARGENTM", "F10_HEAD"]
+      M59: ["0", "SARGENTM", "F11_HEAD"]
+      M60: ["0", "SARGENTM", "F12_HEAD"]
+      M61: ["0", "SARGENTM", "F13_HEAD"]
+      M62: ["0", "SARGENTM", "F14_HEAD"]
+      M63: ["0", "SARGENTM", "F15_HEAD"]
+      M64: ["0", "SARGENTM", "F16_HEAD"]
+      M65: ["0", "SARGENTM", "F17_HEAD"]
+      M66: ["0", "SARGENTM", "F18_HEAD"]
+      M67: ["0", "SARGENTM", "F19_HEAD"]
+      M68: ["0", "SARGENTM", "F20_HEAD"]
+      M69: ["0", "SARGENTM", "F21_HEAD"]
+      M70: ["0", "SARGENTM", "F22_HEAD"]
+      M71: ["0", "SARGENTM", "F23_HEAD"]
+      M72: ["0", "SARGENTM", "F24_HEAD"]
+      M73: ["0", "SARGENTM", "F25_HEAD"]
+      M74: ["0", "SARGENTM", "F26_HEAD"]
+      M75: ["0", "SARGENTM", "F27_HEAD"]
+      M76: ["0", "SARGENTM", "F28_HEAD"]
+      M77: ["0", "SARGENTM", "F29_HEAD"]
+      M78: ["0", "SARGENTM", "F30_HEAD"]
+      M79: ["0", "SARGENTM", "F31_HEAD"]
+      M80: ["0", "SARGENTM", "F32_HEAD"]
+      M81: ["0", "SARGENTM", "F33_HEAD"]
+      M82: ["0", "SARGENTM", "F34_HEAD"]
+      M83: ["0", "SARGENTM", "F35_HEAD"]
+      M84: ["0", "SARGENTM", "F36_HEAD"]
+      M85: ["0", "SARGENTM", "F37_HEAD"]
+      M86: ["0", "SARGENTM", "F38_HEAD"]
+      M87: ["0", "SARGENTM", "F39_HEAD"]
+      M88: ["0", "SARGENTM", "F40_HEAD"]
+      M89: ["0", "SARGENTM", "F41_HEAD"]
+      M90: ["0", "SARGENTM", "F42_HEAD"]
+      M91: ["0", "SARGENTM", "F43_HEAD"]
+      M92: ["0", "SARGENTM", "F44_HEAD"]
+      M93: ["0", "SARGENTM", "F45_HEAD"]
+      M94: ["0", "SARGENTM", "F46_HEAD"]
+      M95: ["0", "SARGENTM", "F47_HEAD"]
+      F0: ["0", "SARGENTF", "F0_HEAD"]
+      F1: ["0", "SARGENTF", "F1_HEAD"]
+      F2: ["0", "SARGENTF", "F2_HEAD"]
+      F3: ["0", "SARGENTF", "F3_HEAD"]
+      F4: ["0", "SARGENTF", "F4_HEAD"]
+      F5: ["0", "SARGENTF", "F5_HEAD"]
+  - type: STR_POWER_SUIT_UC #TERMINATOR
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TERMINATOR
+    layersDefinition:
+      M0: ["0", "TERMINATORMF", "M0_HEAD"]
+      M1: ["0", "TERMINATORMF", "M1_HEAD"]
+      M2: ["0", "TERMINATORMF", "M2_HEAD"]
+      M3: ["0", "TERMINATORMF", "M3_HEAD"]
+      M4: ["0", "TERMINATORMF", "M4_HEAD"]
+      M5: ["0", "TERMINATORMF", "M5_HEAD"]
+      M6: ["0", "TERMINATORMF", "M6_HEAD"]
+      M7: ["0", "TERMINATORMF", "M7_HEAD"]
+      M8: ["0", "TERMINATORMF", "M8_HEAD"]
+      M9: ["0", "TERMINATORMF", "M9_HEAD"]
+      M10: ["0", "TERMINATORMF", "M10_HEAD"]
+      M11: ["0", "TERMINATORMF", "M11_HEAD"]
+      M12: ["0", "TERMINATORMF", "M12_HEAD"]
+      M13: ["0", "TERMINATORMF", "M13_HEAD"]
+      M14: ["0", "TERMINATORMF", "M14_HEAD"]
+      M15: ["0", "TERMINATORMF", "M15_HEAD"]
+      M16: ["0", "TERMINATORMF", "M16_HEAD"]
+      M17: ["0", "TERMINATORMF", "M17_HEAD"]
+      M18: ["0", "TERMINATORMF", "M18_HEAD"]
+      M19: ["0", "TERMINATORMF", "M19_HEAD"]
+      M20: ["0", "TERMINATORMF", "M20_HEAD"]
+      M21: ["0", "TERMINATORMF", "M21_HEAD"]
+      M22: ["0", "TERMINATORMF", "M22_HEAD"]
+      M23: ["0", "TERMINATORMF", "M23_HEAD"]
+      M24: ["0", "TERMINATORMF", "M24_HEAD"]
+      M25: ["0", "TERMINATORMF", "M25_HEAD"]
+      M26: ["0", "TERMINATORMF", "M26_HEAD"]
+      M27: ["0", "TERMINATORMF", "M27_HEAD"]
+      M28: ["0", "TERMINATORMF", "M28_HEAD"]
+      M29: ["0", "TERMINATORMF", "M29_HEAD"]
+      M30: ["0", "TERMINATORMF", "M30_HEAD"]
+      M31: ["0", "TERMINATORMF", "M31_HEAD"]
+      M32: ["0", "TERMINATORMF", "M32_HEAD"]
+      M33: ["0", "TERMINATORMF", "M33_HEAD"]
+      M34: ["0", "TERMINATORMF", "M34_HEAD"]
+      M35: ["0", "TERMINATORMF", "M35_HEAD"]
+      M36: ["0", "TERMINATORMF", "M36_HEAD"]
+      M37: ["0", "TERMINATORMF", "M37_HEAD"]
+      M38: ["0", "TERMINATORMF", "M38_HEAD"]
+      M39: ["0", "TERMINATORMF", "M39_HEAD"]
+      M40: ["0", "TERMINATORMF", "M40_HEAD"]
+      M41: ["0", "TERMINATORMF", "M41_HEAD"]
+      M42: ["0", "TERMINATORMF", "M42_HEAD"]
+      M43: ["0", "TERMINATORMF", "M43_HEAD"]
+      M44: ["0", "TERMINATORMF", "M44_HEAD"]
+      M45: ["0", "TERMINATORMF", "M45_HEAD"]
+      M46: ["0", "TERMINATORMF", "M46_HEAD"]
+      M47: ["0", "TERMINATORMF", "M47_HEAD"]
+      M48: ["0", "TERMINATORMF", "F0_HEAD"]
+      M49: ["0", "TERMINATORMF", "F1_HEAD"]
+      M50: ["0", "TERMINATORMF", "F2_HEAD"]
+      M51: ["0", "TERMINATORMF", "F3_HEAD"]
+      M52: ["0", "TERMINATORMF", "F4_HEAD"]
+      M53: ["0", "TERMINATORMF", "F5_HEAD"]
+      M54: ["0", "TERMINATORMF", "F6_HEAD"]
+      M55: ["0", "TERMINATORMF", "F7_HEAD"]
+      M56: ["0", "TERMINATORMF", "F8_HEAD"]
+      M57: ["0", "TERMINATORMF", "F9_HEAD"]
+      M58: ["0", "TERMINATORMF", "F10_HEAD"]
+      M59: ["0", "TERMINATORMF", "F11_HEAD"]
+      M60: ["0", "TERMINATORMF", "F12_HEAD"]
+      M61: ["0", "TERMINATORMF", "F13_HEAD"]
+      M62: ["0", "TERMINATORMF", "F14_HEAD"]
+      M63: ["0", "TERMINATORMF", "F15_HEAD"]
+      M64: ["0", "TERMINATORMF", "F16_HEAD"]
+      M65: ["0", "TERMINATORMF", "F17_HEAD"]
+      M66: ["0", "TERMINATORMF", "F18_HEAD"]
+      M67: ["0", "TERMINATORMF", "F19_HEAD"]
+      M68: ["0", "TERMINATORMF", "F20_HEAD"]
+      M69: ["0", "TERMINATORMF", "F21_HEAD"]
+      M70: ["0", "TERMINATORMF", "F22_HEAD"]
+      M71: ["0", "TERMINATORMF", "F23_HEAD"]
+      M72: ["0", "TERMINATORMF", "F24_HEAD"]
+      M73: ["0", "TERMINATORMF", "F25_HEAD"]
+      M74: ["0", "TERMINATORMF", "F26_HEAD"]
+      M75: ["0", "TERMINATORMF", "F27_HEAD"]
+      M76: ["0", "TERMINATORMF", "F28_HEAD"]
+      M77: ["0", "TERMINATORMF", "F29_HEAD"]
+      M78: ["0", "TERMINATORMF", "F30_HEAD"]
+      M79: ["0", "TERMINATORMF", "F31_HEAD"]
+      M80: ["0", "TERMINATORMF", "F32_HEAD"]
+      M81: ["0", "TERMINATORMF", "F33_HEAD"]
+      M82: ["0", "TERMINATORMF", "F34_HEAD"]
+      M83: ["0", "TERMINATORMF", "F35_HEAD"]
+      M84: ["0", "TERMINATORMF", "F36_HEAD"]
+      M85: ["0", "TERMINATORMF", "F37_HEAD"]
+      M86: ["0", "TERMINATORMF", "F38_HEAD"]
+      M87: ["0", "TERMINATORMF", "F39_HEAD"]
+      M88: ["0", "TERMINATORMF", "F40_HEAD"]
+      M89: ["0", "TERMINATORMF", "F41_HEAD"]
+      M90: ["0", "TERMINATORMF", "F42_HEAD"]
+      M91: ["0", "TERMINATORMF", "F43_HEAD"]
+      M92: ["0", "TERMINATORMF", "F44_HEAD"]
+      M93: ["0", "TERMINATORMF", "F45_HEAD"]
+      M94: ["0", "TERMINATORMF", "F46_HEAD"]
+      M95: ["0", "TERMINATORMF", "F47_HEAD"]
+      F0: ["0", "TERMINATORMF", "F0_HEAD"]
+      F1: ["0", "TERMINATORMF", "F1_HEAD"]
+      F2: ["0", "TERMINATORMF", "F2_HEAD"]
+      F3: ["0", "TERMINATORMF", "F3_HEAD"]
+      F4: ["0", "TERMINATORMF", "F4_HEAD"]
+      F5: ["0", "TERMINATORMF", "F5_HEAD"]
+  - type: STR_FLYING_SUIT_UC  #TERMINATOR ASS
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TERMINATOR
+    layersDefinition:
+      M0: ["0", "TERMINATORMF", "M0_HEAD"]
+      M1: ["0", "TERMINATORMF", "M1_HEAD"]
+      M2: ["0", "TERMINATORMF", "M2_HEAD"]
+      M3: ["0", "TERMINATORMF", "M3_HEAD"]
+      M4: ["0", "TERMINATORMF", "M4_HEAD"]
+      M5: ["0", "TERMINATORMF", "M5_HEAD"]
+      M6: ["0", "TERMINATORMF", "M6_HEAD"]
+      M7: ["0", "TERMINATORMF", "M7_HEAD"]
+      M8: ["0", "TERMINATORMF", "M8_HEAD"]
+      M9: ["0", "TERMINATORMF", "M9_HEAD"]
+      M10: ["0", "TERMINATORMF", "M10_HEAD"]
+      M11: ["0", "TERMINATORMF", "M11_HEAD"]
+      M12: ["0", "TERMINATORMF", "M12_HEAD"]
+      M13: ["0", "TERMINATORMF", "M13_HEAD"]
+      M14: ["0", "TERMINATORMF", "M14_HEAD"]
+      M15: ["0", "TERMINATORMF", "M15_HEAD"]
+      M16: ["0", "TERMINATORMF", "M16_HEAD"]
+      M17: ["0", "TERMINATORMF", "M17_HEAD"]
+      M18: ["0", "TERMINATORMF", "M18_HEAD"]
+      M19: ["0", "TERMINATORMF", "M19_HEAD"]
+      M20: ["0", "TERMINATORMF", "M20_HEAD"]
+      M21: ["0", "TERMINATORMF", "M21_HEAD"]
+      M22: ["0", "TERMINATORMF", "M22_HEAD"]
+      M23: ["0", "TERMINATORMF", "M23_HEAD"]
+      M24: ["0", "TERMINATORMF", "M24_HEAD"]
+      M25: ["0", "TERMINATORMF", "M25_HEAD"]
+      M26: ["0", "TERMINATORMF", "M26_HEAD"]
+      M27: ["0", "TERMINATORMF", "M27_HEAD"]
+      M28: ["0", "TERMINATORMF", "M28_HEAD"]
+      M29: ["0", "TERMINATORMF", "M29_HEAD"]
+      M30: ["0", "TERMINATORMF", "M30_HEAD"]
+      M31: ["0", "TERMINATORMF", "M31_HEAD"]
+      M32: ["0", "TERMINATORMF", "M32_HEAD"]
+      M33: ["0", "TERMINATORMF", "M33_HEAD"]
+      M34: ["0", "TERMINATORMF", "M34_HEAD"]
+      M35: ["0", "TERMINATORMF", "M35_HEAD"]
+      M36: ["0", "TERMINATORMF", "M36_HEAD"]
+      M37: ["0", "TERMINATORMF", "M37_HEAD"]
+      M38: ["0", "TERMINATORMF", "M38_HEAD"]
+      M39: ["0", "TERMINATORMF", "M39_HEAD"]
+      M40: ["0", "TERMINATORMF", "M40_HEAD"]
+      M41: ["0", "TERMINATORMF", "M41_HEAD"]
+      M42: ["0", "TERMINATORMF", "M42_HEAD"]
+      M43: ["0", "TERMINATORMF", "M43_HEAD"]
+      M44: ["0", "TERMINATORMF", "M44_HEAD"]
+      M45: ["0", "TERMINATORMF", "M45_HEAD"]
+      M46: ["0", "TERMINATORMF", "M46_HEAD"]
+      M47: ["0", "TERMINATORMF", "M47_HEAD"]
+      M48: ["0", "TERMINATORMF", "F0_HEAD"]
+      M49: ["0", "TERMINATORMF", "F1_HEAD"]
+      M50: ["0", "TERMINATORMF", "F2_HEAD"]
+      M51: ["0", "TERMINATORMF", "F3_HEAD"]
+      M52: ["0", "TERMINATORMF", "F4_HEAD"]
+      M53: ["0", "TERMINATORMF", "F5_HEAD"]
+      M54: ["0", "TERMINATORMF", "F6_HEAD"]
+      M55: ["0", "TERMINATORMF", "F7_HEAD"]
+      M56: ["0", "TERMINATORMF", "F8_HEAD"]
+      M57: ["0", "TERMINATORMF", "F9_HEAD"]
+      M58: ["0", "TERMINATORMF", "F10_HEAD"]
+      M59: ["0", "TERMINATORMF", "F11_HEAD"]
+      M60: ["0", "TERMINATORMF", "F12_HEAD"]
+      M61: ["0", "TERMINATORMF", "F13_HEAD"]
+      M62: ["0", "TERMINATORMF", "F14_HEAD"]
+      M63: ["0", "TERMINATORMF", "F15_HEAD"]
+      M64: ["0", "TERMINATORMF", "F16_HEAD"]
+      M65: ["0", "TERMINATORMF", "F17_HEAD"]
+      M66: ["0", "TERMINATORMF", "F18_HEAD"]
+      M67: ["0", "TERMINATORMF", "F19_HEAD"]
+      M68: ["0", "TERMINATORMF", "F20_HEAD"]
+      M69: ["0", "TERMINATORMF", "F21_HEAD"]
+      M70: ["0", "TERMINATORMF", "F22_HEAD"]
+      M71: ["0", "TERMINATORMF", "F23_HEAD"]
+      M72: ["0", "TERMINATORMF", "F24_HEAD"]
+      M73: ["0", "TERMINATORMF", "F25_HEAD"]
+      M74: ["0", "TERMINATORMF", "F26_HEAD"]
+      M75: ["0", "TERMINATORMF", "F27_HEAD"]
+      M76: ["0", "TERMINATORMF", "F28_HEAD"]
+      M77: ["0", "TERMINATORMF", "F29_HEAD"]
+      M78: ["0", "TERMINATORMF", "F30_HEAD"]
+      M79: ["0", "TERMINATORMF", "F31_HEAD"]
+      M80: ["0", "TERMINATORMF", "F32_HEAD"]
+      M81: ["0", "TERMINATORMF", "F33_HEAD"]
+      M82: ["0", "TERMINATORMF", "F34_HEAD"]
+      M83: ["0", "TERMINATORMF", "F35_HEAD"]
+      M84: ["0", "TERMINATORMF", "F36_HEAD"]
+      M85: ["0", "TERMINATORMF", "F37_HEAD"]
+      M86: ["0", "TERMINATORMF", "F38_HEAD"]
+      M87: ["0", "TERMINATORMF", "F39_HEAD"]
+      M88: ["0", "TERMINATORMF", "F40_HEAD"]
+      M89: ["0", "TERMINATORMF", "F41_HEAD"]
+      M90: ["0", "TERMINATORMF", "F42_HEAD"]
+      M91: ["0", "TERMINATORMF", "F43_HEAD"]
+      M92: ["0", "TERMINATORMF", "F44_HEAD"]
+      M93: ["0", "TERMINATORMF", "F45_HEAD"]
+      M94: ["0", "TERMINATORMF", "F46_HEAD"]
+      M95: ["0", "TERMINATORMF", "F47_HEAD"]
+      F0: ["0", "TERMINATORMF", "F0_HEAD"]
+      F1: ["0", "TERMINATORMF", "F1_HEAD"]
+      F2: ["0", "TERMINATORMF", "F2_HEAD"]
+      F3: ["0", "TERMINATORMF", "F3_HEAD"]
+      F4: ["0", "TERMINATORMF", "F4_HEAD"]
+      F5: ["0", "TERMINATORMF", "F5_HEAD"]
+  - type: STR_TSARGENT_UC  #TSARGENT
+    layersDefaultPrefix: 0
+    layersSpecificPrefix:
+      1: TSARGENT
+    layersDefinition:
+      M0: ["0", "TERMINATORSMF", "M0_HEAD"]
+      M1: ["0", "TERMINATORSMF", "M1_HEAD"]
+      M2: ["0", "TERMINATORSMF", "M2_HEAD"]
+      M3: ["0", "TERMINATORSMF", "M3_HEAD"]
+      M4: ["0", "TERMINATORSMF", "M4_HEAD"]
+      M5: ["0", "TERMINATORSMF", "M5_HEAD"]
+      M6: ["0", "TERMINATORSMF", "M6_HEAD"]
+      M7: ["0", "TERMINATORSMF", "M7_HEAD"]
+      M8: ["0", "TERMINATORSMF", "M8_HEAD"]
+      M9: ["0", "TERMINATORSMF", "M9_HEAD"]
+      M10: ["0", "TERMINATORSMF", "M10_HEAD"]
+      M11: ["0", "TERMINATORSMF", "M11_HEAD"]
+      M12: ["0", "TERMINATORSMF", "M12_HEAD"]
+      M13: ["0", "TERMINATORSMF", "M13_HEAD"]
+      M14: ["0", "TERMINATORSMF", "M14_HEAD"]
+      M15: ["0", "TERMINATORSMF", "M15_HEAD"]
+      M16: ["0", "TERMINATORSMF", "M16_HEAD"]
+      M17: ["0", "TERMINATORSMF", "M17_HEAD"]
+      M18: ["0", "TERMINATORSMF", "M18_HEAD"]
+      M19: ["0", "TERMINATORSMF", "M19_HEAD"]
+      M20: ["0", "TERMINATORSMF", "M20_HEAD"]
+      M21: ["0", "TERMINATORSMF", "M21_HEAD"]
+      M22: ["0", "TERMINATORSMF", "M22_HEAD"]
+      M23: ["0", "TERMINATORSMF", "M23_HEAD"]
+      M24: ["0", "TERMINATORSMF", "M24_HEAD"]
+      M25: ["0", "TERMINATORSMF", "M25_HEAD"]
+      M26: ["0", "TERMINATORSMF", "M26_HEAD"]
+      M27: ["0", "TERMINATORSMF", "M27_HEAD"]
+      M28: ["0", "TERMINATORSMF", "M28_HEAD"]
+      M29: ["0", "TERMINATORSMF", "M29_HEAD"]
+      M30: ["0", "TERMINATORSMF", "M30_HEAD"]
+      M31: ["0", "TERMINATORSMF", "M31_HEAD"]
+      M32: ["0", "TERMINATORSMF", "M32_HEAD"]
+      M33: ["0", "TERMINATORSMF", "M33_HEAD"]
+      M34: ["0", "TERMINATORSMF", "M34_HEAD"]
+      M35: ["0", "TERMINATORSMF", "M35_HEAD"]
+      M36: ["0", "TERMINATORSMF", "M36_HEAD"]
+      M37: ["0", "TERMINATORSMF", "M37_HEAD"]
+      M38: ["0", "TERMINATORSMF", "M38_HEAD"]
+      M39: ["0", "TERMINATORSMF", "M39_HEAD"]
+      M40: ["0", "TERMINATORSMF", "M40_HEAD"]
+      M41: ["0", "TERMINATORSMF", "M41_HEAD"]
+      M42: ["0", "TERMINATORSMF", "M42_HEAD"]
+      M43: ["0", "TERMINATORSMF", "M43_HEAD"]
+      M44: ["0", "TERMINATORSMF", "M44_HEAD"]
+      M45: ["0", "TERMINATORSMF", "M45_HEAD"]
+      M46: ["0", "TERMINATORSMF", "M46_HEAD"]
+      M47: ["0", "TERMINATORSMF", "M47_HEAD"]
+      M48: ["0", "TERMINATORSMF", "F0_HEAD"]
+      M49: ["0", "TERMINATORSMF", "F1_HEAD"]
+      M50: ["0", "TERMINATORSMF", "F2_HEAD"]
+      M51: ["0", "TERMINATORSMF", "F3_HEAD"]
+      M52: ["0", "TERMINATORSMF", "F4_HEAD"]
+      M53: ["0", "TERMINATORSMF", "F5_HEAD"]
+      M54: ["0", "TERMINATORSMF", "F6_HEAD"]
+      M55: ["0", "TERMINATORSMF", "F7_HEAD"]
+      M56: ["0", "TERMINATORSMF", "F8_HEAD"]
+      M57: ["0", "TERMINATORSMF", "F9_HEAD"]
+      M58: ["0", "TERMINATORSMF", "F10_HEAD"]
+      M59: ["0", "TERMINATORSMF", "F11_HEAD"]
+      M60: ["0", "TERMINATORSMF", "F12_HEAD"]
+      M61: ["0", "TERMINATORSMF", "F13_HEAD"]
+      M62: ["0", "TERMINATORSMF", "F14_HEAD"]
+      M63: ["0", "TERMINATORSMF", "F15_HEAD"]
+      M64: ["0", "TERMINATORSMF", "F16_HEAD"]
+      M65: ["0", "TERMINATORSMF", "F17_HEAD"]
+      M66: ["0", "TERMINATORSMF", "F18_HEAD"]
+      M67: ["0", "TERMINATORSMF", "F19_HEAD"]
+      M68: ["0", "TERMINATORSMF", "F20_HEAD"]
+      M69: ["0", "TERMINATORSMF", "F21_HEAD"]
+      M70: ["0", "TERMINATORSMF", "F22_HEAD"]
+      M71: ["0", "TERMINATORSMF", "F23_HEAD"]
+      M72: ["0", "TERMINATORSMF", "F24_HEAD"]
+      M73: ["0", "TERMINATORSMF", "F25_HEAD"]
+      M74: ["0", "TERMINATORSMF", "F26_HEAD"]
+      M75: ["0", "TERMINATORSMF", "F27_HEAD"]
+      M76: ["0", "TERMINATORSMF", "F28_HEAD"]
+      M77: ["0", "TERMINATORSMF", "F29_HEAD"]
+      M78: ["0", "TERMINATORSMF", "F30_HEAD"]
+      M79: ["0", "TERMINATORSMF", "F31_HEAD"]
+      M80: ["0", "TERMINATORSMF", "F32_HEAD"]
+      M81: ["0", "TERMINATORSMF", "F33_HEAD"]
+      M82: ["0", "TERMINATORSMF", "F34_HEAD"]
+      M83: ["0", "TERMINATORSMF", "F35_HEAD"]
+      M84: ["0", "TERMINATORSMF", "F36_HEAD"]
+      M85: ["0", "TERMINATORSMF", "F37_HEAD"]
+      M86: ["0", "TERMINATORSMF", "F38_HEAD"]
+      M87: ["0", "TERMINATORSMF", "F39_HEAD"]
+      M88: ["0", "TERMINATORSMF", "F40_HEAD"]
+      M89: ["0", "TERMINATORSMF", "F41_HEAD"]
+      M90: ["0", "TERMINATORSMF", "F42_HEAD"]
+      M91: ["0", "TERMINATORSMF", "F43_HEAD"]
+      M92: ["0", "TERMINATORSMF", "F44_HEAD"]
+      M93: ["0", "TERMINATORSMF", "F45_HEAD"]
+      M94: ["0", "TERMINATORSMF", "F46_HEAD"]
+      M95: ["0", "TERMINATORSMF", "F47_HEAD"]
+      F0: ["0", "TERMINATORSMF", "F0_HEAD"]
+      F1: ["0", "TERMINATORSMF", "F1_HEAD"]
+      F2: ["0", "TERMINATORSMF", "F2_HEAD"]
+      F3: ["0", "TERMINATORSMF", "F3_HEAD"]
+      F4: ["0", "TERMINATORSMF", "F4_HEAD"]
+      F5: ["0", "TERMINATORSMF", "F5_HEAD"]

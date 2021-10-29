@@ -1,0 +1,445 @@
+ufopaedia:
+  - delete: STR_CHOSEN_DEVASTATOR
+  - delete: STR_CHOSEN_ASSAULT
+  - delete: STR_CHOSEN_SCOUT
+  - delete: STR_CHOSEN_TATICAL
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_DEVASTATOR
+  - delete: STR_SCOUT
+
+########################################## ARMOR ##########################################
+
+  - id: STR_SCOUT_ARMOR
+    type_id: 10
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
+    image_id: 0SA.SPK
+    text: STR_SCOUT_ARMOR_UFOPEDIA
+    listOrder: 5050
+
+  - id: STR_SCOUTH_UC                      #ADVANCED SCOUT ARMOR
+    text: STR_SCOUTH_UC_UFOPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
+
+  - id: STR_APOT_ARMOR_UC                  #
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+    listOrder: 5700
+  - id: STR_TECH_ARMOR_UC                  #
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_CHAP_ARMOR_UC                  #
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_LIB_ARMOR_UC                   #
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_POWER_SUIT_CL_UC                   #TERMINATOR ARMOR WITH A CYCLONE LAUNCHER
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: 0TERCL.SPK
+    requires:
+      - STR_POWER_SUIT
+    text: STR_POWER_SUIT_CL_UFOPEDIA
+    listOrder: 6110
+
+  - id: STR_FLYING_SUIT_SARGENT_UC                   #ASSAULT TERMINATOR SERGEANT ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_POWER_SUIT
+    image_id: 0TAS.SPK
+    text: STR_TSARGENT_UFOPEDIA
+    listOrder: 6210
+
+  - id: STR_TSARGENT_UC
+    requires:
+      - STR_POWER_SUIT
+    listOrder: 6120
+
+  - id: STR_SIGNAL_ARMOR_UC
+    listOrder: 5350
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_SARGENT_ARMOR_UC
+    listOrder: 5250
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_ASS_SGT_ARMOR_UC
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: 0ASSS.SPK
+    text: STR_SARGENT_ARMOR_UFOPEDIA
+    listOrder: 5450
+    requires:
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_TATICAL_ARMOR                
+    type_id: 10
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+    image_id: 0MK7.SPK
+    text: STR_TATICAL_ARMOR_UFOPEDIA
+    listOrder: 5190
+
+  - id: STR_PERSONAL_ARMOR_UC                 
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_DEV_ARMOR_UC                   
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_ASS_ARMOR_UC                 
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: BIKE_ARMOR_UC               
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+#  - id: STR_ARTIFICER_ARMOR
+#    type_id: 10
+#    section: STR_ARMORPEDIA
+#    image_id:
+#    text:
+#    listOrder: 5690
+
+  - id: STR_INDOMITUS_ARMOR                   #MAIN PAGE OF THE INDOMITUS PATTERN TERMINATOR ARMOR
+    type_id: 10
+    section: STR_ARMORPEDIA
+    requires:
+      - STR_POWER_SUIT
+    image_id: 00INDS.SPK
+    text: STR_INDOMITUS_ARMOR_UFOPEDIA
+    listOrder: 6090
+
+  - id: STR_CAPTAIN_UC                   
+    listOrder: 6020
+
+########################################## OTHER THINGS ##########################################
+
+  - id: STR_SPACE_MARINES_STRATEGIES                   #10
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_SPACE_MARINES_STRATEGIES
+    image_id: PICK_STRATEGY.SPK
+    text: STR_SPACE_MARINES_STRATEGIES_DESC
+    listOrder: 8
+
+  - id: STR_ULTRAMARINES_STRATEGIES                #14
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_ULTRAMARINES_STRATEGIES
+    image_id: ULT.SPK
+    text: STR_ULTRAMARINES_STRATEGIES_DESC
+    listOrder: 10
+
+  - id: STR_SCOUT_SQUADS                   #10
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_SCOUT_SQUADS
+    image_id: 4S.SPK
+    text: STR_SCOUT_SQUADS_DESC
+    listOrder: 12
+
+  - id: STR_BATTLELINE_SQUADS                   #10
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_BATTLELINE_SQUADS
+    image_id: 4T.SPK
+    text: STR_BATTLELINE_SQUADS_DESC
+    listOrder: 14
+
+  - id: STR_CLOSESUPPORT_SQUADS                   #12
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_CLOSESUPPORT_SQUADS
+    image_id: 4A.SPK
+    text: STR_CLOSESUPPORT_SQUADS_DESC
+    listOrder: 16
+
+  - id: STR_FIRESUPPORT_SQUADS                #14
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_FIRESUPPORT_SQUADS
+    image_id: 4D.SPK
+    text: STR_FIRESUPPORT_SQUADS_DESC
+    listOrder: 18
+
+  - id: STR_PRIMARIS                #62
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_PRIMARIS
+    image_id: 4PRIM.SPK
+    text: STR_PRIMARIS_TEXT
+    listOrder: 62
+
+  - id: STR_GUARD_BARRACKS
+    requires:
+      - STR_GUARD_BARRACKS
+
+  - id: AUX_SIGNUM                   #NEW SERGEANT'S SPECIAL WEAPON
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_CERBERUS_LAUNCHER
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CERB.SPK
+    text: STR_CERBERUS_LAUNCHER_UFOPEDIA
+
+  - id: STR_SPEEDC                     #200
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    text: STR_SPEED_UFOPEDIA
+    listOrder: 200
+    image_id: SPEED.SPK
+    requires:
+      - STR_MARINES_STRATEGY
+
+########################################## CLEANING THE CODEX ##########################################
+
+  - id: STR_BANNER                             #10005
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+
+  - id: STR_SKYRANGER                  #120
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_NOT_PRIMARIS
+      - STR_PERSONAL_ARMOR
+  
+  - id: STR_INTERCEPTOR                #110
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_INTERCEPTOR
+
+  - id: STR_STINGRAY                   #1100   40K craft weapon
+    requires:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_AVALANCHE                  #13  40K craft weapon
+    requires:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_RHINO_NO_TT
+    requires:
+      - STR_NOT_PRIMARIS
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_LAS_AMMO                       #75
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ADEPTAS                  #65
+    requires:
+      - STR_ADEPTAS
+
+  - id: STR_IGS                    #70
+    requires:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ARBITES                  #75
+    requires:
+      - STR_ARBITES
+
+  - id: STR_GUARD_ARMORS_MEDIC_UC
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_GUARD_ARMORSM                  #6650   #ARMOR
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_VALKYRIE                   #210
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASER_RIFLE                   #210
+    requires:
+      - STR_LASER_WEAPONS
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASER_RIFLEG                   #210
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASER_PISTOL                   #210
+    requires:
+      - STR_LASER_WEAPONS
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASER_PISTOLG                   #210
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASGUN_ACCATRAN
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_LASGUN_VOSS
+    requires:
+      - STR_GUARD_AND_ARBITES
+      
+  - id: STR_LASGUN_VOSTROYA
+    requires:
+      - STR_GUARD_AND_ARBITES
+      
+  - id: STR_LASGUN_LUCIUS
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_STUB_GUN
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_STUB_RIFLE
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_AUTOPISTOL
+    requires:
+      - STR_GUARD_AND_ARBITES  
+
+  - id: STR_AUTOGUN
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_STUN_ROD
+    requires:
+      - STR_GUARD_AND_ARBITES
+
+  - id: STR_BOLTER_LIGHT_ULTRA                      #10305
+    requires:
+      - STR_LIGHT_BOLTERS
+
+  - id: STR_BOLTPISTOL_LIGHT_ULTRA                      #10305
+    requires:
+      - STR_LIGHT_BOLTERS
+
+  - id: STR_BOLTER_CANTUS
+    requires:
+      - STR_LIGHT_BOLTERS
+      - STR_ADEPTAS
+
+  - id: STR_RIFLEB                      #10305
+    requires:
+      - STR_RIFLEB
+
+  - id: STR_RIFLEC                      #10310
+    requires:
+      - STR_RIFLEC
+
+  - id: STR_RIFLED                      #10320
+    requires:
+      - STR_RIFLED
+
+  - id: STR_PISTOLB                      #10105
+    requires:
+      - STR_PISTOLB
+
+  - id: STR_PISTOLS                     #10110
+    requires:
+      - STR_PISTOLS
+
+  - id: STR_PISTOLH                      #10120
+    requires:
+      - STR_PISTOLH
+
+  - id: STR_HIGH_EXPLOSIVE                     #14000
+    requires:
+      - STR_MELTABOMB
+
+  - id: STR_TANK_ROCKET_LAUNCHER          #23       #40K HWP
+    requires:
+      - STR_GENERALLOCK
+
+
+########################################## WEAPONS ##########################################
+
+  - id: STR_ASSAULT_SHOTGUN
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1ASSSHOT.SPK
+    text: STR_ASSAULT_SHOTGUN_DESC
+    listOrder: 10610
+    requires:
+      - STR_MARINES_STRATEGY
+
+  - id: STR_ASSAULT_SHOTGUN_SHELLS
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+#  - id: STR_ASSAULT_SHOTGUN_SHELLS_AP
+#    type_id: 14
+#    section: STR_NOT_AVAILABLE
+
+  - id: STR_ASTARTES_WEBBER                           #11810
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1WEB.SPK
+    text: STR_WEBBER_UFOPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
+    listOrder: 11810
+
+  - id: STR_ASTARTES_WEBBER_AMMO
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+    requires:
+      - STR_MARINES_STRATEGY
+
+  - id: STR_MK3_PISTOL                      #10100
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1BP.SPK
+    text: STR_PISTOL_UFOPEDIA
+    listOrder: 10100
+    requires:
+      - STR_MARINES_STRATEGY
+
+########################################## CLEANING THE CODEX ##########################################
+
+  - id: STR_PISTOL                      #10100
+    requires:
+      - STR_GUARD_AND_ARBITES
+      - STR_LIGHT_BOLTERS
+
+  - id: STR_SHOTGUN
+    requires:
+      - STR_GUARD_AND_ARBITES

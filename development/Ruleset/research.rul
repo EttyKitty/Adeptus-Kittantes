@@ -1,0 +1,634 @@
+arcScripts:
+  - delete: marinesPickStrategy
+  
+  
+research:
+  - delete: STR_LASER_PISTOL
+  - delete: STR_LASER_RIFLE
+  - delete: STR_SCOUT
+  - delete: STR_DEVASTATOR
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_PICK_STRATEGY
+
+  - name: STR_UNAVAILABLE
+    cost: 0
+    needItem: true
+
+  - name: STR_MARINES_STRATEGY
+    unlocks:
+      - STR_MARINES_AND_ADEPTAS
+
+#---FACTIONS------------------------------------------------------
+#*** Internal researches used to handle unlocks ***
+  - name: STR_GENERALLOCK
+    needItem: true
+
+  - name: STR_GAME_START
+    unlockFinalMission: true
+
+  - name: STR_CHAPTER_PURITY #CHAOS PATH
+
+  - name: STR_MARINES_AND_ADEPTAS
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_GUARD_SUPORT
+    dependencies:
+      - STR_GENERALLOCK
+
+#---STRATEGY------------------------------------------------------
+  - name: STR_SPACE_MARINES_STRATEGIES
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_NOT_PRIMARIS
+
+  - name: STR_ULTRAMARINES_STRATEGIES
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_SCOUT_SQUADS
+    cost: 5
+    points: 0
+    dependencies:
+      - STR_SPACE_MARINES_STRATEGIES
+    lookup: ""
+    unlocks:
+      - STR_MOTION_SCANNER
+      - STR_SMOKE
+      - STR_SPEEDR
+      - STR_GUARD_BARRACKS
+    disables: []
+    spawnedItem: ""
+    spawnedEvent: ""
+
+  - name: STR_BATTLELINE_SQUADS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_SPACE_MARINES_STRATEGIES
+      - STR_PERSONAL_ARMOR
+    lookup: ""
+    unlocks: []
+    disables: []
+    spawnedItem: ""
+    spawnedEvent: ""
+
+  - name: STR_CLOSESUPPORT_SQUADS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_SPACE_MARINES_STRATEGIES
+      - STR_PERSONAL_ARMOR
+    lookup: ""
+    unlocks: []
+    disables: []
+    spawnedItem: ""
+    spawnedEvent: ""
+
+  - name: STR_FIRESUPPORT_SQUADS
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+    lookup: ""
+    unlocks: []
+    disables: []
+    spawnedItem: ""
+    spawnedEvent: ""
+
+  - name: STR_PRIMARIS
+    cost: 25
+    points: 5
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+    lookup: ""
+    unlocks:
+      - STR_PRIMARIS_AND_ADEPTAS
+    disables: []
+    spawnedEvent: ""
+
+  - name: STR_CHOSEN_PRIMARIS
+    dependencies:
+      - STR_GENERALLOCK
+
+
+#*** Internal for Marines strategy unlocks ***
+  - name: STR_THUNDERHAWKTYPE1
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+
+  - name: STR_THUNDERHAWKTYPE2
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+
+#---START TIER----------------------------------------------------
+#*** (or, doesn't depend on midtier) ***
+
+#*** uses unlocks so marines have to pick strategy first ***
+  - name: STR_LASER_WEAPONS
+    cost: 50
+    points: 10
+    dependencies:
+      - STR_GENERALLOCK
+  - name: STR_MOTION_SCANNER
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_MEDI_KIT # apothecary for marines
+    cost: 210
+    points: 20
+    dependencies:
+      - STR_PERSONAL_ARMOR
+    unlocks:
+      - STR_MEDI_KIT_PREREQ
+    lookup: STR_MEDI_KIT_PREREQ
+
+  - name: STR_MEDI_KIT_PREREQ
+    dependencies:
+      - STR_GENERALLOCK
+
+#*** components ***
+  - name: STR_ALIEN_ALLOYS
+    cost: 400
+    points: 30
+    needItem: true
+    unlocks:
+      - STR_LASCAN
+      - STR_HEAVY_LASER
+
+
+#*** early weaponry ***
+  - name: STR_HEAVY_LASER
+    dependencies:
+      - STR_LASER_WEAPONS
+  - name: STR_LASCAN
+    cost: 460
+    points: 10
+    dependencies:
+      - STR_LASER_WEAPONS
+
+  - name: STR_MASTER_CRAFTING
+    cost: 200
+    points: 30
+    dependencies:
+      - STR_HEAVY_LASER
+    unlocks:
+      - STR_LIGHT_BOLTERS
+  - name: STR_MASTER_CRAFTING_AMMO
+    cost: 200
+    points: 30
+    dependencies:
+      - STR_MASTER_CRAFTING
+
+  - name: STR_LIGHT_BOLTERS
+    dependencies:
+      - STR_GENERALLOCK
+
+#*** armors ***
+  - name: STR_THREAT_ONE #THREAT_ONE ARMOR PATH
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_SNAKEMAN
+      - STR_MUTON
+      - STR_ETHEREAL
+      - STR_FLOATER
+
+  # marines
+  - name: STR_PERSONAL_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_THREAT_ONE
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+  
+  - name: STR_DEV_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_ALIEN_ALLOYS # necessary because Tactical Strategy unlocks STR_PERSONAL_ARMOR
+      - STR_PERSONAL_ARMOR
+  
+  - name: STR_ASS_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_FLOATER_SOLDIER
+      - STR_PERSONAL_ARMOR
+
+  - name: STR_SARGENT_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_PERSONAL_ARMOR
+      - STR_ASS_ARMOR
+      - STR_DEV_ARMOR
+      - STR_BERSERKER_CORPSE
+
+#*** early facilities ***
+  - name: STR_STEELMILLR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_ALIEN_ALLOYS
+
+  - name: STR_DEFENSE_CORRIDORR #facility MARINES
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MOTION_SCANNER
+      - STR_MARINES_STRATEGY
+
+  - name: STR_DEFENSE_CORRIDORBR #facility OTHER FACTIONS BLACK
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MOTION_SCANNER
+
+#*** early crafts ***
+  - name: STR_STORMHAWKR
+    cost: 150
+    points: 10
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_SPEEDR #landspeeder
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_NEW_FIGHTER_CRAFT
+    dependencies:
+      - STR_UFO_CONSTRUCTION
+      - STR_MARINES_AND_ADEPTAS
+
+#*** miscellaneous ***
+
+  - name: STR_SPELLSR
+    cost: 120
+    points: 10
+    dependencies:
+      - STR_MEDI_KIT_PREREQ
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_SPELLS_PREREQ
+    lookup: STR_SPELLS_PREREQ
+
+  - name: STR_SPELLS_PREREQ
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_SMOKE
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_CRAFTADD
+    cost: 200
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+#---MID TIER--------------------------------------------------------
+#*** internal, used for unlocks ***
+  - name: STR_MIDTIER_PREREQ
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+#*** the projects the player sees ***
+
+  - name: STR_MT #mid tier #cutcscene c2
+    cost: 200
+    points: 200
+    dependencies:
+      - STR_THREAT_ONE
+      - STR_ALIEN_ALLOYS
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_MIDTIER_PREREQ
+    cutscene: c2
+
+#*** weapons ***
+  - name: STR_CHAINSWORD_MC
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MASTER_CRAFTING
+      - STR_MARINES_STRATEGY
+  - name: STR_MELTABOMB
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_MIDTIER_PREREQ
+  - name: STR_MGRENADE
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_MIDTIER_PREREQ
+  - name: STR_HEAVY_PLASMA_MC
+    cost: 100
+    points: 25
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MASTER_CRAFTING
+  - name: STR_HB
+    cost: 860
+    points: 20
+    dependencies:
+      - STR_CHB
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_AND_ADEPTAS
+  - name: STR_HB_CLIP
+    cost: 120
+    points: 10
+    dependencies:
+      - STR_HB
+  - name: STR_HFLAMERR
+    cost: 860
+    points: 20
+    dependencies:
+      - STR_POWER_SUIT
+    unlocks:
+      - STR_HFLAMER_FUEL_MANUFACTURING # uses unlocks since IG needs access to the fuel for Heavy Sentinels
+  - name: STR_HFLAMER_FUEL_MANUFACTURING
+    dependencies:
+      - STR_GENERALLOCK
+  - name: STR_ASSC
+    cost: 860
+    points: 20
+    dependencies:
+      - STR_CHB
+      - STR_CASSC
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+  - name: STR_ASSC_CLIP
+    cost: 120
+    points: 10
+    dependencies:
+      - STR_ASSC
+
+#*** armors ***
+  # marines
+  - name: STR_SCOUTH_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_SARGENT_ARMOR
+  - name: STR_SIGNAL_ARMOR_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_SARGENT_ARMOR
+  - name: STR_HONOR_ARMOR_RESEARCH
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_SARGENT_ARMOR
+  - name: STR_HONOR_ARMOR
+    cost: 180
+    points: 20
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_SARGENT_ARMOR
+  - name: STR_POWER_SUIT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_ELERIUM_115
+      - STR_UFO_POWER_SOURCE
+      - STR_MIDTIER_PREREQ
+      - STR_PERSONAL_ARMOR
+  - name: STR_FLYING_SUIT
+    cost: 330
+    points: 20
+    dependencies:
+      - STR_POWER_SUIT
+      - STR_UFO_NAVIGATION
+  - name: STR_CAPTAIN_SUIT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_POWER_SUIT
+      - STR_LORD_CORPSE
+
+#*** midtier facilities ***
+
+  - name: STR_NAVY_COMUNICATIONS
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_APOC_BAY #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_LIBRARY #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_PSI_AMP
+
+  - name: STR_TEC_BAYR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_APOC_BAY
+  - name: STR_TRAINFACILITYR #facility
+    cost: 100
+    points: 15
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_AND_ADEPTAS
+
+#*** crafts ***
+  - name: STR_STORMEAGLE_INTERCEPTOR
+    cost: 600
+    points: 25
+    listOrder: 5050
+    dependencies:
+      - STR_MARINES_AND_ADEPTAS
+      - STR_MIDTIER_PREREQ
+      - STR_BATTLESHIP
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_HARVESTER
+      - STR_SUPPLY_SHIP
+
+#---HIGH TIER--------------------------------------------------------
+  - name: STR_HIGHTIER_PREREQ
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ULTIMATE_CRAFT # chapter hightier Marines
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MIDTIER_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_NEW_FIGHTER_TRANSPORTER
+      - STR_CYDONIA_OR_BUST
+    unlocks:
+      - STR_HIGHTIER_PREREQ
+
+#*** weapons ***
+  - name: STR_POWER_SWORD
+    cost: 560
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_MARINES_AND_ADEPTAS
+  - name: STR_HAMMER
+    cost: 560
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_MARINES_STRATEGY
+      - STR_HB
+
+#*** armors ***
+  # marines
+  - name: STR_CHAP_ARMOR
+    cost: 300
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_SARGENT_ARMOR
+  - name: STR_TSARGENT
+    cost: 205
+    points: 20
+    dependencies:
+      - STR_HIGHTIER_PREREQ
+      - STR_POWER_SUIT
+      - STR_SARGENT_ARMOR
+  - name: STR_CENT_ARMORR
+    cost: 330
+    points: 20
+    dependencies:
+      - STR_CYDONIA_OR_BUST
+      - STR_UFO_NAVIGATION
+      - STR_MARINES_STRATEGY
+
+#*** crafts ***
+  - name: STR_CHAPTERARMYR #MARINES
+    cost: 900
+    points: 30
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+      - STR_STORMEAGLE_INTERCEPTOR
+
+  - name: STR_ASS_ARMOR_DEP1
+    requires:
+      - STR_CLOSESUPPORT_SQUADS
+    dependencies:
+      - STR_FLOATER_SOLDIER
+      - STR_FLOATER_MEDIC
+      - STR_FLOATER_NAVIGATOR  
+      - STR_FLOATER_ENGINEER
+      - STR_FLOATER_LEADER
+      - STR_FLOATER_COMMANDER
+      - STR_WARPTALON_SOLDIER
+      - STR_WARPTALON_COMMANDER
+      - STR_ORK_STORMBOY
+
+  - name: STR_RIFLEB
+    cost: 10
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_RIFLEC
+    cost: 10
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_RIFLED
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_PISTOLB
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+  
+  - name: STR_PISTOLS
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_PISTOLH
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_INTERCEPTOR
+    cost: 50
+    points: 0
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+    unlocks:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - name: STR_BASIC_CRAFT_WEAPON
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_SPEEDR
+    cost: 150
+    points: 10
+    dependencies:
+      - STR_GENERALLOCK
+    unlocks:
+      - STR_SPEEDC
+
+  - name: STR_SPEEDC
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK

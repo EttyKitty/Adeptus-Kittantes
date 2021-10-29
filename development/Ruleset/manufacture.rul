@@ -1,0 +1,127 @@
+manufacture:
+  - delete: STR_SCOUTH                   #6099
+  - delete: STR_SCOUTHB                  #6099
+  - delete: STR_SCOUTHW                  #6099
+  - delete: STR_SCOUTHY                  #6099
+  - delete: STR_SCOUTHR                  #6099
+  - delete: STR_SCOUTHB                  #6099
+  - delete: STR_SCOUTHG                  #6099
+  - delete: STR_FLYING_SUIT                #6200
+  - delete: STR_CAPTAIN_SUIT              #6400
+  - delete: STR_TSARGENT                  #6300
+  - delete: STR_SARGENT_ARMOR             #5500
+  - delete: STR_CHAP_ARMOR                #5900
+  - delete: STR_APOT_ARMOR                #5700
+  - delete: STR_TECH_ARMOR                #5800
+  - delete: STR_HONOR_ARMOR                #5600
+  - delete: STR_SIGNAL_ARMOR                #5602
+  - delete: STR_SIGNALFALSE_ARMOR                #5602
+  - delete: STR_ASS_ARMOR_HONOR              #5601
+  - delete: STR_DEV_ARMOR                   #5300
+  - delete: STR_ASS_ARMOR                  #5400
+  - delete: STR_LIB_ARMOR                  #6000
+  - delete: STR_LIB_ARMOR_DISABLED
+  - delete: STR_TACTICAL_CARE_PACKAGE
+  - delete: STR_ASSAULT_CARE_PACKAGE
+  - delete: STR_DEVASTATOR_CARE_PACKAGE
+  - delete: STR_SCOUT_CARE_PACKAGE
+  - delete: STR_CRATED_LANDSPEEDER
+
+#  - name: STR_CREATE_SPACE_MARINE
+#    requires:
+#      - STR_MARINES_STRATEGY
+#      - STR_CHAPTER_PURITY
+#    requiresBaseFunc: [MED]
+#    space: 0
+#    time: 4000
+#    cost: 1000
+#    producedItems: 
+#      STR_CLEAN_GENESEED: 0
+#    spawnedPersonType: STR_SOLDIER
+#    requiredItems:
+#      STR_ASPIRANT: 1
+#      STR_CLEAN_GENESEED: 1
+
+##########################################CORPSE EXTRACTION##########################################
+
+  - &STR_PROCESS_CORPSE
+    name: STR_PROCESS_CORPSE_SCOUT                 #GENE-SEED EXTRACTION FROM A SCOUT CORPSE
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    requiresBaseFunc: [MED]
+    time: 3000
+    requiredItems:
+      STR_SCOUT_CORPSE: 1
+    producedItems:
+      STR_CLEAN_GENESEED: 2
+
+  - name: STR_PROCESS_CORPSE_MK7                 #GENE-SEED AND ARMOR EXTRACTION FROM A MK7 CORPSE
+    refNode: *STR_PROCESS_CORPSE
+    time: 6000
+    requiredItems:
+      STR_MK7_CORPSE: 1
+    producedItems:
+      STR_CLEAN_GENESEED: 2
+      STR_TATICAL_ARMOR: 1
+
+  - name: STR_PROCESS_CORPSE_TERM                 #GENE-SEED AND ARMOR EXTRACTION FROM A TERMINATOR CORPSE
+    refNode: *STR_PROCESS_CORPSE
+    time: 8000
+    requiredItems:
+      STR_TERMINATOR_CORPSE: 1
+    producedItems:
+      STR_CLEAN_GENESEED: 2
+      STR_POWER_SUIT: 1
+
+  - name: STR_TTSCT  #thunderhawnk Transport Dev
+    category: STR_CRAFT
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+    space: 36
+    time: 34000
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1200
+      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_NAVIGATION: 1
+
+  - name: STR_TTASS #thunderhawnk Transport ASS
+    category: STR_CRAFT
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+    space: 36
+    time: 34000
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1200
+      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_NAVIGATION: 1
+
+  - name: STR_AVENGER #thunderhawnk Transport
+    category: STR_CRAFT
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+    space: 36
+    time: 34000
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1200
+      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_NAVIGATION: 1
+
+  - name: STR_TTDEV  #thunderhawnk Transport Dev
+    category: STR_CRAFT
+    requires:
+      - STR_CHAPTER_PURITY
+      - STR_HIGHTIER_PREREQ
+    space: 36
+    time: 34000
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1200
+      STR_UFO_POWER_SOURCE: 2
+      STR_UFO_NAVIGATION: 1
