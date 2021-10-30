@@ -109,3 +109,16 @@ ufopaedia:
   - id: STR_PISTOLH                      #10120
     requires: !add
       - STR_ADVANCED_BOLT_WEAPON
+
+
+  - id: STR_ADEPTAS                  #65
+    requires: !add
+      - STR_ADEPTAS
+
+  - id: STR_IGS                    #70
+    requires: !add
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ARBITES                  #75
+    requires: !add
+      - STR_ARBITES
