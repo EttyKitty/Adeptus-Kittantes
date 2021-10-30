@@ -1,0 +1,43 @@
+craftWeapons:
+
+  - type: STR_CANNON_UC
+    reloadCautious: 8
+    reloadStandard: 6
+    reloadAggressive: 4
+    ammoMax: 120
+    rearmRate: 60
+    launcher: STR_CANNON
+    clip: STR_AC_AP_AMMO
+
+  - type: STR_HEAVY_BOLTER_UC
+    weaponType: 9
+    sprite: 2
+    sound: {mod: 40k, index: 4}
+    damage: 5
+    range: 30
+    accuracy: 40
+    reloadCautious: 8
+    reloadStandard: 6
+    reloadAggressive: 4
+    ammoMax: 60
+    rearmRate: 60
+    launcher: STR_AUTO_CANNON
+    clip: STR_AC_AP_AMMO
+    projectileType: 2
+    projectileSpeed: 8
+
+  - type: STR_CERBERUS_LAUNCHER_UC
+    sprite: 0
+    sound: 5
+    damage: 80
+    range: 30
+    accuracy: 85
+    reloadCautious: 32
+    reloadStandard: 24
+    reloadAggressive: 16
+    ammoMax: 3
+    launcher: STR_CERBERUS_LAUNCHER
+    clip: STR_FRAGMENTATION_ROCKETS
+    projectileType: 0
+    projectileSpeed: 8
+

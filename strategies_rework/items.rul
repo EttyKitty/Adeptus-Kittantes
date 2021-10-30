@@ -1,0 +1,97 @@
+items:
+
+  - type: STR_BIKE_ARMOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_HWP_CANNON_SHELLS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_SERVITOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR    
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+ 
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_PERSONAL_ARMOR 
+
+  - type: STR_TANK_ROCKET_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+  
+  - type: STR_HWP_ROCKETS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_BANNER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+
+  - type: STR_SHOTGUN
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+    bigSprite: 57
+    floorSprite: 73
+    handSprite: 128
+
+  - type: STR_SHOTGUN_SHELLS
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_STUN_ROD
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_KNIF #                3010
+    categories: [STR_CAT_MELEE]
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+    invWidth: 1
+    invHeight: 2
+
+  - type: STR_KNIF_SM
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    categories: [STR_CAT_MELEE, STR_CAT_SCOUT]
+    size: 0.3
+    costBuy: 1000
+    costSell: 200
+    weight: 7
+    bigSprite: 0
+    floorSprite: {mod: 40k, index: 113}
+    handSprite: {mod: 40k, index: 304}
+    meleeSound: 754 #754 knif miss
+    meleeHitSound: 773 #773 knif hit
+    meleeAnimation: 4
+    power: 80
+    damageType: 7
+    accuracyMelee: 110
+    tuMelee: 15
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 20
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    strengthApplied: false
+    attraction: 7
+    listOrder: 12900
+    experienceTrainingMode: 13

@@ -9,28 +9,61 @@ ufopaedia:
   - delete: STR_SCOUT
   - delete: STR_PRIMARIS
 
-########################################## OTHER THINGS ##########################################
 
-  - id: STR_SPACE_MARINES_STRATEGIES                   #10
+
+  - id: STR_MARINES_STRATEGY                   #10
     type_id: 10
     text_width: 190
     section: STR_STRATEGY
     requires:
-      - STR_SPACE_MARINES_STRATEGIES
+      - STR_MARINES_STRATEGY
     image_id: PICK_STRATEGY.SPK
-    text: STR_SPACE_MARINES_STRATEGIES_DESC
-    listOrder: 8
+    text: STR_MARINES_STRATEGY_DESC
+    listOrder: 9
 
-########################################## CLEANING THE CODEX ##########################################
 
-  - id: STR_ADEPTAS                  #65
+  - id: STR_SPEEDC                     #200
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    text: STR_SPEED_UFOPEDIA
+    listOrder: 200
+    image_id: SPEED.SPK
     requires:
-      - STR_ADEPTAS
+      - STR_MARINES_STRATEGY
 
-  - id: STR_IGS                    #70
+  - id: STR_INTERCEPTOR                #110
     requires:
-      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_INTERCEPTOR
 
-  - id: STR_ARBITES                  #75
+  - id: STR_STINGRAY                   #1100   40K craft weapon
     requires:
-      - STR_ARBITES
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_AVALANCHE                  #13  40K craft weapon
+    requires:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_CANNON_UC
+    requires:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_CERBERUS_LAUNCHER_UC
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CERB.SPK
+    text: STR_CERBERUS_LAUNCHER_UFOPEDIA
+
+  - id: STR_HEAVY_BOLTER_UC                  #14  40K craft weapon
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CC00.SPK
+    text: STR_HEAVY_BOLTER_UC_UFOPEDIA
+    listOrder: 1300
+
+
+  - id: STR_KNIF_SM                           #12900
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1CK.SPK
+    text: STR_KNIF_UFOPEDIA
+    listOrder: 12900

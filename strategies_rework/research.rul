@@ -9,12 +9,9 @@ research:
   - delete: STR_PICK_STRATEGY
 
 
-  - name: STR_SPACE_MARINES_STRATEGIES
-    cost: 5
-    points: 0
-    dependencies:
-      - STR_MARINES_STRATEGY
-    unlocks:
+
+  - name: STR_MARINES_STRATEGY
+    unlocks: !add
       - STR_MOTION_SCANNER
       - STR_SMOKE
       - STR_SPEEDR
@@ -22,18 +19,31 @@ research:
       - STR_MOTION_SCANNER
       - STR_LASER_WEAPONS
       - STR_CRAFTADD
+      - STR_NOT_PRIMARIS
 
   - name: STR_PRIMARIS
-    cost: 25
-    points: 5
-    dependencies:
-      - STR_HIGHTIER_PREREQ
-    lookup: ""
+    dependencies: !add
+      - STR_GENERALLOCK
     unlocks:
       - STR_PRIMARIS_AND_ADEPTAS
     disables: []
-    spawnedEvent: ""
+    spawnedEvent: []
 
+  - name: STR_HUMAN_SIZED_WEAPONS
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ADEPTAS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_IMPERIAL_GUARD_OPERATIONS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_ARBITES
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
 
   - name: STR_HONOR_ARMOR_RESEARCH
     dependencies: !remove
@@ -78,3 +88,20 @@ research:
     unlocks:
       - STR_MEDI_KIT_PREREQ
     lookup: STR_MEDI_KIT_PREREQ
+
+
+  - name: STR_INTERCEPTOR
+    cost: 50
+    points: 5
+    dependencies:
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+    unlocks:
+      - STR_BASIC_CRAFT_WEAPON
+
+  - name: STR_BASIC_CRAFT_WEAPON
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+

@@ -1,39 +1,10 @@
 startingBase:
 
-  scientists: 20
+  scientists: 10
   engineers: 10
 
   randomSoldiers:
-    STR_SOLDIER: 12
-
-  facilities:
-    - type: STR_ACCESS_LIFT
-      x: 2
-      y: 3
-    - type: STR_HANGAR
-      x: 2
-      y: 4
-    - type: STR_HANGAR
-      x: 0
-      y: 4
-    - type: STR_HANGAR
-      x: 0
-      y: 2
-    - type: STR_SMALL_RADAR_SYSTEM
-      x: 3
-      y: 3
-    - type: STR_GENERAL_STORES
-      x: 0
-      y: 1
-    - type: STR_LIVING_QUARTERS
-      x: 3
-      y: 2
-    - type: STR_WORKSHOP
-      x: 4
-      y: 3
-    - type: STR_LABORATORY
-      x: 5
-      y: 3
+    STR_SOLDIER: 16
 
   items:
     STR_FRAGMENTATION_ROCKETS: 9
@@ -54,19 +25,23 @@ startingBase:
       id: 1
       fuel: 1000
       weapons:
-        - type: STR_CANNON_UC
-          ammo: 60
-        - type: STR_CERBERUS_LAUNCHER
+        - type: STR_CERBERUS_LAUNCHER_UC
           ammo: 3
+        - type: STR_HEAVY_BOLTER_UC
+          ammo: 60
+        - type: STR_HEAVY_BOLTER_UC
+          ammo: 60
       status: STR_READY
 
     - type: STR_SPEEDC
       id: 2
       fuel: 1000
       weapons:
-        - type: STR_CANNON_UC
-          ammo: 60
-        - type: STR_CERBERUS_LAUNCHER
+        - type: STR_CERBERUS_LAUNCHER_UC
           ammo: 3
+        - type: STR_HEAVY_BOLTER_UC
+          ammo: 60
+        - type: STR_HEAVY_BOLTER_UC
+          ammo: 60
       status: STR_READY
 

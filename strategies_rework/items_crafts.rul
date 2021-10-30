@@ -1,0 +1,19 @@
+items:
+
+  - type: STR_CERBERUS_LAUNCHER
+    categories: [ STR_CRAFT_WEAPONS]
+
+  - type: STR_FRAGMENTATION_ROCKETS
+    categories: [ STR_CRAFT_WEAPONS]
+    size: 0.4
+    costBuy: 3000
+    costSell: 2000
+    transferTime: 48
+    clipSize: 1
+    listOrder: 1150
+
+  - type: STR_CANNON                      #S 1.5
+    costBuy: 0
+
+  - type: STR_CANNON_ROUNDS_X50           #S 0.1
+    costBuy: 0

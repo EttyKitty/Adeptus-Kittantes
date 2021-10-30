@@ -1,0 +1,27 @@
+extraSprites: 
+
+  - type: CERB.SPK
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/CODEX/CERB.png
+
+
+
+  - type: BIGOBS.PCK                                    #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS
+    files:
+      0: Resources/Psword/PKSM.gif
+      57: Resources/Shotgun/old model/Shotgun.gif
+
+  - type: HANDOB.PCK
+    height: 40
+    width: 256
+    subX: 32
+    subY: 40
+    files:
+      128: Resources/Shotgun/old model/SHOTGUN.png
+
+  - type: FLOOROB.PCK
+    files:
+      73: Resources/Shotgun/old model/FloorS.gif
