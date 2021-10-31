@@ -1,24 +1,21 @@
 startingBase:
 
-  scientists: 10
+  scientists: 20
   engineers: 10
 
   randomSoldiers:
     STR_SOLDIER: 16
 
   items:
-    STR_FRAGMENTATION_ROCKETS: 9
-    STR_AC_AP_AMMO: 8
-    STR_RIFLE: 9
-    STR_RIFLE_CLIP: 27
-    STR_HEAVY_CANNON: 2
-    STR_HC_AP_AMMO: 6
-    STR_ROCKET_LAUNCHER: 1
-    STR_SMALL_ROCKET: 4
-    STR_LARGE_ROCKET: 2
-    STR_GRENADE: 12
-    STR_SMOKE_GRENADE: 12
-    STR_CLEAN_GENESEED: 6
+    STR_FRAGMENTATION_ROCKETS: 12
+    STR_AC_AP_AMMO: 10
+    STR_RIFLE_CLIP: 4
+    STR_ASTARTES_SHOTGUN_SHELLS: 2
+    STR_HC_AP_AMMO: 2
+    STR_SMALL_ROCKET: 2
+    STR_LARGE_ROCKET: 1
+    STR_GRENADE: 4
+    STR_SMOKE_GRENADE: 4
 
   crafts:
     - type: STR_SPEEDC
@@ -32,6 +29,21 @@ startingBase:
         - type: STR_HEAVY_BOLTER_UC
           ammo: 60
       status: STR_READY
+      items:
+        STR_AUTO_CANNON: 1
+        STR_AC_AP_AMMO: 3
+        STR_RIFLE: 6
+        STR_RIFLE_CLIP: 24
+        STR_ASTARTES_SHOTGUN: 2
+        STR_ASTARTES_SHOTGUN_SHELLS: 6
+        STR_HEAVY_CANNON: 2
+        STR_HC_AP_AMMO: 6
+        STR_ROCKET_LAUNCHER: 1
+        STR_SMALL_ROCKET: 8
+        STR_LARGE_ROCKET: 4
+        STR_KNIF_SM: 16
+        STR_GRENADE: 12
+        STR_SMOKE_GRENADE: 12
 
     - type: STR_SPEEDC
       id: 2
