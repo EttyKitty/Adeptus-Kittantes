@@ -1,5 +1,15 @@
 items:
 
+  - type: STR_POWERFIST            #12600           DA POWER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+
+  - type: STR_BANNER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+
   - type: STR_BIKE_ARMOR
     requiresBuy:
       - STR_PERSONAL_ARMOR
@@ -36,10 +46,9 @@ items:
     requiresBuy:
       - STR_PERSONAL_ARMOR
 
-  - type: STR_BANNER
-    requiresBuy:
-      - STR_MARINES_STRATEGY
-      - STR_HIGHTIER_PREREQ
+
+
+
 
   - type: STR_SHOTGUN
     requiresBuy:
@@ -51,6 +60,19 @@ items:
   - type: STR_SHOTGUN_SHELLS
     requiresBuy:
       - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_AP_AMMO #SNIPER AP                   11910
+    clipSize: 6
+    weight: 4
+
+  - type: STR_HC_HE_AMMO #SNIPER HE                   11920
+    clipSize: 6
+    weight: 4
+
+  - type: STR_HC_I_AMMO #SNIPER I                     11930
+    clipSize: 6
+    weight: 4
+
 
   - type: STR_STUN_ROD
     requiresBuy:
@@ -95,3 +117,54 @@ items:
     attraction: 7
     listOrder: 12900
     experienceTrainingMode: 13
+
+
+  - type: STR_ASTARTES_SHOTGUN
+    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    battleType: 1
+    size: 0.2
+    costBuy: 12000
+    costSell: 4000
+    weight: 10
+    compatibleAmmo:
+      - STR_ASTARTES_SHOTGUN_SHELLS
+    accuracySnap: 75
+    accuracyAimed: 95
+    tuSnap: 20
+    tuAimed: 35
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    aimRange: 10
+    snapRange: 8
+    dropoff: 5
+    listOrder: 10600
+    bigSprite: {mod: 40k, index: 235}
+    floorSprite: {mod: 40k, index: 118}
+    handSprite: {mod: 40k, index: 328}
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: {mod: 40k, index: 755}
+
+  - type: STR_ASTARTES_SHOTGUN_SHELLS
+    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    battleType: 2
+    shotgunBehavior: 1
+    shotgunSpread: 25
+    shotgunPellets: 6
+    size: 0.1
+    costBuy: 800
+    costSell: 200
+    weight: 5
+    power: 45
+    damageType: 1
+    clipSize: 8
+    listOrder: 10610
+    bigSprite: {mod: 40k, index: 236}
+    floorSprite: {mod: 40k, index: 119}
+    handSprite: {mod: 40k, index: 46}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}

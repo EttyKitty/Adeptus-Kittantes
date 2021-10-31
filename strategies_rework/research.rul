@@ -77,6 +77,13 @@ research:
   - name: STR_MELTABOMB
     dependencies: !remove
       - STR_SCOUT
+    unlocks:
+      - STR_HIGH_EXPLOSIVE
+
+  - name: STR_HIGH_EXPLOSIVE
+    cost: 20
+    points: 2
+    needItem: true
 
   - name: STR_MGRENADE
     dependencies: !remove
