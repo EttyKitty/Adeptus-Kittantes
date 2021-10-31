@@ -1,5 +1,5 @@
 # Adeptus-Kittantes
-A set of different additions/changes for the 40K and ROSIGMA OpenXcom mods. A set of different additions/changes for the 40K and ROSIGMA OpenXcom mods.
+A set of different additions/changes for the 40K and ROSIGMA OpenXcom mods.
 ## Features:
 - Soon
 ## Dev. Team:
