@@ -21,6 +21,8 @@ en-US:
   STR_DAMAGE_18: "()"
   STR_DAMAGE_19: "()"
 
+  STR_QD_SLOT: Q.D.
+
   STR_ADVANCED_BOLT_WEAPON: "Advanced Bolt Weapon"
   STR_BASIC_CRAFT_WEAPON: "Basic Craft Weapon"
   STR_HUMAN_SIZED_WEAPONS: "Human Sized Weapons"

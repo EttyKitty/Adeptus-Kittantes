@@ -31,28 +31,6 @@ ufopaedia:
     requires:
       - STR_MARINES_STRATEGY
 
-  - id: STR_INTERCEPTOR                #110
-    requires:
-      - STR_INTERCEPTOR
-
-  - id: STR_SKYRANGER                  #120
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_PERSONAL_ARMOR
-
-  - id: STR_DROP                  #121
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_PERSONAL_ARMOR
-
-  - id: STR_RHINO_NO_TT
-    requires:
-      - STR_MARINES_STRATEGY
-      - STR_PERSONAL_ARMOR
-
-  - id: STR_STINGRAY                   #1100   40K craft weapon
-    requires:
-      - STR_BASIC_CRAFT_WEAPON
 
   - id: STR_STINGRAY_K                   #1100   40K craft weapon
     type_id: 12
@@ -60,14 +38,6 @@ ufopaedia:
     image_id: CC01.SPK
     text: STR_STINGRAY_K_UFOPEDIA
     listOrder: 1110
-    requires:
-      - STR_BASIC_CRAFT_WEAPON
-
-  - id: STR_AVALANCHE                  #13  40K craft weapon
-    requires:
-      - STR_BASIC_CRAFT_WEAPON
-
-  - id: STR_CANNON_UC
     requires:
       - STR_BASIC_CRAFT_WEAPON
 
@@ -85,24 +55,12 @@ ufopaedia:
     listOrder: 1300
 
 
-  - id: STR_HIGH_EXPLOSIVE                     #14000
-    requires:
-      - STR_HIGH_EXPLOSIVE
-
-  - id: STR_KNIF
-    requires:
-      - STR_HUMAN_SIZED_WEAPONS
-
   - id: STR_KNIF_SM                           #12900
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1CK.SPK
     text: STR_KNIF_UFOPEDIA
     listOrder: 12900
-
-  - id: STR_SHOTGUN
-    requires:
-      - STR_HUMAN_SIZED_WEAPONS
 
   - id: STR_ASTARTES_SHOTGUN
     type_id: 14
@@ -116,3 +74,67 @@ ufopaedia:
   - id: STR_ASTARTES_SHOTGUN_SHELLS
     type_id: 14
     section: STR_NOT_AVAILABLE
+
+
+
+###################################################CLEANING/RESTRICTION###################################################
+###################################################CLEANING/RESTRICTION###################################################
+###################################################CLEANING/RESTRICTION###################################################
+
+
+
+  - id: STR_TANK_ROCKET_LAUNCHER          #23       #40K HWP
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_SERVITOR                      #2100       #40K HWP
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_SHOTGUN
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_HIGH_EXPLOSIVE                     #14000
+    requires: !add
+      - STR_HIGH_EXPLOSIVE
+
+  - id: STR_KNIF
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - id: STR_AVALANCHE                  #13  40K craft weapon
+    requires: !add
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_CANNON_UC
+    requires: !add
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_INTERCEPTOR                #110
+    requires: !add
+      - STR_INTERCEPTOR
+
+  - id: STR_SKYRANGER                  #120
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_DROP                  #121
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_RHINO_NO_TT
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_STINGRAY                   #1100   40K craft weapon
+    requires: !add
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: BIKE_ARMOR_UC                     #6410   #ARMOR
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_BANNER
+    requires: !add
+      - STR_HIGHTIER_PREREQ

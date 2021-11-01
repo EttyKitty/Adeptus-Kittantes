@@ -154,12 +154,12 @@ items:
     battleType: 2
     shotgunBehavior: 1
     shotgunSpread: 25
-    shotgunPellets: 6
+    shotgunPellets: 4
     size: 0.1
     costBuy: 800
     costSell: 200
     weight: 5
-    power: 45
+    power: 60
     damageType: 1
     clipSize: 8
     listOrder: 10610
