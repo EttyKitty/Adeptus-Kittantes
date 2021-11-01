@@ -1,0 +1,23 @@
+enableCloseQuartersCombat: 1
+closeQuartersSneakUpGlobal: 50
+
+invs:
+
+  - id: STR_QD_SLOT
+    listOrder: 20
+    x: 161
+    y: 68
+    slots:
+      - [0, 0]
+      - [0, 1]
+      - [0, 2]
+    costs:
+      STR_BACK_PACK: 14
+      STR_BELT: 8
+      STR_GROUND: 5
+      STR_LEFT_HAND: 3
+      STR_LEFT_LEG: 10
+      STR_LEFT_SHOULDER: 10
+      STR_RIGHT_HAND: 3
+      STR_RIGHT_LEG: 10
+      STR_RIGHT_SHOULDER: 10
