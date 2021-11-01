@@ -10,7 +10,7 @@ items:
     costSell: 2000
     transferTime: 48
     clipSize: 1
-    listOrder: 1150
+    listOrder: 210
 
   - type: STR_CANNON                      #S 1.5
     costBuy: 0

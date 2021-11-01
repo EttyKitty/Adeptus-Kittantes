@@ -10,8 +10,8 @@ startingBase:
     STR_FRAGMENTATION_ROCKETS: 12
     STR_AC_AP_AMMO: 10
     STR_RIFLE_CLIP: 4
-    STR_ASTARTES_SHOTGUN_SHELLS: 2
-    STR_HC_AP_AMMO: 2
+    STR_SHOTGUN_SM_SHELLS: 2
+    STR_SNIPER_SM_AMMO: 2
     STR_SMALL_ROCKET: 2
     STR_LARGE_ROCKET: 1
     STR_GRENADE: 4
@@ -23,7 +23,7 @@ startingBase:
       fuel: 1000
       weapons:
         - type: STR_CERBERUS_LAUNCHER_UC
-          ammo: 3
+          ammo: 6
         - type: STR_HEAVY_BOLTER_UC
           ammo: 60
         - type: STR_HEAVY_BOLTER_UC
@@ -34,10 +34,10 @@ startingBase:
         STR_AC_AP_AMMO: 3
         STR_RIFLE: 6
         STR_RIFLE_CLIP: 24
-        STR_ASTARTES_SHOTGUN: 2
-        STR_ASTARTES_SHOTGUN_SHELLS: 6
-        STR_HEAVY_CANNON: 2
-        STR_HC_AP_AMMO: 6
+        STR_SHOTGUN_SM: 2
+        STR_SHOTGUN_SM_SHELLS: 6
+        STR_SNIPER_SM: 2
+        STR_SNIPER_SM_AMMO: 6
         STR_ROCKET_LAUNCHER: 1
         STR_SMALL_ROCKET: 8
         STR_LARGE_ROCKET: 4
@@ -50,7 +50,7 @@ startingBase:
       fuel: 1000
       weapons:
         - type: STR_CERBERUS_LAUNCHER_UC
-          ammo: 3
+          ammo: 6
         - type: STR_HEAVY_BOLTER_UC
           ammo: 60
         - type: STR_HEAVY_BOLTER_UC

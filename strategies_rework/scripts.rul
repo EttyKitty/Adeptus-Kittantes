@@ -1,0 +1,5 @@
+items:
+
+  - type: STR_SNIPER_SM
+    tags:
+      ITEM_COLOR_CHANGES_WITH_AMMO: 15

@@ -17,13 +17,18 @@ crafts:
   - type: STR_INTERCEPTOR
     requires:
       - STR_MARINES_STRATEGY
-      - STR_PERSONAL_ARMOR
+      - STR_INTERCEPTOR
 
   - type: STR_SPEEDC  #THIS IS ACTUALLY NOT A SIMPLE LANDSPEEDER, BUT A LIGHT SCOUT VERSION CALLED 'STORM'
     pilots: 4  #TWO LANDSPEEDERS, TWO PILOTS, TWO GUNNERS
     soldiers: 12  #ACCORDING TO THE WIKI + A LITTLE NERF
-    weapons: 3
-    weaponTypes: [0, 9, 9] 
+    weapons: 4
+    weaponTypes:
+      - 0
+      - 9
+      - 9
+      - [4, 5, 13]
+    weaponStrings: [STR_WEAPON_ONE, STR_WEAPON_TWO, STR_WEAPON_FOURTH, STR_WEAPON_THREE]
     fixedWeapons:
       - STR_CERBERUS_LAUNCHER_UC
     deployment:

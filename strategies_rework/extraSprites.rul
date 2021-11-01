@@ -7,12 +7,20 @@ extraSprites:
     files:
       0: Resources/CODEX/CERB.png
 
+  - type: TLHB.SPK
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/CODEX/TLHB.png
 
 
   - type: BIGOBS.PCK                                    #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS
     files:
-      0: Resources/Psword/PKSM.gif
       57: Resources/Shotgun/old model/Shotgun.gif
+      66: Resources/Psword/PKSM.gif
+      67: Resources/Shotgun/ASHOTGUNA.gif
+      68: Resources/Sniper/SNIPER_SM_AMMO.gif
 
   - type: HANDOB.PCK
     height: 40

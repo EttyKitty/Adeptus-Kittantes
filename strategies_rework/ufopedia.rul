@@ -31,6 +31,8 @@ ufopaedia:
     requires:
       - STR_MARINES_STRATEGY
 
+  - id: STR_CANNON_UC
+    image_id: TLHB.SPK
 
   - id: STR_STINGRAY_K                   #1100   40K craft weapon
     type_id: 12
@@ -46,6 +48,7 @@ ufopaedia:
     section: STR_XCOM_CRAFT_ARMAMENT
     image_id: CERB.SPK
     text: STR_CERBERUS_LAUNCHER_UFOPEDIA
+    listOrder: 210
 
   - id: STR_HEAVY_BOLTER_UC                  #14  40K craft weapon
     type_id: 12
@@ -54,7 +57,6 @@ ufopaedia:
     text: STR_HEAVY_BOLTER_UC_UFOPEDIA
     listOrder: 1300
 
-
   - id: STR_KNIF_SM                           #12900
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
@@ -62,24 +64,36 @@ ufopaedia:
     text: STR_KNIF_UFOPEDIA
     listOrder: 12900
 
-  - id: STR_ASTARTES_SHOTGUN
+  - id: STR_SHOTGUN_SM
     type_id: 14
     section: STR_WEAPONS_AND_EQUIPMENT
     image_id: 1SG.SPK
-    text: STR_ASTARTES_SHOTGUN_DESC
-    listOrder: 10610
+    text: STR_SHOTGUN_SM_UFOPEDIA
     requires:
       - STR_MARINES_STRATEGY
+    listOrder: 10610
 
-  - id: STR_ASTARTES_SHOTGUN_SHELLS
+  - id: STR_SHOTGUN_SM_SHELLS
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+  - id: STR_SNIPER_SM
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1SR.SPK
+    text: STR_SNIPER_SM_UFOPEDIA
+    requires:
+      - STR_MARINES_STRATEGY
+    listOrder: 11900
+
+  - id: STR_SNIPER_SM_AMMO
     type_id: 14
     section: STR_NOT_AVAILABLE
 
 
-
-###################################################CLEANING/RESTRICTION###################################################
-###################################################CLEANING/RESTRICTION###################################################
-###################################################CLEANING/RESTRICTION###################################################
+################################################### CLEANING/RESTRICTION ###################################################
+################################################### CLEANING/RESTRICTION ###################################################
+################################################### CLEANING/RESTRICTION ###################################################
 
 
 
@@ -138,3 +152,7 @@ ufopaedia:
   - id: STR_BANNER
     requires: !add
       - STR_HIGHTIER_PREREQ
+
+  - id: STR_HEAVY_CANNON
+    requires: !add
+      - STR_HUMAN_SIZED_WEAPONS

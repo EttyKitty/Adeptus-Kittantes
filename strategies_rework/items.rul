@@ -1,55 +1,5 @@
 items:
 
-  - type: STR_POWERFIST            #12600           DA POWER
-    requiresBuy:
-      - STR_MARINES_STRATEGY
-      - STR_MIDTIER_PREREQ
-
-  - type: STR_BANNER
-    requiresBuy:
-      - STR_MARINES_STRATEGY
-      - STR_HIGHTIER_PREREQ
-
-  - type: STR_BIKE_ARMOR
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
-
-  - type: STR_HWP_CANNON_SHELLS
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
-
-  - type: STR_SERVITOR
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
-
-  - type: STR_STINGRAY_LAUNCHER
-    requiresBuy:
-      - STR_PERSONAL_ARMOR    
-
-  - type: STR_STINGRAY_MISSILES
-    requiresBuy:
-      - STR_PERSONAL_ARMOR 
-
-  - type: STR_AVALANCHE_LAUNCHER
-    requiresBuy:
-      - STR_PERSONAL_ARMOR 
- 
-  - type: STR_AVALANCHE_MISSILES
-    requiresBuy:
-      - STR_PERSONAL_ARMOR 
-
-  - type: STR_TANK_ROCKET_LAUNCHER
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
-  
-  - type: STR_HWP_ROCKETS
-    requiresBuy:
-      - STR_PERSONAL_ARMOR
-
-
-
-
-
   - type: STR_SHOTGUN
     requiresBuy:
       - STR_HUMAN_SIZED_WEAPONS
@@ -57,33 +7,25 @@ items:
     floorSprite: 73
     handSprite: 128
 
-  - type: STR_SHOTGUN_SHELLS
-    requiresBuy:
-      - STR_HUMAN_SIZED_WEAPONS
-
-  - type: STR_HC_AP_AMMO #SNIPER AP                   11910
-    clipSize: 6
-    weight: 4
-
-  - type: STR_HC_HE_AMMO #SNIPER HE                   11920
-    clipSize: 6
-    weight: 4
-
-  - type: STR_HC_I_AMMO #SNIPER I                     11930
-    clipSize: 6
-    weight: 4
-
-
-  - type: STR_STUN_ROD
-    requiresBuy:
-      - STR_HUMAN_SIZED_WEAPONS
-
-  - type: STR_KNIF #                3010
+  - type: STR_KNIF
     categories: [STR_CAT_MELEE]
     requiresBuy:
       - STR_HUMAN_SIZED_WEAPONS
     invWidth: 1
     invHeight: 2
+    weight: 2
+
+  - type: STR_RIFLE
+    weight: 24
+
+  - type: STR_RIFLE_CLIP
+    weight: 6
+    clipSize: 28
+
+
+############################################ NEW ITEMS ############################################
+############################################ NEW ITEMS ############################################
+############################################ NEW ITEMS ############################################
 
   - type: STR_KNIF_SM
     requiresBuy:
@@ -92,8 +34,8 @@ items:
     size: 0.3
     costBuy: 1000
     costSell: 200
-    weight: 7
-    bigSprite: 0
+    weight: 4
+    bigSprite: 66
     floorSprite: {mod: 40k, index: 113}
     handSprite: {mod: 40k, index: 304}
     meleeSound: 754 #754 knif miss
@@ -118,26 +60,25 @@ items:
     listOrder: 12900
     experienceTrainingMode: 13
 
-
-  - type: STR_ASTARTES_SHOTGUN
+  - type: STR_SHOTGUN_SM
     categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
     requiresBuy:
       - STR_MARINES_STRATEGY
     battleType: 1
     size: 0.2
-    costBuy: 12000
-    costSell: 4000
-    weight: 10
+    costBuy: 5000
+    costSell: 2000
+    weight: 16
     compatibleAmmo:
-      - STR_ASTARTES_SHOTGUN_SHELLS
+      - STR_SHOTGUN_SM_SHELLS
     accuracySnap: 75
-    accuracyAimed: 95
+    accuracyAuto: 50
     tuSnap: 20
-    tuAimed: 35
+    tuAuto: 40
     twoHanded: true
     invWidth: 1
     invHeight: 3
-    aimRange: 10
+    autoRange: 8
     snapRange: 8
     dropoff: 5
     listOrder: 10600
@@ -147,24 +88,158 @@ items:
     bulletSprite: {mod: 40k, index: 2}
     fireSound: {mod: 40k, index: 755}
 
-  - type: STR_ASTARTES_SHOTGUN_SHELLS
+  - type: STR_SHOTGUN_SM_SHELLS
     categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
     requiresBuy:
       - STR_MARINES_STRATEGY
     battleType: 2
     shotgunBehavior: 1
     shotgunSpread: 25
-    shotgunPellets: 4
+    shotgunPellets: 8
     size: 0.1
     costBuy: 800
     costSell: 200
-    weight: 5
-    power: 60
+    weight: 4
+    power: 45
     damageType: 1
-    clipSize: 8
+    clipSize: 16
     listOrder: 10610
-    bigSprite: {mod: 40k, index: 236}
+    bigSprite: 67
     floorSprite: {mod: 40k, index: 119}
     handSprite: {mod: 40k, index: 46}
     hitSound: {mod: 40k, index: 22}
     hitAnimation: {mod: 40k, index: 26}
+
+  - type: STR_SNIPER_SM
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    weight: 8
+    size: 0.3
+    costBuy: 18400
+    costSell: 4800
+    compatibleAmmo:
+      - STR_SNIPER_SM_AMMO
+    accuracySnap: 55
+    accuracyAimed: 120
+    tuSnap: 45
+    tuAimed: 70
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    dropoff: 0
+    listOrder: 11900
+    bigSprite: {mod: 40k, index: 11}
+    floorSprite: {mod: 40k, index: 11}
+    handSprite: {mod: 40k, index: 24}
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 711}
+
+
+  - type: STR_SNIPER_SM_AMMO
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    power: 60
+    damageType: 12
+    damageAlter:
+      ArmorEffectiveness: 0.8
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 1.4
+      RandomHealth: true
+      ToStun: 0.5
+      ToWound: 1.6
+      ToTile: 0.0
+    size: 0.1
+    weight: 2
+    clipSize: 6
+    costBuy: 300
+    costSell: 225
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    listOrder: 11910
+    bigSprite: 68
+    floorSprite: {mod: 40k, index: 12}
+    handSprite: {mod: 40k, index: 464}
+    hitSound: {mod: 40k, index: 712}
+    hitAnimation: {mod: 40k, index: 26}
+
+
+################################################### CLEANING/RESTRICTION ###################################################
+################################################### CLEANING/RESTRICTION ###################################################
+################################################### CLEANING/RESTRICTION ###################################################
+
+  - type: STR_POWERFIST
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+
+  - type: STR_BANNER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+
+  - type: STR_BIKE_ARMOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_HWP_CANNON_SHELLS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_SERVITOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON    
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_GENERALLOCK 
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON 
+ 
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON 
+
+  - type: STR_TANK_ROCKET_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+  
+  - type: STR_HWP_ROCKETS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_SHOTGUN_SHELLS
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_STUN_ROD
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HEAVY_CANNON
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_AP_AMMO
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_HE_AMMO
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_I_AMMO
+    requiresBuy:
+      - STR_HUMAN_SIZED_WEAPONS

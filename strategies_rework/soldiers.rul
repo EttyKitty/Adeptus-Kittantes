@@ -1,0 +1,5 @@
+﻿soldiers:
+
+  - type: STR_SOLDIER
+    minStats:
+      strength: 40
