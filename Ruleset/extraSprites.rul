@@ -10,7 +10,7 @@ extraSprites:
       66: Resources/Psword/PKSM.gif
       67: Resources/Shotgun/ASHOTGUNA.gif
       68: Resources/Sniper/SNIPER_SM_AMMO.gif
-      69: Resources/Items/bigob_HealingCement.png
+      69: Resources/Items/bigob_Cement.png
 
   - type: HANDOB.PCK
     files:
