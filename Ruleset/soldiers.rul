@@ -109,3 +109,5 @@ soldiers:
     rankStrings:
       - STR_SOLDIER
     skills:
+      - STR_BRACE
+    skillIconSprite: 0

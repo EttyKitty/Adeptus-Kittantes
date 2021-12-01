@@ -88,6 +88,8 @@ items:
     kneelBonus: 100
     autoShots: 6
     sprayWaypoints: 0
+    tags:
+      BRACING_ALLOWED: 1
 
 
   - type: STR_AC_AP_AMMO
@@ -537,3 +539,71 @@ items:
   - type: STR_HEAVY_STUBBER_CLIP
     requiresBuy: !add
       - STR_HUMAN_SIZED_WEAPONS
+skills:
+  - type: STR_BRACE
+    tags:
+      BRACING_SKILL: 1
+    costUse:
+      time: 4
+    flatUse:
+      time: true
+    compatibleWeapons:
+      - "STR_AUTO_CANNON"
+
+extended:
+  tags:
+    RuleSkill:
+      BRACING_SKILL: int
+    BattleUnit:
+      BRACED: int
+      STAMINA_BEFORE: int
+      ENERGY_BEFORE: int
+    RuleItem:
+      BRACING_ALLOWED: int
+
+  scripts:
+    skillUseUnit:
+      - offset: 2
+        code: |
+          var int bracingSkill;
+          var int bracingState;
+          var int staminaBefore;
+          var int energyBefore;
+
+          skill.getTag bracingSkill Tag.BRACING_SKILL;
+          if eq bracingSkill 1;
+            actor.getTag bracingState Tag.BRACED;
+            if eq bracingState 0;
+              actor.getEnergy energyBefore;
+              actor.setTag Tag.ENERGY_BEFORE energyBefore;
+              actor.Stats.getStamina staminaBefore;
+              actor.setTag Tag.STAMINA_BEFORE staminaBefore;
+              actor.Stats.setStamina 1;
+              actor.setTag Tag.BRACED 1;
+              battle_game.flashMessage "Braced for Fire";
+            else;
+              actor.getTag staminaBefore Tag.STAMINA_BEFORE;
+              actor.Stats.setStamina staminaBefore;
+              actor.getTag energyBefore Tag.ENERGY_BEFORE;
+              actor.setEnergy energyBefore;
+              actor.setTag Tag.BRACED 0;
+              battle_game.flashMessage "Ready to Move";
+            end;
+          end;
+          return;
+
+    accuracyMultiplierBonusStats:
+      - offset: 1
+        code: |
+          var int bracingAllowed;
+          var int bracingState;
+
+          unit.getTag bracingState Tag.BRACED;
+          weapon.getTag bracingAllowed Tag.BRACING_ALLOWED;
+          if and gt bracingAllowed 0 lt bracingState 1;
+            set bonus 0;
+          end;
+          return bonus;
+
+
+
