@@ -1,0 +1,213 @@
+research:
+  - delete: STR_SCOUT
+  - delete: STR_DEVASTATOR
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_PICK_STRATEGY
+
+############################################################################ GENERAL ############################################################################
+
+  - name: STR_MARINES_STRATEGY
+    unlocks: !add
+      - STR_NOT_PRIMARIS
+      - STR_TACTICAL_KIT_REQ
+      - STR_ASSAULT_KIT_REQ
+      - STR_ASSAULT_AND_TACTICAL_KIT_REQ
+      - STR_HEAVY_WEAPONS_RESEARCH_REQ
+      - STR_SNIPER_KIT_REQ
+      - STR_SCOUT_AND_TACTICAL_KIT_REQ
+
+  - name: STR_MARINES_STRATEGY
+    unlocks: !remove
+      - STR_GUARD_SUPORT
+      - STR_GUARDSMEN
+      - STR_LIGHT_BOLTERS
+
+  - name: STR_PRIMARIS
+    dependencies: !add
+      - STR_GENERALLOCK
+    unlocks:
+      - STR_PRIMARIS_AND_ADEPTAS
+    disables: []
+    spawnedEvent: []
+
+  - name: STR_HUMAN_SIZED_WEAPONS
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_ADVANCED_BOLT_WEAPON
+    cost: 50
+    points: 5
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_ADEPTAS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_IMPERIAL_GUARD_OPERATIONS
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_ARBITES
+    unlocks: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - name: STR_BASIC_CRAFT_WEAPON
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK
+
+  - name: STR_OUTPOSTS
+    cost: 50
+    points: 5
+    dependencies:
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+
+  - name: STR_LOW_TIER_MARINES
+    cost: 50
+    points: 5
+    dependencies:
+      - STR_MARINES_STRATEGY
+    unlocks:
+      - STR_MOTION_SCANNER
+      - STR_SMOKE
+      - STR_TRAINFACILITYR
+      - STR_MOTION_SCANNER
+      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
+
+  - name: STR_MT
+    dependencies: !add
+      - STR_MELTAGUN_SM
+      - STR_LASCANNON_SM
+  - name: STR_MT
+    dependencies: !remove
+      - STR_HEAVY_LASER
+
+  - name: STR_CRAFTADD
+    dependencies:
+      - STR_MIDTIER_PREREQ
+
+  - name: STR_SPEEDR
+    dependencies:
+      - STR_LOW_TIER_MARINES
+    unlocks: !add
+      - STR_BASIC_CRAFT_WEAPON
+      - STR_INTERCEPTOR
+
+############################################################################ ARMOR ############################################################################
+
+  - name: STR_HONOR_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_HONOR_ARMOR
+    dependencies: !remove
+      - STR_TATICAL
+
+  - name: STR_ASS_ARMOR_DEP1
+    requires: !remove
+      - STR_ASSAULT
+
+  - name: STR_SIGNAL_ARMOR_RESEARCH
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_SCOUTH_RESEARCH
+    dependencies: !remove
+      - STR_SCOUT
+
+  - name: STR_MEDI_KIT # apothecary for marines
+    dependencies:
+      - STR_PERSONAL_ARMOR
+    unlocks:
+      - STR_MEDI_KIT_PREREQ
+    lookup: STR_MEDI_KIT_PREREQ
+
+############################################################################ WEAPONS ############################################################################
+
+  - name: STR_HEAVY_PLASMA_MC
+    dependencies: !remove
+      - STR_DEVASTATOR
+
+  - name: STR_CHAINSWORD_MC
+    dependencies: !remove
+      - STR_ASSAULT
+
+  - name: STR_MELTABOMB
+    dependencies: !remove
+      - STR_SCOUT
+    unlocks:
+      - STR_HIGH_EXPLOSIVE
+
+  - name: STR_HIGH_EXPLOSIVE
+    cost: 20
+    points: 2
+    needItem: true
+
+  - name: STR_MGRENADE
+    dependencies: !remove
+      - STR_TATICAL
+
+  - name: STR_RIFLEB
+    cost: 10
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_RIFLEC
+    cost: 10
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_RIFLED
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_PISTOLB
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+  
+  - name: STR_PISTOLS
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_PISTOLH
+    cost: 100
+    points: 25
+    needItem: true
+    dependencies:
+      - STR_MARINES_STRATEGY
+
+  - name: STR_LASCANNON_SM
+    cost: 460
+    points: 10
+    dependencies:
+      - STR_LOW_TIER_MARINES
+
+  - name: STR_MELTAGUN_SM
+    cost: 460
+    points: 10
+    dependencies:
+      - STR_LOW_TIER_MARINES
+
+############################################################################ CRAFTS ############################################################################
+
+  - name: STR_INTERCEPTOR
+    cost: 0
+    points: 0
+    dependencies:
+      - STR_GENERALLOCK

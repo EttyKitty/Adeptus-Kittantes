@@ -1,8 +1,0 @@
-research:
-
-  - name: STR_OUTPOSTS
-    cost: 50
-    points: 5
-    dependencies:
-      - STR_SCIENTISTS_AND_ENGINEERS_AVAILABLE
-

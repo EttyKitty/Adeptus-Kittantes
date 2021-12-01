@@ -1,0 +1,539 @@
+items:
+
+############################################################################ BOLT ############################################################################
+
+  - type: STR_RIFLE
+    weight: 26
+    kneelBonus: 100
+    accuracySnap: 40
+    accuracyAuto: 30
+    snapRange: 6
+    autoRange: 6
+    dropoff: 2
+    tuSnap: 34
+    tuAuto: 50
+    maxRange: 14
+    costBuy: 10000
+
+  - type: STR_RIFLEB
+    requiresBuy: !add
+      - STR_GENERALLOCK
+      - STR_ADVANCED_BOLT_WEAPON
+    kneelBonus: 100
+
+  - type: STR_RIFLEC
+    weight: 24
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+
+  - type: STR_RIFLED
+    weight: 26
+    kneelBonus: 100
+
+  - type: STR_RIFLE_CLIP
+    weight: 4
+    clipSize: 28
+    damageAlter:
+      RandomType: 6
+      ArmorEffectiveness: 1
+
+  - type: STR_PISTOL
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    weight: 8
+    kneelBonus: 100
+    snapRange: 6
+    autoRange: 6
+    accuracySnap: 40
+    accuracyAuto: 30
+    dropoff: 2
+    tuSnap: 21
+    tuAuto: 34
+    autoShots: 2
+    costBuy: 10000
+
+  - type: STR_PISTOLB
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOLS
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOLH
+    requiresBuy: !add
+      - STR_ADVANCED_BOLT_WEAPON
+
+  - type: STR_PISTOL_CLIP
+    power: 65
+    clipSize: 14
+    weight: 2
+    damageAlter:
+      RandomType: 6
+
+
+  - type: STR_AUTO_CANNON 
+    weight: 90
+    costBuy: 40000
+    costSell: 16000
+    compatibleAmmo:
+      - STR_AC_AP_AMMO
+      - STR_AC_I_AMMO
+    accuracyAuto: 35
+    dropoff: 3
+    tuAimed: 0
+    tuSnap: 0
+    tuAuto: 1
+    autoRange: 16
+    kneelBonus: 100
+    autoShots: 6
+    sprayWaypoints: 0
+
+
+  - type: STR_AC_AP_AMMO
+    weight: 20
+    power: 75
+    clipSize: 60
+    damageAlter:
+      RandomType: 6
+      ToArmor: 1
+      ArmorEffectiveness: 1
+      ToArmorPre: 0
+
+  - type: STR_AC_HE_AMMO
+    weight: 20
+    clipSize: 60
+
+  - type: STR_AC_I_AMMO
+    weight: 20
+    clipSize: 60
+
+  - type: STR_AC_MC_AMMO
+    weight: 20
+    clipSize: 60
+
+
+############################################################################ LAS ############################################################################
+
+  - type: STR_LASCAN
+    size: 0.4
+    dropoff: 3
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_LASCANNON_SM
+    costBuy: 60000
+    costSell: 24000
+    weight: 110
+    compatibleAmmo:
+      - STR_LASCANNON_CLIP_SMALL
+    snapRange: 24
+    accuracySnap: 90
+    accuracyAimed: 0
+    tuSnap: 51
+    tuAimed: 0
+    clipSize: 0
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    tuLoad: 50
+    tuUnload: 50
+
+  - type: STR_LASCANNON_CLIP_SMALL
+    size: 0.1
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_LASCANNON_SM
+    costBuy: 5000
+    costSell: 4000
+    weight: 10
+    power: 200
+    damageType: 4
+    damageAlter:
+      ToArmorPre: 0.4
+      ToHealth: 1.0
+      ToArmor: 0.0
+      ToStun: 0.0
+      RandomType: 7
+    clipSize: 6
+    invWidth: 1
+    invHeight: 1
+    bigSprite: {mod: 40k_ROSIGMA_edits, index: 2082}
+
+############################################################################ MELTA ############################################################################
+
+  - type: STR_HEAVY_LASER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_MELTAGUN_SM
+    costBuy: 30000
+    costSell: 24000
+
+  - type: STR_MELTA_AMMO
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_MELTAGUN_SM
+    costBuy: 5000
+    costSell: 4000
+
+############################################################################ GRAVI ############################################################################
+
+  - &GRAVITON_GUN
+    type: STR_SMALL_LAUNCHER_TERRAN
+    dropoff: 3
+    costSell: 11000
+    weight: 10
+    compatibleAmmo:
+      - STR_STUN_BOMB
+    accuracySnap: 65
+    # accuracyAimed: 110
+    tuSnap: 40
+    # tuAimed: 75
+    battleType: 1
+    twoHanded: true
+    invWidth: 2
+    invHeight: 3
+
+  - type: STR_SMALL_LAUNCHER
+    refNode: *GRAVITON_GUN
+    requires:
+      - STR_ALIENS_ONLY
+      - STR_SMALL_LAUNCHER
+    costSell: 10000
+    accuracySnap: 65
+    recoveryPoints: 4
+
+  - type: STR_GRAVGUN_MC
+    refNode: *GRAVITON_GUN
+    costSell: 11000
+    accuracySnap: 85
+
+  - type: STR_STUN_BOMB
+    power: 40
+    damageType: 13
+    damageAlter:
+      RandomType: 1
+      ArmorEffectiveness: 0.0
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 0.5
+      ToStun: 1
+
+############################################################################ LAUNCHERS ############################################################################
+
+  - type: STR_ROCKET_LAUNCHER
+    weight: 40
+    accuracySnap: 90
+    accuracyAimed: 0
+    tuSnap: 65
+    tuAimed: 0
+    snapRange: 20
+    dropoff: 3
+    costBuy: 20000
+
+  - type: STR_SMALL_ROCKET
+    weight: 3
+
+  - type: STR_LARGE_ROCKET
+    weight: 3
+
+  - type: STR_INCENDIARY_ROCKET
+    weight: 3
+
+############################################################################ GRENADES ############################################################################
+
+  - type: STR_GRENADE
+    weight: 2
+    invWidth: 1
+    invHeight: 1
+    costPrime:
+      time: 1
+      energy: -40
+
+  - type: STR_SMOKE_GRENADE
+    weight: 2
+    invWidth: 1
+    invHeight: 1
+
+############################################################################ MELEE ############################################################################
+
+  - type: STR_POWERFIST
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_MIDTIER_PREREQ
+
+  - type: STR_KNIF_SM
+    categories: [STR_CAT_MELEE, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    size: 0.3
+    costBuy: 800
+    costSell: 600
+    weight: 4
+    bigSprite: 66
+    floorSprite: {mod: 40k, index: 113}
+    handSprite: {mod: 40k, index: 304}
+    meleeSound: {mod: 40k, index: 754}
+    meleeHitSound: {mod: 40k, index: 773}
+    meleeAnimation: 4
+    power: 70
+    damageType: 7
+    accuracyMelee: 110
+    tuMelee: 15
+    clipSize: -1
+    battleType: 3
+    twoHanded: false
+    invWidth: 1
+    invHeight: 3
+    armor: 20
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    strengthApplied: false
+    attraction: 7
+    listOrder: 12900
+    experienceTrainingMode: 13
+    specialUseEmptyHand: true
+
+############################################################################ MARINES ############################################################################
+
+  - type: STR_SHOTGUN_SM
+    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    battleType: 1
+    size: 0.2
+    costBuy: 10000
+    costSell: 4000
+    weight: 16
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    compatibleAmmo:
+      - STR_SHOTGUN_SM_SHELLS
+    accuracySnap: 75
+    accuracyAuto: 50
+    tuSnap: 25
+    tuAuto: 50
+    snapRange: 12
+    autoRange: 8
+    autoShots: 2
+    dropoff: 3
+    listOrder: 10600
+    bigSprite: {mod: 40k, index: 235}
+    floorSprite: {mod: 40k, index: 118}
+    handSprite: {mod: 40k, index: 328}
+    bulletSprite: {mod: 40k, index: 2}
+    fireSound: {mod: 40k, index: 755}
+
+  - type: STR_SHOTGUN_SM_SHELLS
+    categories: [ STR_CAT_SHOTGUN, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    battleType: 2
+    shotgunBehavior: 1
+    shotgunSpread: 25
+    shotgunPellets: 4
+    power: 55
+    damageType: 1
+    clipSize: 16
+    weight: 4
+    costBuy: 500
+    costSell: 400
+    size: 0.1
+    listOrder: 10610
+    bigSprite: 67
+    floorSprite: {mod: 40k, index: 119}
+    handSprite: {mod: 40k, index: 46}
+    hitSound: {mod: 40k, index: 22}
+    hitAnimation: {mod: 40k, index: 26}
+
+  - type: STR_SNIPER_SM
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    weight: 6
+    size: 0.3
+    costBuy: 40000
+    costSell: 16000
+    compatibleAmmo:
+      - STR_SNIPER_SM_AMMO
+    accuracySnap: 60
+    accuracyAimed: 120
+    tuSnap: 40
+    tuAimed: 80
+    battleType: 1
+    twoHanded: true
+    blockBothHands: true
+    invWidth: 2
+    invHeight: 3
+    bulletSpeed: 50
+    dropoff: 3
+    listOrder: 11900
+    bigSprite: {mod: 40k, index: 11}
+    floorSprite: {mod: 40k, index: 11}
+    handSprite: {mod: 40k, index: 24}
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 841}
+
+  - type: STR_SNIPER_SM_AMMO
+    categories: [STR_CAT_SNIPER, STR_CAT_SCOUT]
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+    power: 60
+    damageType: 12
+    damageAlter:
+      RandomType: 7
+      ArmorEffectiveness: 0.9
+      ToArmorPre: 0.0
+      ToArmor: 0.0
+      ToHealth: 1
+      ToStun: 0.4
+      ToWound: 0.2
+      RandomWound: false
+      ToTile: 0.0
+    damageBonus:
+      firing: 0.1
+    size: 0.1
+    weight: 2
+    clipSize: 6
+    costBuy: 2000
+    costSell: 1600
+    battleType: 2
+    invWidth: 1
+    invHeight: 1
+    listOrder: 11910
+    bigSprite: 68
+    floorSprite: {mod: 40k, index: 12}
+    handSprite: {mod: 40k, index: 464}
+    hitSound: {mod: 40k, index: 712}
+    hitAnimation: {mod: 40k, index: 26}
+
+############################################################################ MISC ############################################################################
+
+  - type: STR_TRAITOR_CHIMERA_MULTI_LASER
+    power: 50
+    damageType: 4
+    accuracyAuto: 10
+    costAuto:
+      time: 1
+      energy: 50
+    flatUse:
+      time: true
+      energy: true
+    autoRange: 9
+    maxRange: 18
+    autoShots: 5
+    sprayWaypoints: 0
+    dropoff: 2
+
+  - type: AUX_DOUBLE_BOLTER   #TANK AUX STORM BOLTER                                Tostun
+    accuracySnap: 75
+    tuSnap: 25
+    tuAimed: 0
+    damageAlter: #DA BOLTER  DOUBLE SHOT
+      RandomType: 6
+      ToArmorPre: 0.1
+      ArmorEffectiveness: 0.9
+      ToArmor: 0.2
+      ToHealth: 2.0
+      ToStun: 1.0
+    power: 90
+    damageType: 1
+
+  - type: STR_SHOTGUN
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+    bigSprite: 57
+    floorSprite: 73
+    handSprite: 128
+
+  - type: STR_SHOTGUN_SHELLS
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_KNIF
+    categories: [STR_CAT_MELEE]
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+    invWidth: 1
+    invHeight: 2
+    weight: 2
+
+  - type: STR_STUN_ROD
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HEAVY_CANNON
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_AP_AMMO
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_HE_AMMO
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HC_I_AMMO
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASER_RIFLE #LASGUN                      10900
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASER_RIFLEG #LASGUN GUARD               10910
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASGUN_CLIP #LASGUN CLIP                 11010
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASER_PISTOL  #LASPISTOL                 10800
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASPISTOL_CLIP #LASPISTOL CLIP           10850
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_LASER_PISTOLG  #LASPISTOL  GUARD         10810
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_STUB_GUN
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_STUB_RIFLE
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_STUB_GUN_AMMO
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_AUTOPISTOL
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS  
+
+  - type: STR_AUTOPISTOL_CLIP
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_AUTOGUN
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_AUTOGUN_CLIP
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS
+
+  - type: STR_HEAVY_STUBBER_CLIP
+    requiresBuy: !add
+      - STR_HUMAN_SIZED_WEAPONS

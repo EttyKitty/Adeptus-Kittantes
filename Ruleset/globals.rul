@@ -1,6 +1,6 @@
 enableCloseQuartersCombat: 1
 closeQuartersSneakUpGlobal: 50
-
+initialFunding: 5920
 invs:
 
   - id: STR_QD_SLOT
@@ -129,3 +129,42 @@ invs:
       STR_RIGHT_LEG: 24
       STR_RIGHT_SHOULDER: 24
 
+
+arcScripts:
+  - delete: marinesPickStrategy
+
+fixedUserOptions:
+  storageLimitsEnforced: true
+  sneakyAI: false
+  strafe: true
+  noAlienPanicMessages: true
+
+
+extended:
+  tags:
+    BattleUnit:
+      LAST_HIT_FRAME: int
+
+  scripts:
+    damageUnit:
+      - offset: 10
+        code: |
+          var int temp;
+          battle_game.getAnimFrame temp;
+          unit.setTag Tag.LAST_HIT_FRAME temp;
+          return;
+
+    recolorUnitSprite:
+      - offset: 10
+        code: |
+          var int temp;
+          
+          unit.getTag temp Tag.LAST_HIT_FRAME;
+          if neq temp 0;
+            sub temp anim_frame;
+            if gt temp -3; #only 3 frames after hit have changed color
+              set_color new_pixel 2; #red color
+            end;
+          end;
+          
+          return new_pixel;

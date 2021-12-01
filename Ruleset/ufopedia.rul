@@ -1,0 +1,223 @@
+ufopaedia:
+  - delete: STR_CHOSEN_DEVASTATOR
+  - delete: STR_CHOSEN_ASSAULT
+  - delete: STR_CHOSEN_SCOUT
+  - delete: STR_CHOSEN_TATICAL
+  - delete: STR_TATICAL
+  - delete: STR_ASSAULT
+  - delete: STR_DEVASTATOR
+  - delete: STR_SCOUT
+  - delete: STR_PRIMARIS
+
+
+############################################################################ GENERAL ############################################################################
+
+  - id: STR_MARINES_STRATEGY                   #10
+    type_id: 10
+    text_width: 190
+    section: STR_STRATEGY
+    requires:
+      - STR_MARINES_STRATEGY
+    image_id: PICK_STRATEGY.SPK
+    text: STR_MARINES_STRATEGY_DESC
+    listOrder: 9
+
+  - id: STR_ADEPTAS                  #65
+    requires: !add
+      - STR_ADEPTAS
+
+  - id: STR_IGS                    #70
+    requires: !add
+      - STR_IMPERIAL_GUARD_OPERATIONS
+
+  - id: STR_ARBITES                  #75
+    requires: !add
+      - STR_ARBITES
+
+  - id: STR_LOW_TIER_MARINES
+    type_id: 10
+    section: STR_STRATEGY
+    requires:
+      - STR_LOW_TIER_MARINES
+    image_id: PICK_STRATEGY.SPK
+    text: STR_LOW_TIER_MARINES_UFOPEDIA
+    listOrder: 10
+
+############################################################################ ARMOR ############################################################################
+
+  - id: STR_PERSONAL_ARMOR_UC                 
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_DEV_ARMOR_UC                   
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_ASS_ARMOR_UC                 
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_GUARD_ARMORS_MEDIC_UC
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: STR_GUARD_ARMORSM                  #6650   #ARMOR
+    requires: !add
+      - STR_GUARD_SUPORT
+
+  - id: BIKE_ARMOR_UC                     #6410   #ARMOR
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+############################################################################ MISC/NEW ############################################################################
+
+  - id: STR_SCOUT_KIT
+    type_id: 14
+    section: STR_NOT_AVAILABLE
+
+############################################################################ MISC ############################################################################
+
+  - id: STR_TANK_ROCKET_LAUNCHER          #23       #40K HWP
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_SERVITOR                      #2100       #40K HWP
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_BANNER
+    requires: !add
+      - STR_HIGHTIER_PREREQ
+
+############################################################################ CRAFTS ############################################################################
+
+  - id: STR_SPEEDC                     #200
+    type_id: 11
+    section: STR_XCOM_CRAFT_ARMAMENT
+    text: STR_SPEED_UFOPEDIA
+    listOrder: 200
+    image_id: SPEED.SPK
+    requires:
+      - STR_MARINES_STRATEGY
+
+  - id: STR_INTERCEPTOR                #110
+    requires: !add
+      - STR_INTERCEPTOR
+
+  - id: STR_SKYRANGER                  #120
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_DROP                  #121
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_RHINO_NO_TT
+    requires: !add
+      - STR_PERSONAL_ARMOR
+
+  - id: STR_VALKYRIE                   #210
+    requires: !add
+      - STR_GUARD_SUPORT
+
+############################################################################ CRAFT WEAPONS ############################################################################
+
+  - id: STR_STINGRAY                   #1100   40K craft weapon
+    requires: !add
+      - STR_GENERALLOCK
+
+  - id: STR_STINGRAY_K                   #1100   40K craft weapon
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CC01.SPK
+    text: STR_STINGRAY_K_UFOPEDIA
+    listOrder: 1110
+    requires:
+      - STR_GENERALLOCK
+
+  - id: STR_CERBERUS_LAUNCHER_UC
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    image_id: CERB.SPK
+    text: STR_CERBERUS_LAUNCHER_UFOPEDIA
+    listOrder: 210
+
+  - id: STR_CRAFT_AUTOCANNON_TWIN
+    type_id: 12
+    section: STR_XCOM_CRAFT_ARMAMENT
+    requires:
+      - STR_BASIC_CRAFT_WEAPON
+    image_id: CRAFT_QUAD_AUTOCANNON.SPK
+    text: STR_CRAFT_AUTOCANNON_UFOPEDIA
+    listOrder: 1920
+
+#  - id: STR_HEAVY_BOLTER_UC                  #14  40K craft weapon
+#    type_id: 12
+#    section: STR_XCOM_CRAFT_ARMAMENT
+#    image_id: 1HB.SPK
+#    text: STR_HEAVY_BOLTER_UC_UFOPEDIA
+#    listOrder: 1300
+
+  - id: STR_AVALANCHE                  #13  40K craft weapon
+    requires: !add
+      - STR_BASIC_CRAFT_WEAPON
+
+  - id: STR_CANNON_UC
+    requires: !add
+      - STR_BASIC_CRAFT_WEAPON
+
+############################################################################ FACILITIES ############################################################################
+
+  - id: STR_OUTPOSTS         #facility
+    type_id: 10
+    section: STR_HELP
+    image_id: PICK_STRATEGY.SPK
+    text: STR_OUTPOSTS_UFOPEDIA
+ 
+  - id: STR_ACCESS_OUTP         #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_DIRT                #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_EMPLACEMENT         #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_EMPLACEMENT_HEAVY   #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_MINEFIELD           #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_MARINES             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_GUARD             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_OUTPOST_ADEPTAS             #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_TRAINCAMP           #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_MARKET              #facility
+    requires: !add
+      - STR_OUTPOSTS
+
+  - id: STR_POWERG              #facility
+    requires: !add
+      - STR_OUTPOSTS

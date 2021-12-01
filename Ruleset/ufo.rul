@@ -1,0 +1,31 @@
+﻿ufos:
+
+  - type: STR_TRAITOR_CHIMERA
+    fireSound: 32
+    speedMax: 30
+    size: STR_MEDIUM
+    armor: 0
+    damageMax: 650
+    accel: 4
+    power: 15
+    range: 30
+    reload: 12
+    breakOffTime: 0
+
+  - type: STR_HELLT #hell talon HK
+    damageMax: 200
+    speedMax: 1080
+    accel: 4
+    power: 15
+    range: 24
+    reload: 14
+    breakOffTime: 0
+
+  - type: STR_SMALL_SCOUT #hell Blade
+    damageMax: 100
+    speedMax: 920
+    accel: 4
+    power: 90
+    range: 14
+    reload: 14
+    breakOffTime: 0

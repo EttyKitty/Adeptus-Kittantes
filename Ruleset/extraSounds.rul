@@ -1,0 +1,9 @@
+extraSounds:
+
+  - type: GEO.CAT
+    files:
+      32: SOUND/CHIMERA.wav
+
+  - type: BATTLE.CAT
+    files:
+      55: SOUND/Inject.wav

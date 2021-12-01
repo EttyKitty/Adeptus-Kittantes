@@ -1,0 +1,11 @@
+items:
+
+  - type: STR_BIKE_ARMOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_HWP_CANNON_SHELLS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+

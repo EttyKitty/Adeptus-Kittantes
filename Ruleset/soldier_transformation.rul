@@ -1,0 +1,13 @@
+soldierTransformation:
+
+  - name: STR_PROMOTE_SCOUT
+    requires:
+      - STR_MARINES_STRATEGY
+      - STR_CHAPTER_PURITY
+    producedSoldierType: STR_SOLDIER
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    allowedSoldierTypes:
+      - STR_SCOUT
+    transferTime: 46
+    recoveryTime: 0

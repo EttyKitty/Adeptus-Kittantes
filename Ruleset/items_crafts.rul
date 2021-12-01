@@ -1,0 +1,57 @@
+items:
+
+############################################################################ NEW ############################################################################
+
+  - type: STR_CERBERUS_LAUNCHER
+    categories: [ STR_CRAFT_WEAPONS]
+
+  - type: STR_FRAGMENTATION_ROCKETS
+    categories: [ STR_CRAFT_WEAPONS]
+    size: 0.4
+    costBuy: 3000
+    costSell: 2000
+    transferTime: 48
+    clipSize: 1
+    listOrder: 210
+    requiresBuy:
+      - STR_SPEEDR
+
+  - type: STR_CRAFT_AUTOCANNON_TWIN
+    categories: [ STR_CRAFT_WEAPONS]
+
+  - type: STR_CRAFT_AUTOCANNON_ROUNDS   #NOT NEW, I LIED
+    categories: [ STR_CRAFT_WEAPONS]
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON 
+    size: 0.2
+    costBuy: 4000
+    costSell: 1500
+    transferTime: 48
+    clipSize: 50
+    listOrder: 1930
+
+############################################################################ GENERAL/OTHERS ############################################################################
+
+  - type: STR_CANNON
+
+  - type: STR_CANNON_ROUNDS_X50
+
+  - type: STR_STINGRAY_LAUNCHER
+    requiresBuy:
+      - STR_GENERALLOCK  
+
+  - type: STR_STINGRAY_MISSILES
+    requiresBuy:
+      - STR_GENERALLOCK 
+
+  - type: STR_AVALANCHE_LAUNCHER
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON 
+ 
+  - type: STR_AVALANCHE_MISSILES
+    requiresBuy:
+      - STR_BASIC_CRAFT_WEAPON 
+    size: 0.7
+    costBuy: 4500
+    costSell: 3600
+

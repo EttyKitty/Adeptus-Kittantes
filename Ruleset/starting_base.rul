@@ -1,31 +1,102 @@
 startingBase:
 
+  scientists: 20
+  engineers: 10
+
+  randomSoldiers:
+    STR_SOLDIER: 14
+
+  items:
+    STR_FRAGMENTATION_ROCKETS: 12
+    STR_AC_AP_AMMO: 2
+    STR_RIFLE_CLIP: 4
+    STR_SHOTGUN_SM_SHELLS: 2
+    STR_SNIPER_SM_AMMO: 2
+    STR_SMALL_ROCKET: 2
+    STR_LARGE_ROCKET: 1
+    STR_GRENADE: 4
+    STR_SMOKE_GRENADE: 4
+    STR_CANNON_ROUNDS_X50: 6
+
   facilities:
     - type: STR_ACCESS_LIFT
-      x: 2
-      y: 3
-    - type: STR_HANGAR
-      x: 2
-      y: 4
-    - type: STR_HANGAR
-      x: 0
-      y: 4
-    - type: STR_HANGAR
       x: 0
       y: 2
-    - type: STR_SMALL_RADAR_SYSTEM
-      x: 3
-      y: 3
+    - type: STR_HANGAR
+      x: 0
+      y: 0
+    - type: STR_HANGAR
+      x: 2
+      y: 0
+    - type: STR_HANGAR
+      x: 4
+      y: 0
     - type: STR_GENERAL_STORES
       x: 0
-      y: 1
+      y: 3
     - type: STR_LIVING_QUARTERS
-      x: 3
-      y: 2
+      x: 0
+      y: 4
+    - type: STR_LIVING_QUARTERS
+      x: 1
+      y: 3
+    - type: STR_SMALL_RADAR_SYSTEM
+      x: 1
+      y: 4
+    - type: STR_ALIEN_CONTAINMENT
+      x: 2
+      y: 4
     - type: STR_WORKSHOP
-      x: 4
-      y: 3
+      x: 3
+      y: 4
     - type: STR_LABORATORY
-      x: 5
-      y: 3
+      x: 4
+      y: 4
+
+
+  crafts:
+    - type: STR_SPEEDC
+      id: 1
+      fuel: 1000
+      weapons:
+        - type: STR_CERBERUS_LAUNCHER_UC
+          ammo: 6
+        - type: STR_CANNON_UC
+          ammo: 100
+      status: STR_READY
+      items:
+        STR_AUTO_CANNON: 1
+        STR_AC_AP_AMMO: 3
+        STR_RIFLE: 6
+        STR_RIFLE_CLIP: 24
+        STR_SHOTGUN_SM: 2
+        STR_SHOTGUN_SM_SHELLS: 6
+        STR_SNIPER_SM: 2
+        STR_SNIPER_SM_AMMO: 6
+        STR_ROCKET_LAUNCHER: 1
+        STR_SMALL_ROCKET: 8
+        STR_LARGE_ROCKET: 4
+        STR_KNIF_SM: 16
+        STR_GRENADE: 12
+        STR_SMOKE_GRENADE: 12
+
+    - type: STR_INTERCEPTOR
+      id: 2
+      fuel: 1000
+      weapons:
+        - type: STR_CRAFT_AUTOCANNON_TWIN
+          ammo: 150
+        - type: STR_AVALANCHE
+          ammo: 6
+      status: STR_READY
+
+    - type: STR_INTERCEPTOR
+      id: 3
+      fuel: 1000
+      weapons:
+        - type: STR_CRAFT_AUTOCANNON_TWIN
+          ammo: 150
+        - type: STR_AVALANCHE
+          ammo: 6
+      status: STR_READY
 

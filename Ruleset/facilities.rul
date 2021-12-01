@@ -1,0 +1,79 @@
+facilities:
+
+  - type: STR_ACCESS_OUTP
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_OUTPOST
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_OUTPOST_MARINES
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_OUTPOST_GUARD
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_OUTPOST_ADEPTAS
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_DIRT
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_EMPLACEMENT
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_EMPLACEMENT_HEAVY
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_MINEFIELD
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_TRAINCAMP
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_MARKET
+    requires: !add
+      - STR_OUTPOSTS
+
+  - type: STR_POWERG
+    requires: !add
+      - STR_OUTPOSTS
+
+
+  - type: STR_SMALL_RADAR_SYSTEM
+    radarRange: 1700
+
+  - type: STR_LARGE_RADAR_SYSTEM
+    radarRange: 2700
+
+  - type: STR_HYPER_WAVE_DECODER
+    radarRange: 2900
+
+  - type: STR_OUTPOST
+    radarRange: 2700
+
+  - type: STR_OUTPOST_MARINES
+    radarRange: 2700
+
+  - type: STR_OUTPOST_GUARD
+    radarRange: 2700
+
+  - type: STR_OUTPOST_ADEPTAS
+    radarRange: 2700
+
+  - type: STR_OUTPOST_GUARD_HYPER
+    radarRange: 2900
+
+
+  - type: STR_CORRIDOR
+    canBeBuiltOver: true
+

@@ -1,0 +1,60 @@
+﻿units:
+
+  - type: STORM_BOLTER_TURRET
+    race: STORM_BOLTER_TURRET
+    stats:
+      tu: 100
+      stamina: 1
+      health: 60
+      bravery: 110
+      reactions: 1
+      firing: 60
+      throwing: 0
+      strength: 60
+      psiStrength: 100
+      psiSkill: 0
+      melee: 0
+    armor: STORM_BOLTER_TURRET
+    standHeight: 16
+    kneelHeight: 16
+    value: 100
+    deathSound: 23
+    intelligence: 4
+    aggression: 7
+    sniper: 50
+    spotter: 1
+    moveSound: 14
+    energyRecovery: 1
+    builtInWeaponSets:
+      - - AUX_DOUBLE_BOLTER
+      - - AUX_DOUBLE_BOLTER
+      - - AUX_DOUBLE_BOLTER
+
+
+  - type: STR_CHAOS_PENETANTE
+    moraleLossWhenKilled: 0
+    specab: 0
+    stats:
+      bravery: 100
+    builtInWeaponSets:
+      - - STR_KNIF
+        - STR_GRENADE
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO
+        - STR_GRENADE
+      - - STR_STUB_GUN_CHAOS
+        - STR_STUB_GUN_AMMO
+        - STR_GRENADE
+        
+  - type: STR_CHAOS_PENETANTE_LEEROY
+    moraleLossWhenKilled: 0
+    specab: 0
+    stats:
+      bravery: 100
+    builtInWeaponSets:
+      - - STR_KNIF
+        - STR_GRENADE
+      - - STR_KNIF
+        - STR_GRENADE
+      - - STR_KNIF
+        - STR_GRENADE

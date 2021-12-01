@@ -1,0 +1,137 @@
+crafts:
+  - delete: STR_RHINO_NO_TT
+################################################### MARINES ###################################################
+################################################### MARINES ###################################################
+################################################### MARINES ###################################################
+
+  - type: STR_SKYRANGER #dropod´s
+    requires: !add
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_DROP #dropod´s
+    requires: !add
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_RHINO_NO_TT
+    requires: !add
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_INTERCEPTOR
+    requires: !add
+      - STR_MARINES_STRATEGY
+      - STR_INTERCEPTOR
+    weaponTypes:
+      - 0
+      - [1, 2]
+      - [4, 5, 13]
+    fixedWeapons:
+      - STR_CRAFT_AUTOCANNON_TWIN
+    weaponStrings: [STR_CRAFT_AUTOCANNON_TWIN, STR_WEAPON_TWO, STR_WEAPON_THREE]
+    speedMax: 1080
+    damageMax: 200
+    accel: 4
+
+  - type: STR_SPEEDC
+    pilots: 4
+    soldiers: 12
+    speedMax: 150
+    accel: 4
+    damageMax: 200
+    armor: 0
+    weapons: 3
+    weaponTypes:
+      - 0
+      - 2
+      - [4, 5, 13]
+    weaponStrings: [STR_WEAPON_TWO, STR_WEAPON_ONE, STR_WEAPON_THREE]
+    fixedWeapons:
+      - STR_CERBERUS_LAUNCHER_UC
+    deployment:
+      - [3, 3, 1, 2]
+      - [2, 3, 1, 6]
+      - [2, 4, 1, 4]
+      - [3, 4, 1, 4]
+      - [1, 3, 1, 6]
+      - [4, 3, 1, 2]
+      - [7, 11, 1, 2]
+      - [6, 11, 1, 6]
+      - [6, 12, 1, 4]
+      - [7, 12, 1, 4]
+      - [5, 11, 1, 6]
+      - [8, 11, 1, 2]
+
+
+  - type: STR_RHINO_NO_TT
+    sprite: 24
+    spacecraft: true # hangar mission
+    requires:
+      - STR_NOT_PRIMARIS
+      - STR_MARINES_STRATEGY
+      - STR_PERSONAL_ARMOR
+    fuelMax: 1000
+    damageMax: 1000
+    speedMax: 180
+    maxAltitude: 1
+    accel: 2
+    weapons: 0
+#    weaponTypes:
+#      - 3
+#    weaponStrings:
+#      - STR_ANTI_AIR_WEAPONS
+    soldiers: 20
+    vehicles: 1
+    costBuy: 900000
+    costRent: 480000
+    refuelRate: 1000
+    transferTime: 96
+    score: 250
+    repairRate: 4
+    battlescapeTerrainData:
+      name: RHINO_NO_TT
+      mapDataSets:
+        - BLANKS
+        - THUNDERHAWKTEX
+        - RHINO
+      mapBlocks:
+        - name: RHINO_NO_TT # Rhino without Thunderhawk
+          width: 10
+          length: 20
+          items:
+            STORM_BOLTER_TURRET_SPAWNER:
+              - [3, 5, 1]
+              - [6, 12, 1]
+          fuseTimers:
+            STORM_BOLTER_TURRET_SPAWNER: [0, 0]
+    deployment:
+      - [6, 12, 0, 0]
+      - [7, 12, 0, 0]
+      - [6, 11, 0, 0]
+      - [7, 11, 0, 0]
+      - [6, 10, 0, 0]
+      - [7, 10, 0, 0]
+      - [6, 9, 0, 0]
+      - [7, 9, 0, 0]
+      - [6, 8, 0, 0]
+      - [7, 8, 0, 0]
+      - [3, 5, 0, 0]
+      - [4, 5, 0, 0]
+      - [3, 4, 0, 0]
+      - [4, 4, 0, 0]
+      - [3, 3, 0, 0]
+      - [4, 3, 0, 0]
+      - [3, 2, 0, 0]
+      - [4, 2, 0, 0]
+      - [3, 1, 0, 0]
+      - [4, 1, 0, 0]
+
+
+################################################### OTHERS ###################################################
+################################################### OTHERS ###################################################
+################################################### OTHERS ###################################################
+
+  - type: STR_VALKYRIE
+    requires: !add
+      - STR_GUARD_SUPORT

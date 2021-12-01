@@ -1,0 +1,64 @@
+extraSprites: 
+
+################################################### PCK/OBS ###################################################
+################################################### PCK/OBS ###################################################
+################################################### PCK/OBS ###################################################
+
+  - type: BIGOBS.PCK
+    files:
+      57: Resources/Shotgun/old model/Shotgun.gif
+      66: Resources/Psword/PKSM.gif
+      67: Resources/Shotgun/ASHOTGUNA.gif
+      68: Resources/Sniper/SNIPER_SM_AMMO.gif
+      69: Resources/Items/bigob_HealingCement.png
+
+  - type: HANDOB.PCK
+    files:
+      128: Resources/Shotgun/old model/SHOTGUN.png
+
+  - type: FLOOROB.PCK
+    files:
+      73: Resources/Shotgun/old model/FloorS.gif
+      74: Resources/Items/floorob_Cement.png
+
+  - type: INTICON.PCK
+    files:
+      24: Resources/Rhino/Rhino_minimised.gif
+
+  - type: BASEBITS.PCK
+    files:
+      57: Resources/Rhino/ULTRAMARINE/Rhino_base.png
+
+
+
+################################################### SPK/SINGLES ###################################################
+################################################### SPK/SINGLES ###################################################
+################################################### SPK/SINGLES ###################################################
+
+  - type: CERB.SPK
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/CODEX/CERB.png
+
+  - type: TLHB.SPK
+    singleImage: true
+    width: 320
+    height: 200
+    files:
+      0: Resources/CODEX/TLHB.png
+
+  - type: STORM_BOLTER_TURRET.PCK
+    subX: 32
+    subY: 40
+    width: 256
+    height: 320
+    files:
+      0: Resources/M60_TURRET.png
+
+  - type: SPICONS.DAT
+    width: 32
+    height: 24
+    files:
+      0: Resources/UI/spicon_skills_ultra.png

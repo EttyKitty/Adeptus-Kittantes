@@ -1,0 +1,137 @@
+items:
+
+############################################################################ NEW ############################################################################
+
+  - type: STR_SCOUT_KIT
+    weight: 0
+    battleType: 6
+    heal: 4
+    stimulant: 4
+    painKiller: 4
+    woundRecovery: 1
+    healthRecovery: 0
+    stunRecovery: 10
+    energyRecovery: 10
+    medikitTargetSelf: true
+    isConsumable: true
+    medikitType: 0
+    costUse:
+      time: 15
+    attraction: 15
+    recover: false
+    specialUseEmptyHand: true
+    # Knife #
+    meleePower: 70
+    damageType: 7
+    accuracyMelee: 110
+    tuMelee: 15
+    clipSize: -1
+    twoHanded: false
+    meleeType: 7
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    experienceTrainingMode: 13
+    fixedWeapon: true
+    meleeSound: {mod: 40k, index: 754} #754 knif miss
+    meleeHitSound: {mod: 40k, index: 773} #773 knif hit
+    meleeAnimation: {mod: 40k, index: 4}
+
+  - type: STR_REPAIR_CEMENT
+    size: 0.1
+    costBuy: 500
+    costSell: 250
+    weight: 2
+    bigSprite: 69
+    floorSprite: 74
+    battleType: 6
+    invWidth: 1
+    invHeight: 1
+    hitSound: 55
+    hitAnimation: {mod: 40k, index: 32}
+    medikitActionName: STR_REPAIR
+    medikitType: 3
+    medikitTargetSelf: true
+    isConsumable: true
+    painKiller: 6
+    painKillerRecovery: 0
+    tags:
+      SPRAY_REPAIRS_ARMOR: 1
+
+  - type: STORM_BOLTER_TURRET_SPAWNER
+    spawnUnit: STORM_BOLTER_TURRET
+    spawnUnitFaction: 0
+    invWidth: 0
+    invHeight: 0
+    battleType: 4
+
+############################################################################ MARINES ############################################################################
+
+  - type: STR_BANNER
+    requiresBuy:
+      - STR_MARINES_STRATEGY
+      - STR_HIGHTIER_PREREQ
+
+  - type: STR_SERVITOR
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+  - type: STR_TANK_ROCKET_LAUNCHER
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+  
+  - type: STR_HWP_ROCKETS
+    requiresBuy:
+      - STR_PERSONAL_ARMOR
+
+############################################################################ GENERAL/OTHERS ############################################################################
+
+extended:
+  tags:
+    RuleItem:
+      SPRAY_REPAIRS_ARMOR: int
+  scripts:
+    healUnit:
+      - offset: 14
+        code: |
+          var ptr RuleItem itemRuleset;
+          var int sprayRepairsArmor;
+          var int currentArmor;
+          var int maxArmor;
+
+          item.getRuleItem itemRuleset;
+          itemRuleset.getTag sprayRepairsArmor Tag.SPRAY_REPAIRS_ARMOR;
+
+          if eq 1 sprayRepairsArmor;
+
+            target.getArmor currentArmor SIDE_FRONT;
+            target.getArmorMax maxArmor SIDE_FRONT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_FRONT 5;
+            end;
+
+            target.getArmor currentArmor SIDE_LEFT;
+            target.getArmorMax maxArmor SIDE_LEFT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_LEFT 5;
+            end;
+
+            target.getArmor currentArmor SIDE_RIGHT;
+            target.getArmorMax maxArmor SIDE_RIGHT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_RIGHT 5;
+            end;
+
+            target.getArmor currentArmor SIDE_REAR;
+            target.getArmorMax maxArmor SIDE_REAR;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_REAR 5;
+            end;
+
+            target.getArmor currentArmor SIDE_UNDER;
+            target.getArmorMax maxArmor SIDE_UNDER;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_UNDER 5;
+            end;
+          end;
+          return;

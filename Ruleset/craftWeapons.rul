@@ -1,0 +1,118 @@
+craftWeapons:
+
+################################################### NEW ###################################################
+################################################### NEW ###################################################
+################################################### NEW ###################################################
+
+#  - type: STR_HEAVY_BOLTER_UC
+#    weaponType: 9
+#    sprite: 2
+#    sound: {mod: 40k, index: 4}
+#    damage: 10
+#    range: 30
+#    accuracy: 40
+#    reloadCautious: 16
+#    reloadStandard: 12
+#    reloadAggressive: 8
+#    ammoMax: 60
+#    rearmRate: 60
+#    launcher: STR_AUTO_CANNON
+#    clip: STR_AC_AP_AMMO
+#    projectileType: 2
+#    projectileSpeed: 32
+
+  - type: STR_CRAFT_AUTOCANNON_TWIN
+    sprite: 2
+    sound: 4
+    damage: 30
+    range: 14
+    accuracy: 60
+    reloadCautious: 20
+    reloadStandard: 15
+    reloadAggressive: 10
+    ammoMax: 100
+    rearmRate: 50
+    launcher: STR_CRAFT_AUTOCANNON_TWIN
+    clip: STR_CRAFT_AUTOCANNON_ROUNDS
+    projectileType: 2
+    projectileSpeed: 8
+
+  - type: STR_CERBERUS_LAUNCHER_UC
+    sprite: 0
+    sound: 5
+    damage: 50
+    range: 1
+    accuracy: 65
+    reloadCautious: 48
+    reloadStandard: 36
+    reloadAggressive: 24
+    ammoMax: 6
+    launcher: STR_CERBERUS_LAUNCHER
+    clip: STR_FRAGMENTATION_ROCKETS
+    projectileType: 0
+    projectileSpeed: 16
+
+################################################### VANILLA  ###################################################
+################################################### VANILLA ###################################################
+################################################### VANILLA ###################################################
+
+  - type: STR_CANNON_UC
+    damage: 15
+    range: 7
+    accuracy: 40
+    reloadCautious: 16
+    reloadStandard: 12
+    reloadAggressive: 8
+    ammoMax: 100
+    rearmRate: 50
+    launcher: STR_CANNON
+    clip: STR_CANNON_ROUNDS_X50
+    weaponType: 2
+    projectileSpeed: 32
+
+  - type: STR_STINGRAY               #R 40       A 6        D 60     Acc 65
+    sprite: 0
+    sound: 5
+    damage: 60
+    range: 40
+    accuracy: 65
+    reloadCautious: 64
+    reloadStandard: 48
+    reloadAggressive: 32
+    ammoMax: 12
+    launcher: STR_STINGRAY_LAUNCHER
+    clip: STR_SMALL_ROCKET
+    projectileType: 0
+    projectileSpeed: 16
+    weaponType: 1
+
+  - type: STR_STINGRAY_K               #R 40       A 6        D 60     Acc 65
+    sprite: 0
+    sound: 5
+    damage: 100
+    range: 40
+    accuracy: 65
+    reloadCautious: 64
+    reloadStandard: 48
+    reloadAggressive: 32
+    ammoMax: 12
+    launcher: STR_STINGRAY_LAUNCHER
+    clip: STR_LARGE_ROCKET
+    projectileType: 0
+    projectileSpeed: 16
+
+  - type: STR_AVALANCHE              #R 50       A 3        D100     Acc 75
+    sprite: 1
+    sound: 5
+    damage: 60
+    range: 24
+    accuracy: 85
+    reloadCautious: 40
+    reloadStandard: 30
+    reloadAggressive: 20
+    ammoMax: 6
+    launcher: STR_AVALANCHE_LAUNCHER
+    clip: STR_AVALANCHE_MISSILES
+    weaponType: 1
+    projectileType: 1
+    projectileSpeed: 16
