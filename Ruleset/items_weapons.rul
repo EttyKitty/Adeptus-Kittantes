@@ -36,6 +36,8 @@ items:
     damageAlter:
       RandomType: 6
       ArmorEffectiveness: 1
+    tags:
+      ARMOR_IGNORE: 20
 
   - type: STR_PISTOL
     requiresBuy:
@@ -101,6 +103,8 @@ items:
       ToArmor: 1
       ArmorEffectiveness: 1
       ToArmorPre: 0
+    tags:
+      ARMOR_IGNORE: 35
 
   - type: STR_AC_HE_AMMO
     weight: 20
@@ -539,6 +543,14 @@ items:
   - type: STR_HEAVY_STUBBER_CLIP
     requiresBuy: !add
       - STR_HUMAN_SIZED_WEAPONS
+
+
+
+armors:
+  - type: STR_PERSONAL_ARMOR_UC
+    tags:
+      TOUGHNESS: 55
+
 skills:
   - type: STR_BRACE
     tags:
@@ -558,8 +570,12 @@ extended:
       BRACED: int
       STAMINA_BEFORE: int
       ENERGY_BEFORE: int
+      ARMOR_BEFORE: int
     RuleItem:
       BRACING_ALLOWED: int
+      ARMOR_IGNORE: int
+    RuleArmor:
+      TOUGHNESS: int
 
   scripts:
     skillUseUnit:
@@ -607,3 +623,62 @@ extended:
 
 
 
+    hitUnit:
+      - offset: 1
+        code: |
+          var int armorIgnore;
+          var int armorBefore;
+          var ptre BattleItem ammo;
+          var ptr RuleArmor rule;
+          var int toughness;
+          var int temp;
+
+          weapon_item.getTag armorIgnore Tag.ARMOR_IGNORE;
+          if eq armorIgnore 0;
+            weapon_item.getAmmoItem ammo;
+            ammo.getTag armorIgnore Tag.ARMOR_IGNORE;
+          end;
+          if gt armorIgnore 0;
+            unit.getArmor armorBefore side;
+            unit.setTag Tag.ARMOR_BEFORE armorBefore;
+            sub armorBefore armorIgnore;
+            unit.setArmor side armorBefore;
+            unit.getRuleArmor rule;
+            rule.getTag toughness Tag.TOUGHNESS;
+            if lt armorBefore toughness;
+              set armorBefore toughness;
+            end;
+          end;
+          return power part side;
+
+    damageUnit:
+      - offset: 1
+        code: |
+          var int armorBefore;
+
+          unit.getTag armorBefore Tag.ARMOR_BEFORE;
+          if gt armorBefore 0;
+            unit.setArmor side armorBefore;
+            unit.setTag Tag.ARMOR_BEFORE 0;
+          end;
+          return;
+
+      - offset: 2
+        code: |
+          var int toughness;
+          var int armorBefore;
+          var int temp;
+          var ptr RuleArmor rule;
+
+          unit.getRuleArmor rule;
+          rule.getTag toughness Tag.TOUGHNESS;
+          if gt toughness 0;
+            unit.getArmor armorBefore side;
+            add temp armorBefore;
+            sub temp to_armor;
+            if lt temp toughness;
+              unit.setArmor side toughness;
+              set to_armor 0;
+              end;
+          end;
+          return;
