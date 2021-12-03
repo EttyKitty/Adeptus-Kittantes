@@ -74,15 +74,15 @@ en-US:
   
 
 
-  STR_PISTOL: "Boltpistol, MK III"
-  STR_RIFLE: "Boltgun, Godwyn Pattern"
-  STR_AUTO_CANNON: "Heavy Bolter, MK IVa"
+  STR_PISTOL: "Boltpistol MK III"
+  STR_RIFLE: "Boltgun Godwyn Pattern"
+  STR_AUTO_CANNON: "Heavy Bolter MK IVa"
   STR_AUTO_CANNON_UFOPEDIA: "{NEWLINE} The Heavy Bolter is generally used for anti-infantry or fire support roles. It fires a round considerably larger than that of the standard bolter shell, with more propellant and longer range and higher stopping power, making it capable of destroying light vehicles. {NEWLINE}{NEWLINE}Recoil: {ALT}60"
   STR_AC_AP_AMMO: "Heavy Bolts Case"
   STR_AC_I_AMMO: "Hellfire Bolts Case"
-  STR_LASCAN: "Lascannon, Mars Pattern"
+  STR_LASCAN: "Lascannon Mars Pattern"
   STR_LASCANNON_CLIP_SMALL: "Lascannon Charge Pack"
-  STR_HEAVY_LASER: "Meltagun, Vulkan Pattern"
+  STR_HEAVY_LASER: "Meltagun Vulkan Pattern"
 
   STR_KNIF_SM: "Astartes Combat Knife"
   STR_SHOTGUN_SM: "Astartes Shotgun"
