@@ -1,0 +1,148 @@
+﻿skills:
+
+  - type: STR_BRACE
+    tags:
+      BRACING_SKILL: 1
+    costUse:
+      time: 4
+    flatUse:
+      time: true
+    compatibleWeapons:
+      - "STR_AUTO_CANNON"
+
+extended:
+  tags:
+    RuleSkill:
+      BRACING_SKILL: int
+    BattleUnit:
+      BRACED: int
+      STAMINA_BEFORE: int
+      ENERGY_BEFORE: int
+      ARMOR_BEFORE: int
+    RuleItem:
+      BRACING_ALLOWED: int
+      ARMOR_IGNORE: int
+      MIN_DAMAGE: int
+    RuleArmor:
+      TOUGHNESS: int
+
+  scripts:
+
+    skillUseUnit:
+      - offset: 2 #Brace skill
+        code: |
+          var int bracingSkill;
+          var int bracingState;
+          var int staminaBefore;
+          var int energyBefore;
+
+          skill.getTag bracingSkill Tag.BRACING_SKILL;
+          if eq bracingSkill 1;
+            actor.getTag bracingState Tag.BRACED;
+            if eq bracingState 0;
+              actor.getEnergy energyBefore;
+              actor.setTag Tag.ENERGY_BEFORE energyBefore;
+              actor.Stats.getStamina staminaBefore;
+              actor.setTag Tag.STAMINA_BEFORE staminaBefore;
+              actor.Stats.setStamina 1;
+              actor.setTag Tag.BRACED 1;
+              battle_game.flashMessage "Braced for Fire";
+            else;
+              actor.getTag staminaBefore Tag.STAMINA_BEFORE;
+              actor.Stats.setStamina staminaBefore;
+              actor.getTag energyBefore Tag.ENERGY_BEFORE;
+              actor.setEnergy energyBefore;
+              actor.setTag Tag.BRACED 0;
+              battle_game.flashMessage "Ready to Move";
+            end;
+          end;
+          return;
+
+    accuracyMultiplierBonusStats:
+      - offset: 1 #Brace skill
+        code: |
+          var int bracingAllowed;
+          var int bracingState;
+
+          unit.getTag bracingState Tag.BRACED;
+          weapon.getTag bracingAllowed Tag.BRACING_ALLOWED;
+          if and gt bracingAllowed 0 lt bracingState 1;
+            set bonus 0;
+          end;
+          return bonus;
+
+
+
+    hitUnit:
+      - offset: 1 #Armor Ignore and Toughness script
+        code: |
+          var ptre BattleItem ammo;
+          var ptr RuleArmor rule;
+          var int armorIgnore;
+          var int armorBefore;
+          var int toughness;
+          var int temp;
+
+          weapon_item.getTag armorIgnore Tag.ARMOR_IGNORE;
+          if eq armorIgnore 0;
+            weapon_item.getAmmoItem ammo;
+            ammo.getTag armorIgnore Tag.ARMOR_IGNORE;
+          end;
+          if gt armorIgnore 0;
+            unit.getArmor armorBefore side;
+            unit.setTag Tag.ARMOR_BEFORE armorBefore;
+            sub armorBefore armorIgnore;
+            unit.setArmor side armorBefore;
+            unit.getRuleArmor rule;
+            rule.getTag toughness Tag.TOUGHNESS;
+            if lt armorBefore toughness;
+              set armorBefore toughness;
+            end;
+          end;
+          return power part side;
+
+      - offset: 2
+        code: |
+          var int minDamage;
+
+          weapon_item.getTag minDamage Tag.MIN_DAMAGE;
+          if neq minDamage 0;
+            add power minDamage;
+          end;
+          damaging_item.getTag minDamage Tag.MIN_DAMAGE;
+          if neq minDamage 0;
+            add power minDamage;
+          end;          
+          return power part side;
+
+    damageUnit:
+      - offset: 1 #Armor Ignore script
+        code: |
+          var int armorBefore;
+
+          unit.getTag armorBefore Tag.ARMOR_BEFORE;
+          if gt armorBefore 0;
+            unit.setArmor side armorBefore;
+            unit.setTag Tag.ARMOR_BEFORE 0;
+          end;
+          return;
+
+      - offset: 2 #Toughness script
+        code: |
+          var int toughness;
+          var int armorBefore;
+          var int temp;
+          var ptr RuleArmor rule;
+
+          unit.getRuleArmor rule;
+          rule.getTag toughness Tag.TOUGHNESS;
+          if gt toughness 0;
+            unit.getArmor armorBefore side;
+            add temp armorBefore;
+            sub temp to_armor;
+            if lt temp toughness;
+              unit.setArmor side toughness;
+              set to_armor 0;
+              end;
+          end;
+          return;

@@ -68,7 +68,9 @@ armors:
       F4: ["0", "ASCOUTF", "F4_FACE", "GOGGLES"]
       F5: ["0", "ASCOUTF", "F5_FACE", "GOGGLES"]
 
-
+  - type: STR_PERSONAL_ARMOR_UC
+    tags:
+      TOUGHNESS: 55
 
   - type: STORM_BOLTER_TURRET
     spriteSheet: STORM_BOLTER_TURRET.PCK
