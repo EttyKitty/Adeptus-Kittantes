@@ -74,7 +74,7 @@ extended:
 
 
     hitUnit:
-      - offset: 1 #Armor Ignore and Toughness script
+      - offset: 1 #armorIgnore and toughness script
         code: |
           var ptre BattleItem ammo;
           var ptr RuleArmor rule;
@@ -101,7 +101,7 @@ extended:
           end;
           return power part side;
 
-      - offset: 2
+      - offset: 2 #minDamage script
         code: |
           var int minDamage;
 
@@ -116,7 +116,7 @@ extended:
           return power part side;
 
     damageUnit:
-      - offset: 1 #Armor Ignore script
+      - offset: 1 #armorIgnore script
         code: |
           var int armorBefore;
 
@@ -127,7 +127,7 @@ extended:
           end;
           return;
 
-      - offset: 2 #Toughness script
+      - offset: 2 #toughness script
         code: |
           var int toughness;
           var int armorBefore;
