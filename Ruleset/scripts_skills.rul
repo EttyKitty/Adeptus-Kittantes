@@ -23,6 +23,7 @@ extended:
       BRACING_ALLOWED: int
       ARMOR_IGNORE: int
       MIN_DAMAGE: int
+      SPRAY_REPAIRS_ARMOR: int
     RuleArmor:
       TOUGHNESS: int
 
@@ -70,8 +71,6 @@ extended:
             set bonus 0;
           end;
           return bonus;
-
-
 
     hitUnit:
       - offset: 1 #armorIgnore and toughness script
@@ -144,5 +143,49 @@ extended:
               unit.setArmor side toughness;
               set to_armor 0;
               end;
+          end;
+          return;
+
+    healUnit:
+      - offset: 14 #repair cement script
+        code: |
+          var ptr RuleItem itemRuleset;
+          var int sprayRepairsArmor;
+          var int currentArmor;
+          var int maxArmor;
+
+          item.getRuleItem itemRuleset;
+          itemRuleset.getTag sprayRepairsArmor Tag.SPRAY_REPAIRS_ARMOR;
+
+          if eq 1 sprayRepairsArmor;
+            target.getArmor currentArmor SIDE_FRONT;
+            target.getArmorMax maxArmor SIDE_FRONT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_FRONT 40;
+            end;
+
+            target.getArmor currentArmor SIDE_LEFT;
+            target.getArmorMax maxArmor SIDE_LEFT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_LEFT 40;
+            end;
+
+            target.getArmor currentArmor SIDE_RIGHT;
+            target.getArmorMax maxArmor SIDE_RIGHT;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_RIGHT 40;
+            end;
+
+            target.getArmor currentArmor SIDE_REAR;
+            target.getArmorMax maxArmor SIDE_REAR;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_REAR 40;
+            end;
+
+            target.getArmor currentArmor SIDE_UNDER;
+            target.getArmorMax maxArmor SIDE_UNDER;
+            if lt currentArmor maxArmor;
+              target.addArmor SIDE_UNDER 40;
+            end;
           end;
           return;

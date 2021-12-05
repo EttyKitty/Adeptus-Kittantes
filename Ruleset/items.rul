@@ -55,6 +55,8 @@ items:
     isConsumable: true
     painKiller: 6
     painKillerRecovery: 0
+    costUse:
+      time: 60
     tags:
       SPRAY_REPAIRS_ARMOR: 1
 
@@ -86,52 +88,3 @@ items:
 
 ############################################################################ GENERAL/OTHERS ############################################################################
 
-extended:
-  tags:
-    RuleItem:
-      SPRAY_REPAIRS_ARMOR: int
-  scripts:
-    healUnit:
-      - offset: 14
-        code: |
-          var ptr RuleItem itemRuleset;
-          var int sprayRepairsArmor;
-          var int currentArmor;
-          var int maxArmor;
-
-          item.getRuleItem itemRuleset;
-          itemRuleset.getTag sprayRepairsArmor Tag.SPRAY_REPAIRS_ARMOR;
-
-          if eq 1 sprayRepairsArmor;
-
-            target.getArmor currentArmor SIDE_FRONT;
-            target.getArmorMax maxArmor SIDE_FRONT;
-            if lt currentArmor maxArmor;
-              target.addArmor SIDE_FRONT 5;
-            end;
-
-            target.getArmor currentArmor SIDE_LEFT;
-            target.getArmorMax maxArmor SIDE_LEFT;
-            if lt currentArmor maxArmor;
-              target.addArmor SIDE_LEFT 5;
-            end;
-
-            target.getArmor currentArmor SIDE_RIGHT;
-            target.getArmorMax maxArmor SIDE_RIGHT;
-            if lt currentArmor maxArmor;
-              target.addArmor SIDE_RIGHT 5;
-            end;
-
-            target.getArmor currentArmor SIDE_REAR;
-            target.getArmorMax maxArmor SIDE_REAR;
-            if lt currentArmor maxArmor;
-              target.addArmor SIDE_REAR 5;
-            end;
-
-            target.getArmor currentArmor SIDE_UNDER;
-            target.getArmorMax maxArmor SIDE_UNDER;
-            if lt currentArmor maxArmor;
-              target.addArmor SIDE_UNDER 5;
-            end;
-          end;
-          return;
